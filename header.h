@@ -1,8 +1,7 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
 
 //merge sort
-std::vector<int> merge (std::vector<int> a, std::vector<int> b, int n, int m);
-void mergeSort(std::vector<int>& a, int n);
+void merge(std::vector<int>& a, int left, int mid, int right);
+void mergeSort(std::vector<int>& a, int left, int right);

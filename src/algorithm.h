@@ -64,12 +64,11 @@ void mergeSort(std::vector<int> &arr, int left, int right);
 void countingSort(std::vector<int> &arr);
 void shakerSort(std::vector<int> &arr);
 void shellSort(std::vector<int> &arr);
-void heapify(std::vector<int>& arr, int i);
+void heapify(std::vector<int>& arr, int n, int i);
 void heapSort(std::vector<int> &arr);
 
 // nodef
 void bubbleSort(std::vector<int> &arr);
 void quickSort(std::vector<int> &arr, int low, int high);
-void heapSort(std::vector<int> &arr);
 
 #endif // !HEADER_H

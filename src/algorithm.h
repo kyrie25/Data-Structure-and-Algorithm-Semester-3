@@ -68,6 +68,7 @@ void heapSort(std::vector<int> &arr);
 void flashSort(std::vector<int> &arr);
 void quickSort(std::vector<int> &arr);
 void bubbleSort(std::vector<int> &arr);
+void insertionSort(std::vector<int> &arr);
 
 // nodef
 

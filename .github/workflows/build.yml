@@ -1,4 +1,4 @@
-name: Build g++
+name: Build (g++)
 
 on:
   push:
@@ -29,4 +29,4 @@ jobs:
 
     - name: Compile
       run: |
-        g++ main.cpp src/*.cpp -o sort
+        g++ main.cpp src/*.cpp -v -o sort

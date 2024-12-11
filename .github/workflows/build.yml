@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+        
     - name: Setup C/C++ Compiler
       id: setup-compiler
       uses: rlalik/setup-cpp-compiler@master

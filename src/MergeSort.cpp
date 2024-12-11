@@ -29,7 +29,7 @@ void merge(std::vector<int> &arr, int left, int mid, int right)
         arr[k++] = c[j++]; 
 }
 
-void mergeSort(std::vector<int> &arr, int left, int right) 
+void mergeSortRecur(std::vector<int> &arr, int left, int right) 
 {
     if (left < right) 
     {
@@ -40,4 +40,12 @@ void mergeSort(std::vector<int> &arr, int left, int right)
 
         merge(arr, left, mid, right);
     }
+}
+
+void mergeSort(std::vector<int> &arr)
+{
+    int left = 0;
+    int right = arr.size();
+
+    mergeSortRecur(arr, left, right);
 }

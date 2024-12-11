@@ -4,13 +4,14 @@ void ShakerSort(std::vector<int> &arr)
 {
     int n = arr.size();
 
-    int Left = 0;
-    int Right = n - 1;
+    int l = 0;
+    int r = n - 1;
     int k = 0;
     int i;
-    while (Left < Right)
+    
+    while (l < r)
     {
-        for (i = Left; i < Right; i++)
+        for (i = l; i < r; i++)
         {
             if (arr[i] > arr[i + 1])
             {
@@ -18,8 +19,8 @@ void ShakerSort(std::vector<int> &arr)
                 k = i;
             }
          }
-        Right = k;
-        for (i = Right; i > Left; i--)
+        r = k;
+        for (i = r; i > l; i--)
         {
             if (arr[i] < arr[i - 1])
             {
@@ -27,6 +28,6 @@ void ShakerSort(std::vector<int> &arr)
                 k = i;
             }
         }
-        Left = k;
+        l = k;
     }
 }

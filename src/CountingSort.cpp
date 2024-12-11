@@ -12,21 +12,17 @@ void countingSort(std::vector<int>& arr)
             max = arr[i];
     }
 
-    std::vector<int> countArray(max + 1, 0);
+    std::vector<int> count(max + 1, 0);
     for (int i = 0; i < n; i++)
-        countArray[arr[i]]++;
+        count[arr[i]]++;
     for (int i = 1; i <= max; i++)
-        countArray[i] += countArray[i - 1];
+        count[i] += count[i - 1];
 
-    // Creating outputArray[] from countArray[] array
     std::vector<int> res(n);
-
     for (int i = n - 1; i >= 0; i--)
     {
-        res[countArray[arr[i]] - 1]
-            = arr[i];
-
-        countArray[arr[i]]--;
+        res[count[arr[i]] - 1] = arr[i];
+        count[arr[i]]--;
     }
 
     for (int i = 0; i < n; i++)

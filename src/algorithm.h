@@ -63,6 +63,7 @@ const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
 void mergeSort(std::vector<int> &arr, int left, int right);
 void countingSort(std::vector<int> &arr);
 void shakerSort(std::vector<int> &arr);
+void shellSort(std::vector<int> &arr, int n);
 
 //nodef
 void bubbleSort(std::vector<int> &arr);

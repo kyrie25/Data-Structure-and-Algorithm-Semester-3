@@ -3,6 +3,7 @@
 #define HEADER_H
 
 #include <vector>
+
 #include <string>
 #include <map>
 
@@ -65,10 +66,9 @@ void countingSort(std::vector<int> &arr);
 void shakerSort(std::vector<int> &arr);
 void shellSort(std::vector<int> &arr, int n);
 
-//nodef
+// nodef
 void bubbleSort(std::vector<int> &arr);
 void quickSort(std::vector<int> &arr, int low, int high);
 void heapSort(std::vector<int> &arr);
-
 
 #endif // !HEADER_H

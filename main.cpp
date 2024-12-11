@@ -1,4 +1,4 @@
-#include "src/header.h"
+#include "src/algorithm.h"
 #include <iostream>
 #include <fstream>
 

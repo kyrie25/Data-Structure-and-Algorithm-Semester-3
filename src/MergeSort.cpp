@@ -1,4 +1,4 @@
-#include "header.h"
+#include "algorithm.h"
 
 void merge(std::vector<int>& a, int left, int mid, int right) 
 {

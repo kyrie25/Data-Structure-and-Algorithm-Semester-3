@@ -60,19 +60,13 @@ const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
     {"-comp", COMPARISIONS},
     {"-both", BOTH}};
 
-// bubble sort
-void bubbleSort(std::vector<int> &a, int n);
-
-// quick sort
-int partition(std::vector<int> &a, int low, int high);
-void quickSort(std::vector<int> &a, int low, int high);
-
-// merge sort
-void merge(std::vector<int> &a, int left, int mid, int right);
 void mergeSort(std::vector<int> &a, int left, int right);
+void countingSort(std::vector<int> &a);
 
-// heap sort
-void heapify(std::vector<int> &a, int n, int i);
+//nodef
+void bubbleSort(std::vector<int> &a, int n);
+void quickSort(std::vector<int> &a, int low, int high);
 void heapSort(std::vector<int> &a, int n);
+
 
 #endif // !HEADER_H

@@ -28,7 +28,7 @@ void merge(std::vector<int>& a, int left, int mid, int right) {
 }
 
 void mergeSort(std::vector<int>& a, int left, int right) {
-    while (left < right) {
+    if (left < right) {
         int mid = (left + right) / 2;
 
         mergeSort(a, left, mid);

@@ -61,7 +61,8 @@ const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
     {"-both", BOTH}};
 
 void mergeSort(std::vector<int> &a, int left, int right);
-void countingSort(std::vector<int> &a);
+void countingSort(std::vector<int> &arr);
+void shakerSort(std::vector<int> &arr);
 
 //nodef
 void bubbleSort(std::vector<int> &a, int n);

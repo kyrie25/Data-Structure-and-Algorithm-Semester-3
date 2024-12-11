@@ -70,6 +70,4 @@ void bubbleSort(std::vector<int> &arr);
 void quickSort(std::vector<int> &arr, int low, int high);
 void heapSort(std::vector<int> &arr);
 
-// hieu xam lon
-
 #endif // !HEADER_H

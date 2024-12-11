@@ -65,9 +65,9 @@ void countingSort(std::vector<int> &arr);
 void shakerSort(std::vector<int> &arr);
 
 //nodef
-void bubbleSort(std::vector<int> &arr, int n);
+void bubbleSort(std::vector<int> &arr);
 void quickSort(std::vector<int> &arr, int low, int high);
-void heapSort(std::vector<int> &arr, int n);
+void heapSort(std::vector<int> &arr);
 
 
 #endif // !HEADER_H

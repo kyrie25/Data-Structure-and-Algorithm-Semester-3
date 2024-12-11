@@ -1,6 +1,7 @@
 #include "header.h"
 
-void merge(std::vector<int>& a, int left, int mid, int right) {
+void merge(std::vector<int>& a, int left, int mid, int right) 
+{
     int n = mid - left + 1;
     int m = right - mid;
 
@@ -13,7 +14,8 @@ void merge(std::vector<int>& a, int left, int mid, int right) {
 
     int i = 0, j = 0, k = left;
 
-    while (i < n && j < m) {
+    while (i < n && j < m) 
+    {
         if (b[i] < c[j])
             a[k++] = b[i++];
         else
@@ -27,8 +29,10 @@ void merge(std::vector<int>& a, int left, int mid, int right) {
         a[k++] = c[j++]; 
 }
 
-void mergeSort(std::vector<int>& a, int left, int right) {
-    if (left < right) {
+void mergeSort(std::vector<int>& a, int left, int right) 
+{
+    if (left < right) 
+    {
         int mid = (left + right) / 2;
 
         mergeSort(a, left, mid);

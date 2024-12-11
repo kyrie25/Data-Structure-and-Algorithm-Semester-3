@@ -60,7 +60,7 @@ const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
     {"-comp", COMPARISIONS},
     {"-both", BOTH}};
 
-void mergeSort(std::vector<int> &arr, int left, int right);
+void mergeSort(std::vector<int> &arr);
 void countingSort(std::vector<int> &arr);
 void shakerSort(std::vector<int> &arr);
 void shellSort(std::vector<int> &arr);

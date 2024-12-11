@@ -63,12 +63,13 @@ const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
 void mergeSort(std::vector<int> &arr, int left, int right);
 void countingSort(std::vector<int> &arr);
 void shakerSort(std::vector<int> &arr);
-void shellSort(std::vector<int> &arr, int n);
+void shellSort(std::vector<int> &arr);
 
-//nodef
+// nodef
 void bubbleSort(std::vector<int> &arr);
 void quickSort(std::vector<int> &arr, int low, int high);
 void heapSort(std::vector<int> &arr);
 
+// hieu xam lon
 
 #endif // !HEADER_H

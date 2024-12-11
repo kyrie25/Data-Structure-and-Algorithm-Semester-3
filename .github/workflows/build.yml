@@ -1,4 +1,4 @@
-name: Build G++
+name: Build g++
 
 on:
   push:

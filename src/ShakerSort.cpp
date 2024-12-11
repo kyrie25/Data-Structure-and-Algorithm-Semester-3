@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void ShakerSort(std::vector<int> &arr)
+void shakerSort(std::vector<int> &arr)
 {
     int n = arr.size();
 
@@ -8,7 +8,7 @@ void ShakerSort(std::vector<int> &arr)
     int r = n - 1;
     int k = 0;
     int i;
-    
+
     while (l < r)
     {
         for (i = l; i < r; i++)

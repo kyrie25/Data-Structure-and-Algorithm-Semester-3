@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void BubbleSort(std::vector<int> &arr)
+void bubbleSort(std::vector<int> &arr)
 {
     int n = arr.size() - 1;
     for (int i = 0; i < n; i++)

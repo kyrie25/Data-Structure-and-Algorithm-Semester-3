@@ -1,6 +1,8 @@
-#include "src/algorithm.h"
 #include <iostream>
 #include <fstream>
+
+#include "src/algorithm/algorithm.h"
+#include "src/utils/utils.h"
 
 // Command 1: [Execution file] -a [Algorithm]   [Given input] [Output parameter(s)]
 // Command 2: [Execution file] -a [Algorithm]   [Input size]  [Input order]             [Output parameter(s)]

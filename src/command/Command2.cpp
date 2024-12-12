@@ -4,7 +4,7 @@ void Command2(const std::string &algorithm, const int &input_size,
               const std::string &input_order, const std::string &output_param)
 {
     double runTime = 0;
-    int comparisons = 0;
+    int countComparisons = 0;
 
     DATA_TYPE dataType = dataTypeMap.at(input_order);
 
@@ -32,7 +32,7 @@ void Command2(const std::string &algorithm, const int &input_size,
     }
 
     auto start = std::chrono::high_resolution_clock::now();
-    algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr);
+    algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr, countComparisons);
     auto end = std::chrono::high_resolution_clock::now();
 
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
@@ -47,5 +47,5 @@ void Command2(const std::string &algorithm, const int &input_size,
               << ((outputParam == TIME || outputParam == BOTH) ? std::to_string((end - start).count()) : "") << '\n'
 
               << "Comparisions (if required): "
-              << ((outputParam == COMPARISIONS || outputParam == BOTH) ? std::to_string(comparisons) : "") << '\n';
+              << ((outputParam == COMPARISIONS || outputParam == BOTH) ? std::to_string(countComparisons) : "") << '\n';
 }

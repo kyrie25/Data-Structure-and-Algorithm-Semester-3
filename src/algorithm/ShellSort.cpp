@@ -1,20 +1,22 @@
 #include "algorithm.h"
 
-void shellSort(std::vector<int> &arr)
+void shellSort(std::vector<int> &arr, int &countComparison)
 {
     int n = arr.size();
 
-    for (int gap = n / 2; gap > 0; gap /= 2)
+    for (int gap = n / 2; ++countComparison && gap > 0; gap /= 2)
     {
-        for (int i = gap; i < n; i++)
+        for (int i = gap; ++countComparison && i < n; i++)
         {
             int temp = arr[i];
+            
             int j;
-            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+            for (j = i; ++countComparison && j >= gap && arr[j - gap] > temp; j -= gap)
             {
                 arr[j] = arr[j - gap];
             }
-            arr[j] = arr[temp];
+            arr[j] = temp;
         }
     }
 }
+

@@ -1,5 +1,6 @@
 #include "command.h"
-#include "algorithm/algorithm.h"
+#include "../algorithm/algorithm.h"
+#include "../utils/utils.h"
 #include <chrono>
 #include <fstream>
 #include <vector>

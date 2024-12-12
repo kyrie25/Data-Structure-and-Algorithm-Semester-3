@@ -31,15 +31,15 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     arr.push_back(arr2);
     arr.push_back(arr3);
 
-    std::ifstream input1("input1.txt");
-    if (input1.is_open())
+    std::ofstream output1("input1.txt");
+    if (output1.is_open())
     {
-        input1 >> input_size;
+        output1 << input_size << '\n';
         for(int i = 0; i < input_size; i++)
         {
-            input >> arr0[i] >> ' ';
+            output1 << arr0[i] << ' ';
         }
-        input1.close();
+        output1.close();
     }
     else
     {
@@ -47,15 +47,15 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         exit(1);
     }
 
-    std::ifstream input2("input2.txt");
-    if (input2.is_open())
+    std::ofstream output2("input2.txt");
+    if (output2.is_open())
     {
-        input2 >> input_size;
+        output2 << input_size << '\n';
         for(int i = 0; i < input_size; i++)
         {
-            input >> arr1[i] >> ' ';
+            output2 << arr1[i] << ' ';
         }
-        input2.close();
+        output2.close();
     }
     else
     {
@@ -63,15 +63,15 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         exit(1);
     }
 
-    std::ifstream input3("input3.txt");
-    if (input3.is_open())
+    std::ofstream output3("input3.txt");
+    if (output3.is_open())
     {
-        input3 >> input_size;
+        output3 << input_size << '\n';
         for(int i = 0; i < input_size; i++)
         {
-            input3 >> arr2[i] >> ' ';
+            output3 << arr2[i] << ' ';
         }
-        input3.close();
+        output3.close();
     }
     else
     {
@@ -79,15 +79,15 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         exit(1);
     }
 
-    std::ifstream input4("input4.txt");
-    if (input4.is_open())
+    std::ofstream output4("input4.txt");
+    if (output4.is_open())
     {
-        input4 >> input_size;
+        output4 << input_size << '\n';
         for(int i = 0; i < input_size; i++)
         {
-            input4 >> arr3[i] >> ' ';
+            output4 << arr3[i] << ' ';
         }
-        input4.close();
+        output4.close();
     }
     else
     {

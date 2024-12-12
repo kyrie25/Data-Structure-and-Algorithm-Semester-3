@@ -1,4 +1,5 @@
-#include "src/include.h"
+#include "../algorithm/algorithm.h"
+#include "../utils/utils.h"
 
 void Command2(std::string algorithm, int input_size, std::string input_order, std::string output_param)
 {

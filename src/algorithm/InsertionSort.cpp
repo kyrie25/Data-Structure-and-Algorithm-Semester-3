@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void insertionSort(std::vector<int> &arr)
+void insertionSort(std::vector<int> &arr, int &countComparison)
 {
     int n = arr.size();
 
@@ -12,9 +12,11 @@ void insertionSort(std::vector<int> &arr)
            greater than key, to one position ahead
            of their current position */
         while (j >= 0 && arr[j] > key) {
+            countComparison += 2;
             arr[j + 1] = arr[j];
             j = j - 1;
         }
+        countComparison++;
         arr[j + 1] = key;
     }
 }

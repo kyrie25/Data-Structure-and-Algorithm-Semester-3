@@ -16,15 +16,17 @@ void Command4(std::string algorithm1, std::string algorithm2, std::string inputF
     
     std::vector<int> arr1 = arr;
     std::vector<int> arr2 = arr;
+    int countComparison1 = 0;
+    int countComparison2 = 0;
 
     auto start = std::chrono::high_resolution_clock::now();
-    algorithmFunctionMap.at(algorithmMap.at(algorithm1))(arr1);
+    algorithmFunctionMap.at(algorithmMap.at(algorithm1))(arr1, countComparison1);
     auto end = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> runTime1 = end - start;
 
     start = std::chrono::high_resolution_clock::now();
-    algorithmFunctionMap.at(algorithmMap.at(algorithm2))(arr2);
+    algorithmFunctionMap.at(algorithmMap.at(algorithm2))(arr2, countComparison2);
     end = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> runTime2 = end - start;
@@ -34,6 +36,6 @@ void Command4(std::string algorithm1, std::string algorithm2, std::string inputF
     std::cout << "Input file: " << inputFile << '\n';
     std::cout << "-------------------------\n";
     std::cout << "Running time: " << runTime1.count() << " | " << runTime2.count() << '\n';
-    std::cout << "Comparisions: ";
+    std::cout << "Comparisons: " << countComparison1 << " | " << countComparison2 << '\n';
 
 }

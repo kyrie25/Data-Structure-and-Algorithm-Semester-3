@@ -1,9 +1,14 @@
+#pragma once
+
+#ifndef UTILS_H
+#define UTILS_H
+
 #include <iostream>
 #include <fstream>
 #include <cmath>
 #include <vector>
 #include <time.h>
 
-using namespace std;
+void GenerateData(std::vector<int> &arr, int dataType);
 
-void GenerateData(vector<int> &arr, int dataType);
+#endif // UTILS_H

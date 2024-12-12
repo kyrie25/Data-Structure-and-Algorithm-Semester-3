@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
             if (!input_order.empty())
             {
                 // command 2
-                // Command2(algorithm, input_size, input_order, output_parameter);
+                Command2(algorithm, input_size, input_order, output_parameter);
             }
             else
             {
@@ -160,7 +160,7 @@ int main(int argc, char *argv[])
         if (input_size == 0)
         {
             // command 4
-            Command4(argv[2], argv[3], argv[4]);
+            // Command4(algorithm1, algorithm2, given_input);
         }
         else
         {

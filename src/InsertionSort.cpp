@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void insertionSort(std::vector<int> arr)
+void insertionSort(std::vector<int> &arr)
 {
     int n = arr.size();
 

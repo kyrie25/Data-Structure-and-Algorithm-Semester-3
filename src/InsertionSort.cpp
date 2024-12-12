@@ -1,5 +1,4 @@
-#include<iostream>
-#include <vector>
+#include "algorithm.h"
 
 void insertionSort(std::vector<int> arr)
 {

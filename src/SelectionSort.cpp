@@ -1,5 +1,4 @@
-#include <iostream>
-#include<vector>
+#include "algorithm.h"
 
 void selectionSort(std::vector<int>& arr) {
     

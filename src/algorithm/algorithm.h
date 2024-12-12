@@ -76,7 +76,6 @@ void bubbleSort(std::vector<int> &arr);
 void insertionSort(std::vector<int> &arr);
 void radixSort(std::vector<int> &arr);
 void selectionSort(std::vector<int> &arr);
-void sort(SORT_ALGORITHMS algorithm, std::vector<int> &arr);
 
 const std::map<SORT_ALGORITHMS, std::function<void(std::vector<int> &)>> algorithmFunctionMap = {
     {SELECTION_SORT, selectionSort},

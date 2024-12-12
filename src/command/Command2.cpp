@@ -12,29 +12,29 @@ void Command2(const std::string &algorithm, const int &input_size,
     arr.resize(input_size);
     GenerateData(arr, dataType);
 
-    std::ifstream inFile;
-    inFile.open("input.txt");
-    if (inFile.is_open())
+    // write generated data to input.txt
+    std::ofstream outFile;
+    outFile.open("input.txt");
+    outFile << arr.size() << ' ';
+    for (int x : arr)
     {
-        int n = 0;
-        inFile >> n;
-
-        for (int i = 0; i < n; i++)
-        {
-            inFile >> arr[i];
-        }
-        inFile.close();
+        outFile << x << ' ';
     }
-    else
-    {
-        std::cerr << "Unable to open file input.txt\n";
-        exit(1);
-    }
+    outFile.close();
 
+    // measure running time and comparisons
     auto start = std::chrono::high_resolution_clock::now();
     algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr, countComparisons);
     auto end = std::chrono::high_resolution_clock::now();
 
+    // write sorted data to output.txt
+    outFile.open("output.txt");
+    outFile << arr.size() << ' ';
+    for (int x : arr)
+    {
+        outFile << x << ' ';
+    }
+    outFile.close();
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
     std::cout << "ALGORITHM MODE\n"

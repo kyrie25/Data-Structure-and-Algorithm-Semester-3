@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
             else
             {
                 // command 3
-                // Command3(algorithm, input_size, output_parameter);
+                Command3(algorithm, input_size, output_parameter);
             }
         }
     }

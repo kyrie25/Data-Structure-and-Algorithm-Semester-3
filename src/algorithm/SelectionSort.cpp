@@ -1,10 +1,11 @@
 #include "algorithm.h"
 
-void selectionSort(std::vector<int>& arr) {
-    
+void selectionSort(std::vector<int> &arr, int &countComparison)
+{
     int n = arr.size();
 
-    for (int i = 0; i < n - 1; ++i) {
+    for (int i = 0; i < n - 1; ++i)
+    {
 
         // Assume the current position holds
         // the minimum element
@@ -12,8 +13,10 @@ void selectionSort(std::vector<int>& arr) {
 
         // Iterate through the unsorted portion
         // to find the actual minimum
-        for (int j = i + 1; j < n; ++j) {
-            if (arr[j] < arr[min_idx]) {
+        for (int j = i + 1; j < n; ++j)
+        {
+            if (++countComparison && arr[j] < arr[min_idx])
+            {
 
                 // Update min_idx if a smaller
                 // element is found

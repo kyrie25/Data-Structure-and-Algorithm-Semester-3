@@ -1,14 +1,13 @@
 #include "algorithm.h"
 
-void countingSort(std::vector<int>& arr)
+void countingSort(std::vector<int>& arr, int& countComparison)
 {
-
     int n = arr.size();
     int max = arr[0];
 
     for (int i = 1; i < n; i++)
     {
-        if (arr[i] > max)
+        if (++countComparison && arr[i] > max)
             max = arr[i];
     }
 

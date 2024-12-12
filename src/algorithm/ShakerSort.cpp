@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void shakerSort(std::vector<int> &arr)
+void shakerSort(std::vector<int> &arr, int &countComparison)
 {
     int n = arr.size();
 
@@ -13,7 +13,7 @@ void shakerSort(std::vector<int> &arr)
     {
         for (i = l; i < r; i++)
         {
-            if (arr[i] > arr[i + 1])
+            if (++countComparison && arr[i] > arr[i + 1])
             {
                 std::swap(arr[i], arr[i + 1]);
                 k = i;
@@ -22,7 +22,7 @@ void shakerSort(std::vector<int> &arr)
         r = k;
         for (i = r; i > l; i--)
         {
-            if (arr[i] < arr[i - 1])
+            if (++countComparison && arr[i] < arr[i - 1])
             {
                 std::swap(arr[i], arr[i - 1]);
                 k = i;

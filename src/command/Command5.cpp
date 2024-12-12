@@ -1,7 +1,6 @@
 #include "command.h"
 
-void CommandCompare(const std::string &algorithm1, const std::string &algorithm2, const int &input_size,
-                    const std::string &input_order)
+void Command5(const std::string &algorithm1, const std::string &algorithm2, const int &input_size, const std::string &input_order)
 {
     int countComparisons1 = 0, countComparisons2 = 0;
 

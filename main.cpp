@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
             }
 
             // command 1
-            // Command1(algorithm, given_input, output_parameter);
+            Command1(algorithm, given_input, output_parameter);
         }
         else
         {

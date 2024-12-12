@@ -1,8 +1,4 @@
 #include "command.h"
-#include "algorithm/algorithm.h"
-#include <chrono>
-#include <fstream>
-#include <vector>
 
 void Command3(const std::string &algorithm, const int &input_size, const std::string &output_param)
 {

@@ -2,9 +2,11 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+#include <iostream>
 #include <vector>
 #include <string>
 #include <map>
+#include <functional>
 
 enum SORT_ALGORITHMS
 {
@@ -47,18 +49,21 @@ const std::map<std::string, SORT_ALGORITHMS> algorithmMap = {
     {"quick-sort", QUICK_SORT},
     {"counting-sort", COUNTING_SORT},
     {"radix-sort", RADIX_SORT},
-    {"flash-sort", FLASH_SORT}};
+    {"flash-sort", FLASH_SORT}
+};
 
 const std::map<std::string, DATA_TYPE> dataTypeMap = {
     {"-rand", RANDOM},
     {"-nsorted", NEARLY_SORTED},
     {"-sorted", SORTED},
-    {"-rev", REVERSE}};
+    {"-rev", REVERSE}
+};
 
 const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
     {"-time", TIME},
     {"-comp", COMPARISIONS},
-    {"-both", BOTH}};
+    {"-both", BOTH}
+};
 
 void mergeSort(std::vector<int> &arr);
 void countingSort(std::vector<int> &arr);
@@ -70,6 +75,34 @@ void quickSort(std::vector<int> &arr);
 void bubbleSort(std::vector<int> &arr);
 void insertionSort(std::vector<int> &arr);
 void radixSort(std::vector<int> &arr);
+void selectionSort(std::vector<int> &arr);
 
+const std::map<SORT_ALGORITHMS, std::function<void(std::vector<int> &)>> algorithmFunctionMap = {
+    {SELECTION_SORT, selectionSort},
+    {INSERTION_SORT, insertionSort},
+    {BUBBLE_SORT, bubbleSort},
+    {SHAKER_SORT, shakerSort},
+    {SHELL_SORT, shellSort},
+    {HEAP_SORT, heapSort},
+    {MERGE_SORT, mergeSort},
+    {QUICK_SORT, quickSort},
+    {COUNTING_SORT, countingSort},
+    {RADIX_SORT, radixSort},
+    {FLASH_SORT, flashSort}
+};
+
+const std::map<SORT_ALGORITHMS, std::string> algorithmNameMap = {
+    {SELECTION_SORT, "Selection Sort"},
+    {INSERTION_SORT, "Insertion Sort"},
+    {BUBBLE_SORT, "Bubble Sort"},
+    {SHAKER_SORT, "Shaker Sort"},
+    {SHELL_SORT, "Shell Sort"},
+    {HEAP_SORT, "Heap Sort"},
+    {MERGE_SORT, "Merge Sort"},
+    {QUICK_SORT, "Quick Sort"},
+    {COUNTING_SORT, "Counting Sort"},
+    {RADIX_SORT, "Radix Sort"},
+    {FLASH_SORT, "Flash Sort"}
+};
 
 #endif // !HEADER_H

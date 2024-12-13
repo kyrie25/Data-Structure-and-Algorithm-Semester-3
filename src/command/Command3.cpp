@@ -101,6 +101,8 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr[i], countComparisons);
         auto end = std::chrono::high_resolution_clock::now();
 
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
         OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
         if (i == 0)
@@ -121,9 +123,25 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         }
     
         std::cout << "-------------------------\n";
+
         std::cout << "Running time (if required): ";
-        std::cout << ((outputParam == TIME || outputParam == BOTH) ? std::to_string((end - start).count() * 1000.0) : "") << '\n';
+        if (outputParam == TIME || outputParam == BOTH) 
+        {
+            std::cout << std::to_string(duration.count()) << " ms" << '\n';
+        } 
+        else 
+        {
+            std::cout << " " << '\n';
+        }
+
         std::cout << "Comparisions (if required): ";
-        std::cout << ((outputParam == COMPARISIONS || outputParam == BOTH) ? std::to_string(countComparisons) : "") << '\n';
+        if(outputParam == COMPARISIONS || outputParam == BOTH)
+        {
+            std::cout << std::to_string(countComparisons) << '\n';
+        }
+        else
+        {
+            std::cout << " " << '\n';
+        }
     }
 }

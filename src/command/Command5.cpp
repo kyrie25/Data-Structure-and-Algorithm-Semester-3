@@ -14,18 +14,19 @@ void Command5(const std::string &algorithm1, const std::string &algorithm2, cons
     auto start1 = std::chrono::high_resolution_clock::now();
     algorithmFunctionMap.at(algorithmMap.at(algorithm1))(arr1, countComparisons1);
     auto end1 = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> runTime1 = end1 - start1;
+
+    auto runTime1 = std::chrono::duration_cast<std::chrono::milliseconds>(end1 - start1);
 
     auto start2 = std::chrono::high_resolution_clock::now();
     algorithmFunctionMap.at(algorithmMap.at(algorithm2))(arr2, countComparisons2);
     auto end2 = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> runTime2 = end2 - start2;
+    auto runTime2 = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2);
 
     std::cout << "COMPARE MODE\n";
     std::cout << "Algorithm: " << algorithm1 << " | " << algorithm2 << '\n';
     std::cout << "Input size: " << input_size << '\n';
     std::cout << "Input order: " << input_order << '\n';
     std::cout << "---------------------------\n";
-    std::cout << "Running time: " << runTime1.count() << " | " << runTime2.count() << '\n';
+    std::cout << "Running time: " << runTime1.count() << " ms | " << runTime2.count() << " ms" << '\n';
     std::cout << "Comparisons: " << countComparisons1 << " | " << countComparisons2 << '\n';
 }

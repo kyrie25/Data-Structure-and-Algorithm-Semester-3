@@ -3,7 +3,6 @@
 void Command2(const std::string &algorithm, const int &input_size,
               const std::string &input_order, const std::string &output_param)
 {
-    double runTime = 0;
     int countComparisons = 0;
 
     DATA_TYPE dataType = dataTypeMap.at(input_order);
@@ -27,9 +26,11 @@ void Command2(const std::string &algorithm, const int &input_size,
     algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr, countComparisons);
     auto end = std::chrono::high_resolution_clock::now();
 
+    auto runTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
     // write sorted data to output.txt
     outFile.open("output.txt");
-    outFile << arr.size() << ' ';
+    outFile << arr.size() << '\n';
     for (int x : arr)
     {
         outFile << x << ' ';
@@ -41,11 +42,25 @@ void Command2(const std::string &algorithm, const int &input_size,
               << "Algorithm: " << algorithm << '\n'
               << "Input size: " << input_size << '\n'
               << "Input order: " << input_order << '\n'
-              << "---------------------------\n"
+              << "---------------------------\n";
 
-              << "Running time (if required): "
-              << ((outputParam == TIME || outputParam == BOTH) ? std::to_string((end - start).count()) : "") << '\n'
+    std::cout << "Running time (if required): ";
+    if (outputParam == TIME || outputParam == BOTH) 
+    {
+        std::cout << std::to_string(runTime.count()) << " ms" << '\n';
+    } 
+    else 
+    {
+        std::cout << " " << '\n';
+    }
 
-              << "Comparisions (if required): "
-              << ((outputParam == COMPARISIONS || outputParam == BOTH) ? std::to_string(countComparisons) : "") << '\n';
+    std::cout << "Comparisions (if required): ";
+    if(outputParam == COMPARISIONS || outputParam == BOTH)
+    {
+        std::cout << std::to_string(countComparisons) << '\n';
+    }
+    else
+    {
+        std::cout << " " << '\n';
+    }
 }

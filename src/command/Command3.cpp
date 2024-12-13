@@ -101,7 +101,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr[i], countComparisons);
         auto end = std::chrono::high_resolution_clock::now();
 
-        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+        auto runTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
         OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
@@ -127,7 +127,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         std::cout << "Running time (if required): ";
         if (outputParam == TIME || outputParam == BOTH) 
         {
-            std::cout << std::to_string(duration.count()) << " ms" << '\n';
+            std::cout << std::to_string(runTime.count()) << " ms" << '\n';
         } 
         else 
         {

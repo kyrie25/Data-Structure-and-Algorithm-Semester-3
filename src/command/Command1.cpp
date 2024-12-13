@@ -16,7 +16,7 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
     algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr, countComparisons);
     auto end = std::chrono::high_resolution_clock::now();
 
-    std::chrono::duration<double> runTime = end - start;
+    auto runTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
@@ -26,7 +26,7 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
     std::cout << "Input size: " << arr.size() << '\n';
     std::cout << "---------------------------\n";
     if (outputParam == TIME || outputParam == BOTH)
-        std::cout << "Running time: " << runTime.count() << '\n';
+        std::cout << "Running time: " << std::to_string(runTime.count()) << " ms" << '\n';
     if (outputParam == COMPARISIONS || outputParam == BOTH)
-        std::cout << "Comparisons: " << countComparisons << '\n';
+        std::cout << "Comparisons: " << std::to_string(countComparisons) << '\n';
 }

@@ -160,12 +160,12 @@ int main(int argc, char *argv[])
         if (input_size == 0)
         {
             // command 4
-            // Command4(algorithm1, algorithm2, given_input);
+            Command4(algorithm1, algorithm2, given_input);
         }
         else
         {
             // command 5
-            // Command5(algorithm1, algorithm2, input_size, input_order);
+            Command5(algorithm1, algorithm2, input_size, input_order);
         }
     }
     else

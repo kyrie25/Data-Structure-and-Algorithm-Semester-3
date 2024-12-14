@@ -9,12 +9,12 @@ void insertionSort(std::vector<int> &arr, int &countComparison)
         int j = i - 1;
 
         
-        while (  j >= 0 && arr[j] > key) {
-           countComparison+=2
+        while (countComparison++ && j >= 0 && countComparison++ &&  arr[j] > key) {
+          
             arr[j + 1] = arr[j];
             j = j - 1;
         }
-        countComparison++;
+        
         arr[j + 1] = key;
     }
 }

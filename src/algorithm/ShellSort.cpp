@@ -11,7 +11,7 @@ void shellSort(std::vector<int> &arr, int &countComparison)
             int temp = arr[i];
             
             int j;
-            for (j = i; ++countComparison && j >= gap && arr[j - gap] > temp; j -= gap)
+            for (j = i; ++countComparison && j >= gap && ++countComparison && arr[j - gap] > temp; j -= gap)
             {
                 arr[j] = arr[j - gap];
             }

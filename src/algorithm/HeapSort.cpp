@@ -23,12 +23,12 @@ void heapSort(std::vector<int> &arr, int &countComparison)
 {
     int n = arr.size();
 
-    for (int i = n / 2 - 1; i >= 0; i--)
+    for (int i = n / 2 - 1; ++countComparison && i >= 0; i--)
     {
         heapify(arr, n, i, countComparison);
     }
 
-    for (int i = n - 1; i > 0; i--)
+    for (int i = n - 1; ++countComparison && i > 0; i--)
     {
         std::swap(arr[0], arr[i]);
         heapify(arr, i, 0, countComparison);

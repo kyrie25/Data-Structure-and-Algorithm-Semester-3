@@ -9,18 +9,18 @@ void shakerSort(std::vector<int> &arr, int &countComparison)
     int k = 0;
     int i;
 
-    while (l < r)
+    while (++countComparison && l < r)
     {
-        for (i = l; i < r; i++)
+        for (i = l; ++countComparison && i < r; i++)
         {
             if (++countComparison && arr[i] > arr[i + 1])
             {
                 std::swap(arr[i], arr[i + 1]);
                 k = i;
             }
-         }
+        }
         r = k;
-        for (i = r; i > l; i--)
+        for (i = r; ++countComparison && i > l; i--)
         {
             if (++countComparison && arr[i] < arr[i - 1])
             {

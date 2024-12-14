@@ -3,29 +3,26 @@
 void selectionSort(std::vector<int> &arr, int &countComparison)
 {
     int n = arr.size();
+    countComparison=0;
 
-    for (int i = 0; i < n - 1; ++i)
+    for (int i = 0;++countComparison && i < n - 1; ++i)
     {
 
-        // Assume the current position holds
-        // the minimum element
+      
         int min_idx = i;
 
-        // Iterate through the unsorted portion
-        // to find the actual minimum
-        for (int j = i + 1; j < n; ++j)
+      
+        for (int j = i + 1; ++countComparison && j< n; ++j)
         {
             if (++countComparison && arr[j] < arr[min_idx])
             {
 
-                // Update min_idx if a smaller
-                // element is found
+               
                 min_idx = j;
             }
         }
 
-        // Move minimum element to its
-        // correct position
+        
         std::swap(arr[i], arr[min_idx]);
     }
 }

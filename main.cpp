@@ -10,14 +10,14 @@
 
 bool isValidAlgorithm(const std::string &algorithm)
 {
-    SORT_ALGORITHMS sort_algorithm = algorithmMap.at(algorithm);
-    return sort_algorithm != algorithmMap.end()->second;
+    auto sort_algorithm = algorithmMap.find(algorithm);
+    return sort_algorithm != algorithmMap.end();
 }
 
 bool isValidInputOrder(const std::string &input_order)
 {
-    DATA_TYPE data_type = dataTypeMap.at(input_order);
-    return data_type != dataTypeMap.end()->second;
+    auto data_type = dataTypeMap.find(input_order);
+    return data_type != dataTypeMap.end();
 }
 
 bool isValidGivenInput(const std::string &given_input)
@@ -34,8 +34,8 @@ bool isValidGivenInput(const std::string &given_input)
 
 bool isValidOutputParam(const std::string &output_parameter)
 {
-    OUTPUT_PARAM output_param = outputParamMap.at(output_parameter);
-    return output_param != outputParamMap.end()->second;
+    auto output_param = outputParamMap.find(output_parameter);
+    return output_param != outputParamMap.end();
 }
 
 int main(int argc, char *argv[])

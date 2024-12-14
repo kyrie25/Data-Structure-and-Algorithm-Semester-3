@@ -37,3 +37,5 @@
 !.vscode/tasks.json
 main
 sort
+
+*.txt

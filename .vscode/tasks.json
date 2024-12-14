@@ -3,9 +3,18 @@
 		{
 			"type": "shell",
 			"label": "C/C++: g++.exe build active file",
-			"command": "${workspaceFolder}/build.ps1",
-			"args": ["${fileBasenameNoExtension}.exe"],
-			"group": "build",
+			"linux": {
+				"command": "g++",
+				"args": ["-fdiagnostics-color=always", "-g", "${file}", "${workspaceFolder}/src/**/*.cpp", "-o", "${fileBasenameNoExtension}.out"]
+			},
+			"windows": {
+				"command": "${workspaceFolder}/build.ps1",
+				"args": ["${fileBasenameNoExtension}.exe"]
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 			"problemMatcher": ["$gcc"],
 			"detail": "Task to build all C++ files."
 		}

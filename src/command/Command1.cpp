@@ -6,6 +6,8 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
 
     std::ifstream input(given_input);
     std::vector<int> arr;
+    int arrSize;
+    input >> arrSize;
     int val;
     while (input >> val)
     {
@@ -23,7 +25,7 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
     std::cout << "ALGORITHM MODE\n";
     std::cout << "Algorithm: " << algorithm << '\n';
     std::cout << "Input file: " << given_input << '\n';
-    std::cout << "Input size: " << arr.size() << '\n';
+    std::cout << "Input size: " << arrSize << '\n';
     std::cout << "---------------------------\n";
     if (outputParam == TIME || outputParam == BOTH)
         std::cout << "Running time: " << std::to_string(runTime.count()) << " ms" << '\n';

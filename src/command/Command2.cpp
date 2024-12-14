@@ -30,7 +30,7 @@ void Command2(const std::string &algorithm, const int &input_size,
 
     // write sorted data to output.txt
     outFile.open("output.txt");
-    outFile << arr.size() << '\n';
+    outFile << arr.size() << ' ';
     for (int x : arr)
     {
         outFile << x << ' ';
@@ -45,17 +45,17 @@ void Command2(const std::string &algorithm, const int &input_size,
               << "---------------------------\n";
 
     std::cout << "Running time (if required): ";
-    if (outputParam == TIME || outputParam == BOTH) 
+    if (outputParam == TIME || outputParam == BOTH)
     {
         std::cout << std::to_string(runTime.count()) << " ms" << '\n';
-    } 
-    else 
+    }
+    else
     {
         std::cout << " " << '\n';
     }
 
     std::cout << "Comparisions (if required): ";
-    if(outputParam == COMPARISIONS || outputParam == BOTH)
+    if (outputParam == COMPARISIONS || outputParam == BOTH)
     {
         std::cout << std::to_string(countComparisons) << '\n';
     }

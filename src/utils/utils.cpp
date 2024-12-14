@@ -18,7 +18,7 @@ void GenerateRandomData(std::vector<int> &arr)
 
 	for (int i = 0; i < n; i++)
 	{
-		arr.push_back(rand() % n);
+		arr[i] = rand() % n;
 	}
 }
 
@@ -28,7 +28,7 @@ void GenerateSortedData(std::vector<int> &arr)
 	int n = arr.size();
 	for (int i = 0; i < n; i++)
 	{
-		arr.push_back(i);
+		arr[i] = i;
 	}
 }
 
@@ -38,7 +38,7 @@ void GenerateReverseData(std::vector<int> &arr)
 	int n = arr.size();
 	for (int i = n; i > 0; i--)
 	{
-		arr.push_back(i);
+		arr[i] = i;
 	}
 }
 
@@ -48,7 +48,7 @@ void GenerateNearlySortedData(std::vector<int> &arr)
 	int n = arr.size();
 	for (int i = 0; i < n; i++)
 	{
-		arr.push_back(i);
+		arr[i] = i;
 	}
 	srand((unsigned int)time(NULL));
 	for (int i = 0; i < 10; i++)

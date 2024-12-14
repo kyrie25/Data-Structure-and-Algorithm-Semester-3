@@ -31,6 +31,9 @@
 *.out
 *.app
 
-.vscode
+.vs
+# Everything inside .vscode except tasks.json
+.vscode/*
+!.vscode/tasks.json
 main
 sort

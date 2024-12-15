@@ -2,8 +2,8 @@
 
 void bubbleSort(std::vector<int> &arr, int &countComparisons)
 {
-    int n = arr.size() - 1;
-    for (int i = 0; ++countComparisons && i < n; i++)
+    int n = arr.size();
+    for (int i = 0; ++countComparisons && i < n - 1; i++)
     {
         for (int j = 0; ++countComparisons && j < n - i - 1; j++)
         {

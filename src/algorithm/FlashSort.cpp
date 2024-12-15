@@ -4,7 +4,7 @@
 void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
     int n = arr.size();
-    int min = arr[0], max = arr[0];
+    long long min = arr[0], max = arr[0];
 
     for (int i = 0; ++countComparison && i < n; i++)
     {
@@ -17,7 +17,7 @@ void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
     if (++countComparison && min == max)
         return;
 
-    int m = 0.45 * n;
+    long long m = 0.45 * n;
     std::vector<int> l(m, 0);
 
     for (int i = 0; ++countComparison && i < n; i++)

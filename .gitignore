@@ -50,6 +50,7 @@ sort
 *.fdb_latexmk
 *.synctex.gz
 *.toc
+*.synctex
 
 # LaTeX output files
 *.pdf

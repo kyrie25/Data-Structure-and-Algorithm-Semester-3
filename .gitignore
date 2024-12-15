@@ -39,3 +39,17 @@ main
 sort
 
 *.txt
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.fls
+*.log
+*.out
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+
+# LaTeX output files
+*.pdf

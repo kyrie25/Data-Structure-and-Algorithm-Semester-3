@@ -26,7 +26,7 @@ void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
         l[k]++;
     }
 
-    for (int i = 0; ++countComparison && i < m; i++)
+    for (int i = 1; ++countComparison && i < m; i++)
     {
         l[i] += l[i - 1];
     }

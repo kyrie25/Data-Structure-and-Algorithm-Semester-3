@@ -36,9 +36,9 @@ void GenerateSortedData(std::vector<int> &arr)
 void GenerateReverseData(std::vector<int> &arr)
 {
 	int n = arr.size();
-	for (int i = n; i > 0; i--)
+	for (int i = 0; i < n; i++)
 	{
-		arr[i] = i;
+		arr[i] = n - i;
 	}
 }
 

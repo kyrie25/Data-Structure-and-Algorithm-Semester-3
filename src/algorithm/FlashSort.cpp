@@ -22,7 +22,7 @@ void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
 
     for (int i = 0; ++countComparison && i < n; i++)
     {
-        int k = floor((m - 1) * (arr[i] - min) * 1.0 / (max - min));
+        long long k = floor((m - 1) * (arr[i] - min) * 1.0 / (max - min));
         l[k]++;
     }
 
@@ -34,7 +34,7 @@ void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
     int move = 0;
     int flash = 0;
     int hold = 0;
-    int k = 0;
+    long long k = 0;
     int i = 0;
 
     while (++countComparison && move < n - 1)

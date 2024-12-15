@@ -1,23 +1,23 @@
 #include "algorithm.h"
 
 // choose pivot as middle element
-int partition(std::vector<int> &arr, int left, int right, int &countComparisions)
+int partition(std::vector<int> &arr, int left, int right, unsigned long long &countComparison)
 {
     int pivot_value = arr[left + (right - left) / 2];
     int i = left, j = right;
-    while (++countComparisions && i <= j)
+    while (++countComparison && i <= j)
     {
-        while (++countComparisions && arr[i] < pivot_value)
+        while (++countComparison && arr[i] < pivot_value)
         {
             i++;
         }
 
-        while (++countComparisions && arr[j] > pivot_value)
+        while (++countComparison && arr[j] > pivot_value)
         {
             j--;
         }
 
-        if (++countComparisions && i <= j)
+        if (++countComparison && i <= j)
         {
             std::swap(arr[i], arr[j]);
             i++;
@@ -27,20 +27,20 @@ int partition(std::vector<int> &arr, int left, int right, int &countComparisions
     return i;
 }
 
-void quickSortRecursive(std::vector<int> &arr, int left, int right, int &countComparisions)
+void quickSortRecursive(std::vector<int> &arr, int left, int right, unsigned long long &countComparison)
 {
-    if (++countComparisions && left >= right)
+    if (++countComparison && left >= right)
     {
         return;
     }
 
-    int pivot = partition(arr, left, right, countComparisions);
+    int pivot = partition(arr, left, right, countComparison);
 
-    quickSortRecursive(arr, left, pivot - 1, countComparisions);
-    quickSortRecursive(arr, pivot, right, countComparisions);
+    quickSortRecursive(arr, left, pivot - 1, countComparison);
+    quickSortRecursive(arr, pivot, right, countComparison);
 }
 
-void quickSort(std::vector<int> &arr, int &countComparisions)
+void quickSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
-    quickSortRecursive(arr, 0, arr.size() - 1, countComparisions);
+    quickSortRecursive(arr, 0, arr.size() - 1, countComparison);
 }

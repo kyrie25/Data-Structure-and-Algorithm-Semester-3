@@ -5,19 +5,21 @@
 #include <fstream>
 #include <vector>
 
-void Command4(std::string algorithm1, std::string algorithm2, std::string inputFile) {
+void Command4(std::string algorithm1, std::string algorithm2, std::string inputFile)
+{
 
     std::ifstream input(inputFile);
     std::vector<int> arr;
     int val;
-    while (input >> val) {
+    while (input >> val)
+    {
         arr.push_back(val);
     }
-    
+
     std::vector<int> arr1 = arr;
     std::vector<int> arr2 = arr;
-    int countComparison1 = 0;
-    int countComparison2 = 0;
+    unsigned long long countComparison1 = 0;
+    unsigned long long countComparison2 = 0;
 
     auto start = std::chrono::high_resolution_clock::now();
     algorithmFunctionMap.at(algorithmMap.at(algorithm1))(arr1, countComparison1);
@@ -37,5 +39,4 @@ void Command4(std::string algorithm1, std::string algorithm2, std::string inputF
     std::cout << "-------------------------\n";
     std::cout << "Running time: " << runTime1.count() << " ms | " << runTime2.count() << " ms" << '\n';
     std::cout << "Comparisons: " << countComparison1 << " | " << countComparison2 << '\n';
-
 }

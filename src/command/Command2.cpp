@@ -3,7 +3,7 @@
 void Command2(const std::string &algorithm, const int &input_size,
               const std::string &input_order, const std::string &output_param)
 {
-    int countComparisons = 0;
+    unsigned long long countComparisons = 0;
 
     DATA_TYPE dataType = dataTypeMap.at(input_order);
 

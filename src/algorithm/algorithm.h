@@ -49,35 +49,32 @@ const std::map<std::string, SORT_ALGORITHMS> algorithmMap = {
     {"quick-sort", QUICK_SORT},
     {"counting-sort", COUNTING_SORT},
     {"radix-sort", RADIX_SORT},
-    {"flash-sort", FLASH_SORT}
-};
+    {"flash-sort", FLASH_SORT}};
 
 const std::map<std::string, DATA_TYPE> dataTypeMap = {
     {"-rand", RANDOM},
     {"-nsorted", NEARLY_SORTED},
     {"-sorted", SORTED},
-    {"-rev", REVERSE}
-};
+    {"-rev", REVERSE}};
 
 const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
     {"-time", TIME},
     {"-comp", COMPARISIONS},
-    {"-both", BOTH}
-};
+    {"-both", BOTH}};
 
-void mergeSort(std::vector<int> &arr, int &countComparison);
-void countingSort(std::vector<int> &arr, int &countComparison);
-void shakerSort(std::vector<int> &arr, int &countComparison);
-void shellSort(std::vector<int> &arr, int &countComparison);
-void heapSort(std::vector<int> &arr, int &countComparison);
-void flashSort(std::vector<int> &arr, int &countComparison);
-void quickSort(std::vector<int> &arr, int &countComparison);
-void bubbleSort(std::vector<int> &arr, int &countComparison);
-void insertionSort(std::vector<int> &arr, int &countComparison);
-void radixSort(std::vector<int> &arr, int &countComparison);
-void selectionSort(std::vector<int> &arr, int &countComparison);
+void mergeSort(std::vector<int> &arr, unsigned long long &countComparison);
+void countingSort(std::vector<int> &arr, unsigned long long &countComparison);
+void shakerSort(std::vector<int> &arr, unsigned long long &countComparison);
+void shellSort(std::vector<int> &arr, unsigned long long &countComparison);
+void heapSort(std::vector<int> &arr, unsigned long long &countComparison);
+void flashSort(std::vector<int> &arr, unsigned long long &countComparison);
+void quickSort(std::vector<int> &arr, unsigned long long &countComparison);
+void bubbleSort(std::vector<int> &arr, unsigned long long &countComparison);
+void insertionSort(std::vector<int> &arr, unsigned long long &countComparison);
+void radixSort(std::vector<int> &arr, unsigned long long &countComparison);
+void selectionSort(std::vector<int> &arr, unsigned long long &countComparison);
 
-const std::map<SORT_ALGORITHMS, std::function<void(std::vector<int> &, int &)>> algorithmFunctionMap = {
+const std::map<SORT_ALGORITHMS, std::function<void(std::vector<int> &, unsigned long long &)>> algorithmFunctionMap = {
     {SELECTION_SORT, selectionSort},
     {INSERTION_SORT, insertionSort},
     {BUBBLE_SORT, bubbleSort},
@@ -88,8 +85,7 @@ const std::map<SORT_ALGORITHMS, std::function<void(std::vector<int> &, int &)>> 
     {QUICK_SORT, quickSort},
     {COUNTING_SORT, countingSort},
     {RADIX_SORT, radixSort},
-    {FLASH_SORT, flashSort}
-};
+    {FLASH_SORT, flashSort}};
 
 const std::map<SORT_ALGORITHMS, std::string> algorithmNameMap = {
     {SELECTION_SORT, "Selection Sort"},
@@ -102,7 +98,6 @@ const std::map<SORT_ALGORITHMS, std::string> algorithmNameMap = {
     {QUICK_SORT, "Quick Sort"},
     {COUNTING_SORT, "Counting Sort"},
     {RADIX_SORT, "Radix Sort"},
-    {FLASH_SORT, "Flash Sort"}
-};
+    {FLASH_SORT, "Flash Sort"}};
 
 #endif // !HEADER_H

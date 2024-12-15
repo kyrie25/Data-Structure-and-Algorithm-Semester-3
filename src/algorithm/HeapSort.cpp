@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void heapify(std::vector<int>& arr, int n, int i, int &countComparison)
+void heapify(std::vector<int> &arr, int n, int i, unsigned long long &countComparison)
 {
     int largest = i;
     int left = 2 * i + 1;
@@ -19,7 +19,7 @@ void heapify(std::vector<int>& arr, int n, int i, int &countComparison)
     }
 }
 
-void heapSort(std::vector<int> &arr, int &countComparison)
+void heapSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
     int n = arr.size();
 

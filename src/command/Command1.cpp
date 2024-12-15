@@ -2,7 +2,7 @@
 
 void Command1(const std::string &algorithm, const std::string &given_input, const std::string &output_param)
 {
-    int countComparisons = 0;
+    unsigned long long countComparisons = 0;
 
     std::ifstream input(given_input);
     std::vector<int> arr;

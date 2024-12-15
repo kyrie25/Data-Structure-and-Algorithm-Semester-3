@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void countingSort(std::vector<int> &arr, int &countComparison)
+void countingSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
     int n = arr.size();
     int max = arr[0];

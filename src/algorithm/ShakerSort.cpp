@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void shakerSort(std::vector<int> &arr, int &countComparison)
+void shakerSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
     int n = arr.size();
 

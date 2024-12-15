@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void shellSort(std::vector<int> &arr, int &countComparison)
+void shellSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
     int n = arr.size();
 
@@ -9,7 +9,7 @@ void shellSort(std::vector<int> &arr, int &countComparison)
         for (int i = gap; ++countComparison && i < n; i++)
         {
             int temp = arr[i];
-            
+
             int j;
             for (j = i; ++countComparison && j >= gap && ++countComparison && arr[j - gap] > temp; j -= gap)
             {
@@ -19,4 +19,3 @@ void shellSort(std::vector<int> &arr, int &countComparison)
         }
     }
 }
-

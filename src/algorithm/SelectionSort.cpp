@@ -1,6 +1,6 @@
 #include "algorithm.h"
 
-void selectionSort(std::vector<int> &arr, int &countComparison)
+void selectionSort(std::vector<int> &arr, unsigned long long &countComparison)
 {
     int n = arr.size();
 

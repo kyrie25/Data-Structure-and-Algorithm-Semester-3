@@ -2,7 +2,7 @@
 
 void Command3(const std::string &algorithm, const int &input_size, const std::string &output_param)
 {
-    int countComparisons = 0;
+    unsigned long long countComparisons = 0;
 
     std::vector<int> arr0;
     arr0.resize(input_size);
@@ -31,7 +31,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     if (output1.is_open())
     {
         output1 << input_size << '\n';
-        for(int i = 0; i < input_size; i++)
+        for (int i = 0; i < input_size; i++)
         {
             output1 << arr0[i] << ' ';
         }
@@ -47,7 +47,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     if (output2.is_open())
     {
         output2 << input_size << '\n';
-        for(int i = 0; i < input_size; i++)
+        for (int i = 0; i < input_size; i++)
         {
             output2 << arr1[i] << ' ';
         }
@@ -63,7 +63,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     if (output3.is_open())
     {
         output3 << input_size << '\n';
-        for(int i = 0; i < input_size; i++)
+        for (int i = 0; i < input_size; i++)
         {
             output3 << arr2[i] << ' ';
         }
@@ -79,7 +79,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     if (output4.is_open())
     {
         output4 << input_size << '\n';
-        for(int i = 0; i < input_size; i++)
+        for (int i = 0; i < input_size; i++)
         {
             output4 << arr3[i] << ' ';
         }
@@ -95,7 +95,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     std::cout << "Algorithm: " << algorithm << '\n';
     std::cout << "Input size: " << input_size << '\n';
 
-    for(int i = 0; i < 4; i++)
+    for (int i = 0; i < 4; i++)
     {
         auto start = std::chrono::high_resolution_clock::now();
         algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr[i], countComparisons);
@@ -121,21 +121,21 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         {
             std::cout << "Input order: Nearly Sorted\n";
         }
-    
+
         std::cout << "-------------------------\n";
 
         std::cout << "Running time (if required): ";
-        if (outputParam == TIME || outputParam == BOTH) 
+        if (outputParam == TIME || outputParam == BOTH)
         {
             std::cout << std::to_string(runTime.count()) << " ms" << '\n';
-        } 
-        else 
+        }
+        else
         {
             std::cout << " " << '\n';
         }
 
         std::cout << "Comparisions (if required): ";
-        if(outputParam == COMPARISIONS || outputParam == BOTH)
+        if (outputParam == COMPARISIONS || outputParam == BOTH)
         {
             std::cout << std::to_string(countComparisons) << '\n';
         }
@@ -143,5 +143,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         {
             std::cout << " " << '\n';
         }
+
+        std::cout << "\n";
     }
 }

@@ -10,6 +10,8 @@ void Command4(std::string algorithm1, std::string algorithm2, std::string inputF
 
     std::ifstream input(inputFile);
     std::vector<int> arr;
+    int arrSize;
+    input >> arrSize;
     int val;
     while (input >> val)
     {

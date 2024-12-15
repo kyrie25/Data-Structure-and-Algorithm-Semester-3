@@ -14,7 +14,7 @@ void Command2(const std::string &algorithm, const int &input_size,
     // write generated data to input.txt
     std::ofstream outFile;
     outFile.open("input.txt");
-    outFile << arr.size() << ' ';
+    outFile << arr.size() << '\n';
     for (int x : arr)
     {
         outFile << x << ' ';
@@ -30,7 +30,7 @@ void Command2(const std::string &algorithm, const int &input_size,
 
     // write sorted data to output.txt
     outFile.open("output.txt");
-    outFile << arr.size() << ' ';
+    outFile << arr.size() << '\n';
     for (int x : arr)
     {
         outFile << x << ' ';

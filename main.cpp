@@ -174,6 +174,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    std::cout << "Successfully.\n";
+    std::cout << "Success!\n";
     return 0;
 }

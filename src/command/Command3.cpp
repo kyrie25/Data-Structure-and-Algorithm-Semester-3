@@ -27,7 +27,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     arr.push_back(arr2);
     arr.push_back(arr3);
 
-    std::ofstream output1("input1.txt");
+    std::ofstream output1("input_1.txt");
     if (output1.is_open())
     {
         output1 << input_size << '\n';
@@ -39,11 +39,11 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     }
     else
     {
-        std::cerr << "Unable to open file input1.txt\n";
+        std::cerr << "Unable to open file input_1.txt\n";
         exit(1);
     }
 
-    std::ofstream output2("input2.txt");
+    std::ofstream output2("input_2.txt");
     if (output2.is_open())
     {
         output2 << input_size << '\n';
@@ -55,11 +55,11 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     }
     else
     {
-        std::cerr << "Unable to open file input2.txt\n";
+        std::cerr << "Unable to open file input_2.txt\n";
         exit(1);
     }
 
-    std::ofstream output3("input3.txt");
+    std::ofstream output3("input_3.txt");
     if (output3.is_open())
     {
         output3 << input_size << '\n';
@@ -71,11 +71,11 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     }
     else
     {
-        std::cerr << "Unable to open file input3.txt\n";
+        std::cerr << "Unable to open file input_3.txt\n";
         exit(1);
     }
 
-    std::ofstream output4("input4.txt");
+    std::ofstream output4("input_4.txt");
     if (output4.is_open())
     {
         output4 << input_size << '\n';
@@ -87,7 +87,7 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
     }
     else
     {
-        std::cerr << "Unable to open file input4.txt\n";
+        std::cerr << "Unable to open file input_4.txt\n";
         exit(1);
     }
 

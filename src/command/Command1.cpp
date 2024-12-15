@@ -18,6 +18,15 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
     algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr, countComparisons);
     auto end = std::chrono::high_resolution_clock::now();
 
+    std::ofstream outFile;
+    outFile.open("output.txt");
+    outFile << arrSize << '\n';
+    for (int x : arr)
+    {
+        outFile << x << ' ';
+    }
+    outFile.close();
+
     auto runTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);

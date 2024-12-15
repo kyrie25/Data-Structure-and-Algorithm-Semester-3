@@ -26,9 +26,9 @@ enum SORT_ALGORITHMS
 enum DATA_TYPE
 {
     RANDOM,
-    NEARLY_SORTED,
     SORTED,
-    REVERSE
+    REVERSE,
+    NEARLY_SORTED
 };
 
 enum OUTPUT_PARAM
@@ -53,9 +53,9 @@ const std::map<std::string, SORT_ALGORITHMS> algorithmMap = {
 
 const std::map<std::string, DATA_TYPE> dataTypeMap = {
     {"-rand", RANDOM},
-    {"-nsorted", NEARLY_SORTED},
     {"-sorted", SORTED},
-    {"-rev", REVERSE}};
+    {"-rev", REVERSE},
+    {"-nsorted", NEARLY_SORTED}};
 
 const std::map<std::string, OUTPUT_PARAM> outputParamMap = {
     {"-time", TIME},
@@ -102,8 +102,8 @@ const std::map<SORT_ALGORITHMS, std::string> algorithmNameMap = {
 
 const std::map<DATA_TYPE, std::string> dataTypeNameMap = {
     {RANDOM, "Random"},
-    {NEARLY_SORTED, "Nearly Sorted"},
     {SORTED, "Sorted"},
-    {REVERSE, "Reverse"}};
+    {REVERSE, "Reverse"},
+    {NEARLY_SORTED, "Nearly Sorted"}};
 
 #endif // !HEADER_H

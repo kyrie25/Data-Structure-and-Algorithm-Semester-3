@@ -42,8 +42,11 @@ void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
         while (++countComparison && i > l[k] - 1)
         {
             i++;
+            if (++countComparison && i >= n) break;
             k = floor((m - 1) * (arr[i] - min) / (max - min));
         }
+
+        if (++countComparison && i >= n) break;
 
         flash = arr[i];
         if (++countComparison && k < 0)
@@ -52,6 +55,7 @@ void flashSort(std::vector<int> &arr, unsigned long long &countComparison)
         while (++countComparison && i != l[k])
         {
             k = floor((m - 1) * (flash - min) / (max - min));
+            if ((++countComparison && k < 0) || (++countComparison && k >= m)) break;
             --l[k];
             hold = arr[l[k]];
             arr[l[k]] = flash;

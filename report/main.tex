@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+
+\usepackage{hcmus-report-template}
+% \usepackage{IEEEtran}
+% \documentclass[conference]{IEEEtran}
+
+% Disable indentation on new paragraphs
+\setlength{\parindent}{0pt}
+
+% Line spacing 1.5
+\renewcommand{\baselinestretch}{1.5}
+
+% Optional: graphic path
+% \graphicspath{PATH_TO_GRAPHIC_FOLDER}
+
+% To use Times font family, uncomment this row
+% \usepackage{mathptmx}
+
+% To use roman section / subsection, uncomment these rows
+% \renewcommand{\thesection}{\Roman{section}}
+% \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+
+% Define course name, report name and report title.
+\newcommand{\coursename}{Cấu trúc dữ liệu và giải thuật}
+\newcommand{\reportname}{Các thuật toán sắp xếp}
+\newcommand{\reporttitle}{Báo cáo đồ án}
+
+\newcommand{\studentname}{
+\begin{tabular}{l l} % Two columns: left-aligned
+Nguyễn Minh Hiếu & 23120124 \\
+Đỗ Tiến Đạt & 23120119 \\
+Phạm Quốc Nam Anh & 23120111 \\
+Nguyễn Xuân Duy & 23120121 \\
+Thái Khắc Anh Tuấn & 23120112 \\
+\end{tabular}
+                        }
+\newcommand{\teachername}{Trần Hoàng Quân}
+
+% Header
+\lhead{\reportname}
+\rhead{
+Trường Đại học Khoa học Tự nhiên - ĐHQG HCM\\
+\coursename
+}
+
+% Footer
+% \newcommand{\leftfooter}{\LaTeX\ by \href{https://github.com/trhgquan}{Quan, Tran Hoang}}
+% \lfoot{\leftfooter}
+
+% ============ DOCUMENT ============
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+% \pagenumbering{roman}
+\input{content/title.tex}
+
+\tableofcontents
+\pagebreak
+% \listoftables
+% \pagebreak
+% \listoffigures
+% \pagebreak
+
+
+\input{content/gioi_thieu}
+\input{content/sort}
+\input{content/ket_qua_thuc_nghiem}
+\input{content/luu_y}
+
+% References
+\input{ref/ref.tex}
+
+
+% Appendix
+% \appendix
+% Add \cleardoublepage to move appendices to next page.
+% \input{appendix/appendix.tex}
+\end{document}

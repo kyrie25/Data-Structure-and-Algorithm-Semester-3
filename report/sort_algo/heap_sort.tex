@@ -1,0 +1,40 @@
+\subsubsection{Ý tưởng}
+Heap Sort là thuật toán sắp xếp dựa trên cấu trúc dữ liệu Binary Heap, trong đó phần tử lớn nhất (hoặc nhỏ nhất) được đưa về gốc của heap (max heap hoặc min heap). Sau đó, phần tử này được hoán đổi với phần tử cuối mảng và loại bỏ khỏi heap. Quá trình xây dựng lại heap và hoán đổi được lặp lại cho đến khi mảng được sắp xếp.
+
+\subsubsection{Mã giả}
+\begin{algorithm}[H]
+\caption{Heap Sort}
+\begin{algorithmic}[1]
+\Procedure{HeapSort}{$arr, n$}
+    \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử
+    \State \textbf{Output:} Mảng $arr$ được sắp xếp
+    
+    \For {$i \gets n /2 -1 $ \textbf{downto} $0$}
+        \State \Call {Heapify}{$arr, n, i$}
+    \EndFor
+    
+    \For {$i \gets n - 1$ \textbf{downto} $0$}
+        \State \textbf{swap} $arr[0]$ \textbf{and} $arr[i]$
+        \State \Call {heapify}{$arr, i, 0$}
+    \EndFor
+\EndProcedure
+\Procedure{Heapify}{$arr, n, i$}
+    \State $largest \gets i$
+    \State $left \gets 2\times i + 1$
+    \State $right \gets 2\times i + 2$
+    \If {$left < n$ \textbf{and} $arr[largest] < arr[left]$}
+        \State $largest \gets left$
+    \EndIf
+    \If {$right < n$ \textbf{and} $arr[largest] < arr[right]$}
+        \State $largest \gets right$
+    \EndIf
+    \If {$largest \ne i$}
+        \State \textbf{swap} $arr[i]$ \textbf{and} $arr[largest]$
+        \State \Call {heapify}{$arr, n, largest$}
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Ví dụ}
+abcd

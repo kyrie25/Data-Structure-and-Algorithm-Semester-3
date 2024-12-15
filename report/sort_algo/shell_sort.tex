@@ -1,0 +1,38 @@
+\subsubsection{Ý tưởng}
+Shell Sort là thuật toán sắp xếp so sánh tại chỗ, trong đó chung ta chia đầu vào thành các mảng con nhỏ hơn và thực hiện sắp xếp chèn trên mỗi mảng con. Ý tưởng chính là cho phép trao đổi các phần tử cách xa nhau, do đó giảm tổng số lần hoán đổi cần thiết.
+
+\subsubsection{Mã giả}
+\begin{algorithm}[H]
+\caption{ShellSort}
+\begin{algorithmic}[1]
+\Procedure{ShellSort}{$arr, n$}
+    \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử
+    \State \textbf{Output:} Mảng $arr$ được sắp xếp
+    \State $gap \gets n/2$
+    \While {$gap > 0$}
+        \For {$i \gets gap$ \textbf{to} $n - 1$} 
+            \State $temp \gets arr[i]$
+            \State $j \gets i$
+            \While{$j \geq gap$ \textbf{and} $arr[j - gap] > temp$}
+                \State $arr[j] \gets arr[j - gap]$
+                \State $j \gets j - gap$
+            \EndWhile
+            \State $arr[j] \gets temp$
+        \EndFor
+        \State $gap \gets gap / 2$
+    \EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Độ phức tạp}
+\begin{itemize}
+    \item[\textbf{--}]Độ phức tạp về thời gian:
+        \begin{itemize}
+            \item[$\bullet$] \textbf{Best Case:} $O(n \cdot \log{n})$
+            \item[$\bullet$] \textbf{Average Case:}  $O(n^2)$
+            \item[$\bullet$] \textbf{Worst Case:}  $O(n^2)$
+        \end{itemize}
+    \item[\textbf{--}]Độ phức tạp về không gian: $O(n)$ 
+    \item[\textbf{--}]Tính ổn định: Không ổn định
+\end{itemize}

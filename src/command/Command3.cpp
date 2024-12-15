@@ -91,8 +91,10 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
         exit(1);
     }
 
+    std::string algorithmName = algorithmNameMap.at(algorithmMap.at(algorithm));
+
     std::cout << "ALGORITHM MODE\n";
-    std::cout << "Algorithm: " << algorithm << '\n';
+    std::cout << "Algorithm: " << algorithmName << '\n';
     std::cout << "Input size: " << input_size << '\n';
 
     for (int i = 0; i < 4; i++)
@@ -105,23 +107,9 @@ void Command3(const std::string &algorithm, const int &input_size, const std::st
 
         OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
-        if (i == 0)
-        {
-            std::cout << "Input order: Randomize\n";
-        }
-        else if (i == 1)
-        {
-            std::cout << "Input order: Sorted\n";
-        }
-        else if (i == 2)
-        {
-            std::cout << "Input order: Reversed\n";
-        }
-        else
-        {
-            std::cout << "Input order: Nearly Sorted\n";
-        }
+        std::string dataTypeName = dataTypeNameMap.at((DATA_TYPE)i);
 
+        std::cout << "Input order: " << dataTypeName << '\n';
         std::cout << "-------------------------\n";
 
         std::cout << "Running time (if required): ";

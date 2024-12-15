@@ -33,9 +33,13 @@ void Command4(std::string algorithm1, std::string algorithm2, std::string inputF
 
     auto runTime2 = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
+    std::string algorithmName1 = algorithmNameMap.at(algorithmMap.at(algorithm1));
+    std::string algorithmName2 = algorithmNameMap.at(algorithmMap.at(algorithm2));
+
     std::cout << "COMPARE MODE\n";
-    std::cout << "Algorithm: " << algorithm1 << " | " << algorithm2 << '\n';
+    std::cout << "Algorithm: " << algorithmName1 << " | " << algorithmName2 << '\n';
     std::cout << "Input file: " << inputFile << '\n';
+    std::cout << "Input size: " << arr.size() << '\n';
     std::cout << "-------------------------\n";
     std::cout << "Running time: " << runTime1.count() << " ms | " << runTime2.count() << " ms" << '\n';
     std::cout << "Comparisons: " << countComparison1 << " | " << countComparison2 << '\n';

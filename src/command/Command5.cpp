@@ -22,10 +22,14 @@ void Command5(const std::string &algorithm1, const std::string &algorithm2, cons
     auto end2 = std::chrono::high_resolution_clock::now();
     auto runTime2 = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - start2);
 
+    std::string algorithmName1 = algorithmNameMap.at(algorithmMap.at(algorithm1));
+    std::string algorithmName2 = algorithmNameMap.at(algorithmMap.at(algorithm2));
+    std::string dataTypeName = dataTypeNameMap.at(dataType);
+
     std::cout << "COMPARE MODE\n";
-    std::cout << "Algorithm: " << algorithm1 << " | " << algorithm2 << '\n';
+    std::cout << "Algorithm: " << algorithmName1 << " | " << algorithmName2 << '\n';
     std::cout << "Input size: " << input_size << '\n';
-    std::cout << "Input order: " << input_order << '\n';
+    std::cout << "Input order: " << dataTypeName << '\n';
     std::cout << "---------------------------\n";
     std::cout << "Running time: " << runTime1.count() << " ms | " << runTime2.count() << " ms" << '\n';
     std::cout << "Comparisons: " << countComparisons1 << " | " << countComparisons2 << '\n';

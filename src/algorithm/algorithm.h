@@ -100,4 +100,10 @@ const std::map<SORT_ALGORITHMS, std::string> algorithmNameMap = {
     {RADIX_SORT, "Radix Sort"},
     {FLASH_SORT, "Flash Sort"}};
 
+const std::map<DATA_TYPE, std::string> dataTypeNameMap = {
+    {RANDOM, "Random"},
+    {NEARLY_SORTED, "Nearly Sorted"},
+    {SORTED, "Sorted"},
+    {REVERSE, "Reverse"}};
+
 #endif // !HEADER_H

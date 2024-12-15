@@ -38,10 +38,13 @@ void Command2(const std::string &algorithm, const int &input_size,
     outFile.close();
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
+    std::string algorithmName = algorithmNameMap.at(algorithmMap.at(algorithm));
+    std::string dataTypeName = dataTypeNameMap.at(dataType);
+
     std::cout << "ALGORITHM MODE\n"
-              << "Algorithm: " << algorithm << '\n'
+              << "Algorithm: " << algorithmName << '\n'
               << "Input size: " << input_size << '\n'
-              << "Input order: " << input_order << '\n'
+              << "Input order: " << dataTypeName << '\n'
               << "---------------------------\n";
 
     std::cout << "Running time (if required): ";

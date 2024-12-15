@@ -22,8 +22,10 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
 
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
+    std::string algorithmName = algorithmNameMap.at(algorithmMap.at(algorithm));
+
     std::cout << "ALGORITHM MODE\n";
-    std::cout << "Algorithm: " << algorithm << '\n';
+    std::cout << "Algorithm: " << algorithmName << '\n';
     std::cout << "Input file: " << given_input << '\n';
     std::cout << "Input size: " << arrSize << '\n';
     std::cout << "---------------------------\n";

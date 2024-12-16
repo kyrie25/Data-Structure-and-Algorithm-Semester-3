@@ -50,7 +50,7 @@ void Command2(const std::string &algorithm, const int &input_size,
     std::cout << "Running time (if required): ";
     if (outputParam == TIME || outputParam == BOTH)
     {
-        std::cout << std::to_string(runTime.count()) << " ms" << '\n';
+        std::cout << runTime.count() << " ms" << '\n';
     }
     else
     {

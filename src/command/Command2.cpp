@@ -26,7 +26,7 @@ void Command2(const std::string &algorithm, const int &input_size,
     algorithmFunctionMap.at(algorithmMap.at(algorithm))(arr, countComparisons);
     auto end = std::chrono::high_resolution_clock::now();
 
-    auto runTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::chrono::duration<double> runTime = (end - start) * 1000.0;
 
     // write sorted data to output.txt
     outFile.open("output.txt");
@@ -50,7 +50,7 @@ void Command2(const std::string &algorithm, const int &input_size,
     std::cout << "Running time (if required): ";
     if (outputParam == TIME || outputParam == BOTH)
     {
-        std::cout << setprecision(20) << fixed << runTime.count() << " ms" << '\n';
+        std::cout << std::setprecision(6) << std::fixed << runTime.count() << " ms" << '\n';
     }
     else
     {

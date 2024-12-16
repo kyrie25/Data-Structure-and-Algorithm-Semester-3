@@ -27,7 +27,7 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
     }
     outFile.close();
 
-    auto runTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::chrono::duration<double> runTime = (end - start) * 1000.0;
 
     OUTPUT_PARAM outputParam = outputParamMap.at(output_param);
 
@@ -39,7 +39,7 @@ void Command1(const std::string &algorithm, const std::string &given_input, cons
     std::cout << "Input size: " << arrSize << '\n';
     std::cout << "---------------------------\n";
     if (outputParam == TIME || outputParam == BOTH)
-        std::cout << "Running time: " << std::to_string(runTime.count()) << " ms" << '\n';
+        std::cout << std::setprecision(6) << std::fixed << runTime.count() << " ms" << '\n';
     if (outputParam == COMPARISIONS || outputParam == BOTH)
         std::cout << "Comparisons: " << std::to_string(countComparisons) << '\n';
 }

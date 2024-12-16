@@ -6,4 +6,4 @@ for /r src %%i in (*.cpp) do (
     set files=!files! "%%i"
 )
 
-g++ -Wl,--stack,1000000000 main.cpp %files% -o sort.exe
+g++ -Wl,--stack,1000000000 -O3 main.cpp %files% -o sort.exe

@@ -5,7 +5,7 @@
 ### Linux
 
 ```bash
-g++ -Wl,-z,stack-size=1000000000 -g main.cpp src/**/*.cpp -o sort
+g++ -Wl,-z,stack-size=1000000000 -O3 -g main.cpp src/**/*.cpp -o sort
 ```
 
 ### Windows

@@ -3,30 +3,54 @@
 \subsection{Kết quả}
 
 \subsubsection{Randomized data}
+
 \begin{table}[!ht]
     \centering
-    \caption{Sorting Algorithms Performance}
-    \resizebox{1.1\textwidth}{!}{ % Điều chỉnh chiều rộng của bảng sao cho phù hợp với trang
-    \hspace{-3.35cm}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+    \resizebox{1.1\textwidth}{!}{
+    \hspace{-2cm}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-    \multicolumn{13}{|c|}{Data order: Randomize} \\ \hline
-    Data size         & \multicolumn{2}{c|}{10000}        & \multicolumn{2}{c|}{30000}        & \multicolumn{2}{c|}{50000}        & \multicolumn{2}{c|}{100000}        & \multicolumn{2}{c|}{300000}       & \multicolumn{2}{c|}{500000}        \\ \hline
-    Resulting statics & Running time & Comparisons & Running time & Comparisons & Running time & Comparisons & Running time & Comparisons & Running time & Comparisons & Running time & Comparisons \\ \hline
-    Selection sort    &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Insertion sort    &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Bubble sort       &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Shaker sort       &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Shell sort        &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Heap sort         &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Merge sort        &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Quick sort        &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Counting sort     &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Radix sort        &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    Flash sort        &              &             &              &             &              &             &              &             &              &             &              &             \\ \hline
-    \end{tabular}
-    }
-\end{table}
+    \multicolumn{7}{|c|}{Data order: Randomize} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+    Selection sort             & $32.183573$     & $100009999$ & $306.653455$ & $900029999$ & $844.855146$   & $2500049999$  \\ \hline
+    Insertion sort             &                 &             &              &             &                &               \\ \hline
+    Bubble sort                &                 &             &              &             &                &               \\ \hline
+    Shaker sort                &                 &             &              &             &                &               \\ \hline
+    Shell sort                 &                 &             &              &             &                &               \\ \hline
+    Heap sort                  &                 &             &              &             &                &               \\ \hline
+    Merge sort                 &                 &             &              &             &                &               \\ \hline
+    Quick sort                 &                 &             &              &             &                &               \\ \hline
+    Counting sort              &                 &             &              &             &                &               \\ \hline
+    Radix sort                 &                 &             &              &             &                &               \\ \hline
+    Flash sort                 &                 &             &              &             &                &               \\ \hline
+    \end{tabular}}
+    \end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
+    \resizebox{1.1\textwidth}{!}{
+    \hspace{-2cm}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Randomize} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
+    Selection sort             & $3349.233902$   & $10000099999$ & $31423.715711$ & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
+    Insertion sort             &                 &               &                &               &               &                 \\ \hline
+    Bubble sort                &                 &               &                &               &               &                 \\ \hline
+    Shaker sort                &                 &               &                &               &               &                 \\ \hline
+    Shell sort                 &                 &               &                &               &               &                 \\ \hline
+    Heap sort                  &                 &               &                &               &               &                 \\ \hline
+    Merge sort                 &                 &               &                &               &               &                 \\ \hline
+    Quick sort                 &                 &               &                &               &               &                 \\ \hline
+    Counting sort              &                 &               &                &               &               &                 \\ \hline
+    Radix sort                 &                 &               &                &               &               &                 \\ \hline
+    Flash sort                 &                 &               &                &               &               &                 \\ \hline
+    \end{tabular}}
+    \end{table}
 \subsubsection{Sorted data}
 
 \subsubsection{Reversed data}

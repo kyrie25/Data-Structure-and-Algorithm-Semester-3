@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - main 
-  pull_request:
-    branches:
-      - main
+    paths: 
+      - 'src/**'
+      - 'main.cpp'
 
 jobs:
-  build:
+  build-cpp:
     runs-on: ubuntu-latest
 
     steps:

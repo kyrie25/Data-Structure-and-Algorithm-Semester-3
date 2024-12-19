@@ -1,3 +1,97 @@
 \section{Một số lưu ý}
 
+\subsection{Tổ chức mã nguồn}
+Mã nguồn của chương trình được tổ chức thành các thư mục con như sau:
+
+\begin{forest}
+  for tree={
+    font=\ttfamily,
+    grow'=0,
+    child anchor=west,
+    parent anchor=south,
+    anchor=west,
+    calign=first,
+    edge path={
+      \noexpand\path [draw, \forestoption{edge}]
+      (!u.south west) + (7.5pt,0) |- (.child anchor)\forestoption{edge label};
+    },
+    before typesetting nodes={
+      if n=1
+        {insert before={[,phantom]}}
+        {}
+    },
+    fit=band,
+    before computing xy={l=15pt},
+  }
+[/root
+  [src
+    [algorithm
+      [algorithm.h]
+      [BubbleSort.cpp]
+      [CountingSort.cpp]
+      [\ldots]
+    ]
+    [command
+      [command.h]
+      [Command1.cpp]
+      [Command2.cpp]
+      [\ldots]
+    ]
+    [utils
+      [utils.h]
+      [utils.cpp]
+    ]
+    [include.h]
+  ]
+  [main.cpp]
+  [build.bat]
+  [build.ps1]
+]
+\end{forest}
+
+Trong đó:
+\begin{itemize}
+  \item \texttt{src}: chứa mã nguồn của các thuật toán sắp xếp và các lệnh thực thi.
+  \item \texttt{algorithm}: chứa mã nguồn của các thuật toán sắp xếp.
+  \item \texttt{command}: chứa mã nguồn của các lệnh thực thi.
+  \item \texttt{utils}: chứa mã nguồn của các hàm tiện ích.
+  \item \texttt{include.h}: chứa các \texttt{\#include} cần thiết.
+  \item \texttt{main.cpp}: chứa hàm \texttt{main} của chương trình.
+  \item \texttt{build.bat} và \texttt{build.ps1}: các script để biên dịch chương trình trên Windows.
+\end{itemize}
+
+\subsection{Biên dịch chương trình}
+
+\subsubsection{Điều kiện tiên quyết}
+\begin{itemize}
+  % Hyperlink
+  \item Cài đặt trình biên dịch \href{https://gcc.gnu.org/}{\texttt{g++}}. (phiên bản 9.4.0 trở lên)
+  \item Cài đặt \href{https://git-scm.com/}{\texttt{git}}.
+\end{itemize}
+
+\subsubsection{Biên dịch}
+
+Yêu cầu biên dịch chương trình thay đổi tùy theo hệ điều hành.
+
+Trong môi trường terminal, thực hiện các bước sau:
+\begin{itemize}
+  \item[1.] Clone mã nguồn
+  \begin{minted}{bash}
+  git clone https://github.com/kyrie25/Data-Structure-and-Algorithm-Semester-3.git
+  cd Data-Structure-and-Algorithm-Semester-3
+  \end{minted}
+  \item[2.] Biên dịch chương trình
+  \begin{itemize}
+    \item Trên Windows:
+    Chạy file \texttt{build.bat} hoặc \texttt{build.ps1}. 
+    \item Trên Linux:
+    Chạy lệnh sau:
+    \begin{minted}{bash}
+g++ -Wl,-z,stack-size=1000000000 -O3 -g main.cpp src/**/*.cpp -o sort 
+    \end{minted}
+  \end{itemize}
+\end{itemize}
+
+Chương trình biên dịch sẽ tạo ra file thực thi \texttt{sort}. (hoặc \texttt{sort.exe} trên Windows)
+
 \newpage

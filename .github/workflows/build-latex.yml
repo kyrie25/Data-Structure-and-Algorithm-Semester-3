@@ -8,10 +8,9 @@ on:
       - 'report/**'
 
 jobs:
-  build-cpp:
-    runs-on: ubuntu-latest
   build_latex:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4

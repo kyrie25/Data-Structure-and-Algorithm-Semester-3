@@ -3,7 +3,88 @@
 \subsection{Nội dung}
 Trong lĩnh vực công nghệ thông tin, các thuật toán sắp xếp (sort) đóng vai trò quan trọng trong việc tổ chức và xử lý dữ liệu. Từ việc sắp xếp danh sách học sinh theo điểm số, đến việc sắp xếp các giao dịch tài chính theo thời gian, các thuật toán sắp xếp được áp dụng rộng rãi trong nhiều tình huống thực tế. Việc hiểu rõ và cải tiến các thuật toán này không chỉ giúp nâng cao hiệu suất của hệ thống máy tính mà còn mở ra những ứng dụng mới trong nhiều lĩnh vực khác nhau.
 \subsection{Mục đích}
+Nghiên cứu này nhằm mục đích so sánh hiệu suất của các thuật toán sort phổ biến như Bubblesort, Countingsort, Flashsort, Heapsort, Insertionsort, Mergesort, Quicksort, Radixsort, Selectionsort, Shakersort, Shellsort trong các tình huống khác nhau. Đồng thời, nghiên cứu cũng tìm hiểu các yếu tố ảnh hưởng đến hiệu suất của các thuật toán này, từ đó đề xuất các cải tiến để tối ưu hóa hiệu suất.\\
+Nghiên cứu này đóng góp vào cộng đồng khoa học bằng việc cung cấp một phân tích toàn diện và cập nhật về hiệu suất của các thuật toán sort. Ngoài ra, nghiên cứu cũng đề xuất các cải tiến mới để tối ưu hóa hiệu suất của các thuật toán này, đặc biệt trong môi trường tính toán hiện đại với nhiều yếu tố phức tạp.
 
 \subsection{Phương pháp nghiên cứu}
 
+\subsubsection{Phân tích lý thuyết}
+Phương pháp này tập trung vào việc phân tích các thuộc tính của thuật toán từ góc độ lý thuyết:
+
+\begin{itemize}
+    \item \textbf{So sánh độ phức tạp thời gian (Time Complexity):}
+    \begin{itemize}
+        \item Xác định và chứng minh độ phức tạp thời gian của từng thuật toán dựa trên số lượng phép so sánh.
+        \item Phân tích các trường hợp khác nhau:
+        \begin{itemize}
+            \item Tốt nhất (Best Case): Khi đầu vào phù hợp tối ưu.
+            \item Trung bình (Average Case): Khi đầu vào ngẫu nhiên.
+            \item Tệ nhất (Worst Case): Khi đầu vào không phù hợp.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{So sánh độ phức tạp không gian (Space Complexity):}
+    \begin{itemize}
+        \item Phân tích lượng bộ nhớ cần thiết cho từng thuật toán.
+        \item Xem xét liệu thuật toán có sử dụng bộ nhớ bổ sung (\textit{In-place sorting}) hay cần bộ nhớ phụ.
+    \end{itemize}
+    
+    \item \textbf{Phân tích đặc điểm:}
+    \begin{itemize}
+        \item Đặc điểm ổn định (\textit{Stable}) hay không ổn định (\textit{Unstable}).
+        \item Tích hợp với dữ liệu lớn, dữ liệu ngẫu nhiên, dữ liệu đã sắp xếp, dữ liệu sắp xếp ngược thứ tự, hoặc dữ liệu gần được sắp xếp.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Thực nghiệm}
+Phương pháp thực nghiệm giúp kiểm tra hiệu năng thực tế của thuật toán:
+
+\begin{itemize}
+    \item \textbf{Chuẩn bị dữ liệu đầu vào:}
+    \begin{itemize}
+    \item Khảo sát các thuật toán sắp xếp trên các kích thước mảng khác nhau: 10000, 30000, 50000, 100000, 300000 và 500000.
+    \item Khảo sát các thuật toán sắp xếp trên các kiểu thứ tự khác nhau của mảng:
+        \begin{itemize}
+            \item Mảng đã sắp xếp.
+            \item Mảng gần được sắp xếp hoàn chỉnh.
+            \item Mảng đã sắp xếp, nhưng theo thứ tự ngược (sắp xếp ngược).
+            \item Mảng có thứ tự ngẫu nhiên.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Các chỉ số hiệu năng cần ghi nhận:}
+    \begin{itemize}
+        \item Thời gian thực thi: Đo thời gian cần thiết để sắp xếp.
+        \item Số phép so sánh: Đếm số lần các phần tử được so sánh.
+    \end{itemize}
+    \item \textbf{Công cụ hỗ trợ thực nghiệm:}
+    \begin{itemize}
+        \item Viết các đoạn mã nguồn bằng C++.
+        \item Mã nguồn được biên dịch thành chương trình sử dụng tham số dòng lệnh (command-line argument) với các chế độ mode sau:
+        \begin{itemize}
+            \item Algorithm mode (chạy 1 thuật toán).
+            \item Comparison mode (chạy 1 cặp thuật toán).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{So sánh kết quả:}
+    \begin{itemize}
+        \item Trình bày kết quả dưới dạng bảng và đồ thị.
+        \item Phân tích sự khác biệt giữa lý và thực nghiệm.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Mô phỏng và trực quan hóa}
+Mô phỏng và trực quan hóa giúp minh họa cách hoạt động của thuật toán, dễ hiểu hơn cho độc giả:
+
+\begin{itemize}
+    \item \textbf{Mô phỏng:}
+    \begin{itemize}
+        \item Tạo các đoạn mã giả hoặc hình vẽ minh hoạt từng bước sắp xếp.
+        \item Hiển thị sự thay đổi vị trí các phần tử trong mảng qua từng bước của thuật toán.
+    \end{itemize}
+    \item \textbf{Đồ thị:}
+    \begin{itemize}
+        \item Vẽ biểu đồ cột minh hoạt số phép so sánh, thời gian thực thi.
+        \item So sánh các thuật toán bằng biểu đồ đường.
+    \end{itemize}
+\end{itemize}
 \newpage

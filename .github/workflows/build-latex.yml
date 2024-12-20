@@ -26,9 +26,14 @@ jobs:
       - name: Move PDF to root
         run: mv ./report/main.pdf ./Report.pdf
 
+      - name: Set outputs
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
       - name: Release PDF
         uses: softprops/action-gh-release@v2
         with:
           files: ./Report.pdf
-          tag_name: ${{ github.sha }}
+          tag_name: ${{ steps.vars.outputs.sha_short }}
           name: Report
+          override: true

@@ -76,19 +76,21 @@ Yêu cầu biên dịch chương trình thay đổi tùy theo hệ điều hành
 Trong môi trường terminal, thực hiện các bước sau:
 \begin{itemize}
   \item[1.] Clone mã nguồn
-  \begin{minted}{bash}
+  \item[1.] Clone mã nguồn
+  \begin{verbatim}
   git clone https://github.com/kyrie25/Data-Structure-and-Algorithm-Semester-3.git
   cd Data-Structure-and-Algorithm-Semester-3
-  \end{minted}
+  \end{verbatim}
   \item[2.] Biên dịch chương trình
   \begin{itemize}
     \item Trên Windows:
     Chạy file \texttt{build.bat} hoặc \texttt{build.ps1}. 
+    \newpage
     \item Trên Linux:
     Chạy lệnh sau:
-    \begin{minted}{bash}
+\begin{verbatim}
 g++ -Wl,-z,stack-size=1000000000 -O3 -g main.cpp src/**/*.cpp -o sort 
-    \end{minted}
+\end{verbatim}
   \end{itemize}
 \end{itemize}
 

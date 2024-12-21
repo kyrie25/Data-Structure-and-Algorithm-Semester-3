@@ -61,7 +61,6 @@ Trong đó:
 \end{itemize}
 
 \subsection{Biên dịch chương trình}
-
 \subsubsection{Điều kiện tiên quyết}
 \begin{itemize}
   % Hyperlink
@@ -70,14 +69,12 @@ Trong đó:
 \end{itemize}
 
 \subsubsection{Biên dịch}
-
 Yêu cầu biên dịch chương trình thay đổi tùy theo hệ điều hành.
 
 Trong môi trường terminal, thực hiện các bước sau:
 \begin{itemize}
   \item[1.] Clone mã nguồn
-  \item[1.] Clone mã nguồn
-  \begin{minted}
+  \begin{minted}{bash}
   git clone https://github.com/kyrie25/Data-Structure-and-Algorithm-Semester-3.git
   cd Data-Structure-and-Algorithm-Semester-3
   \end{minted}
@@ -85,15 +82,13 @@ Trong môi trường terminal, thực hiện các bước sau:
   \begin{itemize}
     \item Trên Windows:
     Chạy file \texttt{build.bat} hoặc \texttt{build.ps1}. 
-    \newpage
     \item Trên Linux:
     Chạy lệnh sau:
-\begin{minted}
+    \begin{minted}{bash}
 g++ -Wl,-z,stack-size=1000000000 -O3 -g main.cpp src/**/*.cpp -o sort 
-\end{minted}
+    \end{minted}
   \end{itemize}
 \end{itemize}
-
 Chương trình biên dịch sẽ tạo ra file thực thi \texttt{sort}. (hoặc \texttt{sort.exe} trên Windows)
 
 \newpage

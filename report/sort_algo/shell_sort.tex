@@ -108,20 +108,12 @@ Dưới đây là các bước chạy tay của thuật toán \textbf{Shell Sort
 
 \subsubsection{Độ phức tạp}
 \begin{itemize}
-    \item[\textbf{--}]Độ phức tạp về thời gian:
-        \begin{itemize}
-<<<<<<< HEAD
-            \item[$\bullet$] \textbf{Best Case:} $\mathcal{O}(n \cdot \log{}n)$
-            \item[$\bullet$] \textbf{Average Case:}  $\mathcal{O}(n^2)$
-            \item[$\bullet$] \textbf{Worst Case:}  $\mathcal{O}(n^2)$
-        \end{itemize}
-    \item[\textbf{--}]Độ phức tạp về không gian: $\mathcal{O}(n)$ 
-=======
-            \item[$\bullet$] \textbf{Best Case:} $O(n \cdot \log{n})$ (phụ thuộc vào cách chọn $gap$)
-            \item[$\bullet$] \textbf{Average Case:}  $O(n^{3/2})$ (với chuỗi $gap$ \textbf{Knuth} hoặc \textbf{Hibbard})
-            \item[$\bullet$] \textbf{Worst Case:}  $O(n^2)$ (với chuỗi $gap$ đơn giản như chia đôi liên tiếp)
-        \end{itemize}
-    \item[\textbf{--}]Độ phức tạp về không gian: $O(1)$ 
->>>>>>> 425c4b7 (hoàn chỉnh thuật shellsort)
-    \item[\textbf{--}]Tính ổn định: Không ổn định
+    \item[\textbf{--}] \textbf{Độ phức tạp về thời gian:}
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Best Case:} $\mathcal{O}(n \cdot \log n)$, phụ thuộc vào cách chọn chuỗi khoảng cách (gap sequence). Khi mảng gần như đã được sắp xếp, số phép hoán đổi và so sánh giảm đáng kể.
+        \item[$\bullet$] \textbf{Average Case:} $\mathcal{O}(n^{3/2})$, đối với chuỗi khoảng cách phổ biến như Knuth hoặc Hibbard. Đây là độ phức tạp trung bình được quan sát trong thực tế và lý thuyết.
+        \item[$\bullet$] \textbf{Worst Case:} $\mathcal{O}(n^2)$, xảy ra khi mảng có cấu trúc dữ liệu bất lợi hoặc chuỗi khoảng cách không được tối ưu hóa.
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Độ phức tạp về không gian:} $\mathcal{O}(1)$, do thuật toán thực hiện in-place, không yêu cầu bộ nhớ phụ trợ.
+    \item[\textbf{--}] \textbf{Tính ổn định:} Thuật toán không ổn định, vì trong quá trình di chuyển các phần tử qua khoảng cách lớn, thứ tự ban đầu của các phần tử có giá trị bằng nhau có thể bị thay đổi.
 \end{itemize}

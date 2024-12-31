@@ -1,5 +1,5 @@
-\subsection{Kết quả thực nghiệm}
-
+\section{Kết quả thực nghiệm}
+\subsection{Dữ liệu thực nghiệm}
 % Randomized data
 \subsubsection{Randomized data}
 \begin{table}[!h]
@@ -53,14 +53,14 @@
     \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/2.png}
     \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/3.png}
 
+    \paragraph{Quan sát biểu đồ đường:}
     \begin{itemize}
         \item \textbf{Hiệu năng tốt nhất:} Counting sort.
         \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
         \item \textit{Selection sort, Insertion sort, Bubble sort, Shaker sort :} Các thuật toán này đều có thời gian tăng nhanh theo kích thước của bộ dữ liệu, điều này phù hợp với độ phức tạp lý thuyết $\mathcal{O}(n^2)$ của chúng.
-        \item \textit{Shell sort:} Mặc dù về lý thuyết \textit{Shell sort} có độ phức tạp trung bình là $\mathcal{O}(n^{3/2})$ nhưng kết quả thực nghiệm lại thể hiện rằng nó có hiệu quả tương đương với các thuật toán có độ phức tạp $\mathcal{O}(n \cdot \log n)$. 
+        \item \textit{Shell sort:} Mặc dù về lý thuyết \textit{Shell sort} có độ phức tạp trung bình là $\mathcal{O}(n^{3/2})$ nhưng kết quả thực nghiệm lại thể hiện rằng nó có thời gian chạy nằm chung nhóm với các thuật toán có độ phức tạp $\mathcal{O}(n \cdot \log n)$. 
         \item \textit{Heap sort, Merge sort, Quick sort:} Các thuật toán đều có thời gian chạy ổn định và tăng chậm, phù hợp với độ phức tạp $\mathcal{O}(n \cdot \log n)$.
-        \item \textit{Counting sort}: Kể cả với dữ liệu lớn \textit{Counting sort} vẫn duy trì được thời gian chạy thấp nhất
-        \item \textit{Radix sort, Flash sort}:  
+        \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sử dụng phương pháp phân phối dữ liệu nên với bất kì bộ dữ liệu ngẫu nhiên nào thời gian chạy của chúng cũng tương đối ổn định. Giúp duy trì hiệu năng tốt kể cả khi kích thước của bộ dữ liệu tăng lên.
     \end{itemize}
 \newpage
 % Sorted data
@@ -86,12 +86,46 @@
     Radix sort                 &                 &             &              &             &                &               \\ \hline
     Flash sort                 &                 &             &              &             &                &               \\ \hline
     \end{tabular}}
-    \end{table}
+\end{table}
 
+\begin{table}[!h]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Sorted} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+    Selection sort             & $32.183573$     & $100009999$ & $306.653455$ & $900029999$ & $844.855146$   & $2500049999$  \\ \hline
+    Insertion sort             &                 &             &              &             &                &               \\ \hline
+    Bubble sort                &                 &             &              &             &                &               \\ \hline
+    Shaker sort                &                 &             &              &             &                &               \\ \hline
+    Shell sort                 &                 &             &              &             &                &               \\ \hline
+    Heap sort                  &                 &             &              &             &                &               \\ \hline
+    Merge sort                 &                 &             &              &             &                &               \\ \hline
+    Quick sort                 &                 &             &              &             &                &               \\ \hline
+    Counting sort              &                 &             &              &             &                &               \\ \hline
+    Radix sort                 &                 &             &              &             &                &               \\ \hline
+    Flash sort                 &                 &             &              &             &                &               \\ \hline
+    \end{tabular}}
+\end{table}
+
+\includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/1.png}
+\includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/2.png}
+\includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/3.png}
+    \paragraph{Quan sát biểu đồ đường:}
     \begin{itemize}
         \item \textbf{Hiệu năng tốt nhất:} Shaker sort.
         \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
+        \item Vì bộ dữ liệu đã được sắp xếp nên sẽ có một số thuật toán ít phải thực hiện phép so sánh, hoán đổi vị trí và một số sẽ nhận diện được bộ dữ liệu đã được sắp xếp, giúp cải thiện đáng kể thời gian chạy.
+        \item \textit{Selection sort, Bubble sort: } Kể cả bộ dữ liệu đã được sắp xếp nhưng vì tính chất thuật toán này vẫn phải thực hiện số lượng phép so sánh và hoán đổi vị trí, do đó thời gian chạy của chúng vẫn tăng nhanh theo kích thước của bộ dữ liệu.
+        \item \textit{Insertion sort, Shaker sort: } Hai thuật toán này có thể nhận diện được bộ dữ liệu đã được sắp xếp nên thời gian chạy của chúng giảm đáng kể, nằm trong nhóm có hiệu năng tốt nhất.
+        \item \textit{Shell sort: } Tuy là một biến thể của \textit{Insertion sort} nhưng \textit{Shell sort} lại không thể nhận diện được bộ dữ liệu đã được sắp xếp nên không giảm được thời gian chạy.
+        \item \textit{Heap sort, Merge sort, Quick sort:} Các thuật toán này đều có thời gian chạy ổn định và tăng chậm, phù hợp với độ phức tạp $\mathcal{O}(n \cdot \log n)$. \textit{Quick sort} với phương pháp chọn pivot nằm giữa mảng đã giúp tránh được các tình huống xấu nhất khi gọi đệ quy, bảo việc chia nhóm đều hơn, giúp giảm thời gian chạy so với \textit{Heap sort} và \textit{Merge sort}.
+        \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sử dụng phương pháp phân phối dữ liệu nên với bộ dữ liệu được sắp xếp thì các thuật toán này sẽ chia mảng ra đều hơn, giúp hiệu năng của chúng được duy trì tốt.
     \end{itemize}    
+
 \newpage
 \subsubsection{Nearly sorted data}
     \begin{table}[!h]
@@ -146,7 +180,13 @@
         \begin{itemize}
             \item \textbf{Hiệu năng tốt nhất:} Shaker sort.
             \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
-        \end{itemize}
+            \item Bộ dữ liệu gần như đã được sắp xếp nên các thuật toán có thể nhận diện được điều này và giảm được thời gian chạy, nhưng lúc này một số thuật toán có thời gian chạy thiếu sự ổn định
+            \item \textit{Selection sort, Bubble sort: } Tương tự với trường hợp dữ liệu được sắp xếp, cả 2 thuật toán này đều có thời gian chạy tăng nhanh theo kích thước của bộ dữ liệu.
+            \item \textit{Insertion sort, Shaker sort: } Tuy vẫn có hiệu năng tốt tương tự với bộ dữ liệu được sắp xếp nhưng lúc này thời gian chạy của cả 2 lại thiếu ổn định.
+            \item \textit{Shell sort: } Tương tự với trường hợp dữ liệu được sắp xếp, \textit{Shell sort} có thời gian chạy tốt và ổn định.
+            \item \textit{Heap sort, Merge sort, Quick sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
+            \item \textit{Counting sort, Radix sort, Flash sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
+    \end{itemize}
 % Reversed data
 \newpage
 \subsubsection{Reversed data}
@@ -206,4 +246,6 @@
 
 
 \newpage
-\subsection{Nhận xét}
+\subsection{Kết luận}
+
+\newpage

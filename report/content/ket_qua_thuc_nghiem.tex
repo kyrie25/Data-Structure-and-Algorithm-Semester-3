@@ -1,5 +1,3 @@
-\section{Kết quả thực nghiệm}
-
 \subsection{Kết quả}
 
 % Randomized data
@@ -15,16 +13,16 @@
     \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
     \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
     Selection sort             & $32.183573$     & $100009999$ & $306.653455$ & $900029999$ & $844.855146$   & $2500049999$  \\ \hline
-    Insertion sort             &                 &             &              &             &                &               \\ \hline
-    Bubble sort                &                 &             &              &             &                &               \\ \hline
-    Shaker sort                &                 &             &              &             &                &               \\ \hline
-    Shell sort                 &                 &             &              &             &                &               \\ \hline
-    Heap sort                  &                 &             &              &             &                &               \\ \hline
-    Merge sort                 &                 &             &              &             &                &               \\ \hline
-    Quick sort                 &                 &             &              &             &                &               \\ \hline
-    Counting sort              &                 &             &              &             &                &               \\ \hline
-    Radix sort                 &                 &             &              &             &                &               \\ \hline
-    Flash sort                 &                 &             &              &             &                &               \\ \hline
+    Insertion sort             & $19.384731$     & $50522006$  & $145.740501$ & $452272024$ & $392.687566$   & $1248436921$  \\ \hline
+    Bubble sort                & $70.734463$     & $100009999$ & $934.530289$ & $900029999$ & $3299.414892$  & $2500049999$  \\ \hline
+    Shaker sort                & $42.287156$     & $66875081$  & $619.416315$ & $600759308$ & $2055.377927$  & $1665041683$  \\ \hline
+    Shell sort                 & $0.986861$      & $652068$    & $4.293509$   & $2270237$   & $10.13297$     & $4405508$     \\ \hline
+    Heap sort                  & $0.960662$      & $637548$    & $3.341052$   & $2150596$   & $5.735989$     & $3772079$     \\ \hline
+    Merge sort                 & $1.149464$      & $588901$    & $6.414518$   & $1955125$   & $9.465082$     & $3410940$     \\ \hline
+    Quick sort                 & $0.665371$      & $284724$    & $2.19808$    & $943182$    & $3.667631$     & $1652882$     \\ \hline
+    Counting sort              & $0.097903$      & $50000$     & $0.288228$   & $150000$    & $0.567188$     & $250001$      \\ \hline
+    Radix sort                 & $0.282387$      & $130057$    & $1.10427$    & $480071$    & $1.811559$     & $800071$      \\ \hline
+    Flash sort                 & $0.360212$      & $124341$    & $1.604112$   & $344133$    & $2.174185$     & $581725$      \\ \hline
     \end{tabular}}
     \end{table}
 
@@ -37,20 +35,21 @@
     \multicolumn{7}{|c|}{Data order: Randomize} \\ \hline
     \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
     \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
-    Selection sort             & $3349.233902$   & $10000099999$ & $31423.715711$ & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
-    Insertion sort             &                 &               &                &               &               &                 \\ \hline
-    Bubble sort                &                 &               &                &               &               &                 \\ \hline
-    Shaker sort                &                 &               &                &               &               &                 \\ \hline
-    Shell sort                 &                 &               &                &               &               &                 \\ \hline
-    Heap sort                  &                 &               &                &               &               &                 \\ \hline
-    Merge sort                 &                 &               &                &               &               &                 \\ \hline
-    Quick sort                 &                 &               &                &               &               &                 \\ \hline
-    Counting sort              &                 &               &                &               &               &                 \\ \hline
-    Radix sort                 &                 &               &                &               &               &                 \\ \hline
-    Flash sort                 &                 &               &                &               &               &                 \\ \hline
+    Selection sort             & $3349.233902$   & $10000099999$ & $31423.71571$  & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
+    Insertion sort             & $1724.785371$   & $4991334689$  & $15283.73471$  & $45004491273$ & $42641.65251$ & $125061559509$  \\ \hline
+    Bubble sort                & $13368.79662$   & $10000099999$ & $122968.1562$  & $90000299999$ & $342455.073$  & $250000499999$  \\ \hline
+    Shaker sort                & $8192.499752$   & $6630746484$  & $74832.3415$   & $60042574753$ & $207449.4541$ & $16651086366$   \\ \hline
+    Shell sort                 & $12.283542$     & $1021936$     & $41.400131$    & $36211086$    & $80.487939$   & $66162103$      \\ \hline
+    Heap sort                  & $12.267843$     & $8044268$     & $50.151986$    & $26488066$    & $74.984454$   & $45966994$      \\ \hline
+    Merge sort                 & $19.772601$     & $7221288$     & $43.158881$    & $23550740$    & $73.601204$   & $40684963$      \\ \hline
+    Quick sort                 & $7.561674$      & $3537485$     & $29.876757$    & $11648573$    & $41.883683$   & $19765518$      \\ \hline
+    Counting sort              & $1.102757$      & $500001$      & $3.475312$     & $1500001$     & $6.097413$    & $2500001$       \\ \hline
+    Radix sort                 & $3.627125$      & $1600071$     & $12.835631$    & $5700085$     & $27.51946$    & $9000085$       \\ \hline
+    Flash sort                 & $5.305346$      & $1179306$     & $18.403426$    & $3560788$     & $32.058046$   & $5776314$       \\ \hline
     \end{tabular}}
     \end{table}
 
+<<<<<<< HEAD
     \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/1.png}
     \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/2.png}
     \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/3.png}
@@ -66,6 +65,8 @@
     \end{itemize}
 \newpage
 % Sorted data
+=======
+>>>>>>> 5e85200 (fix bug)
 \subsubsection{Sorted data}
 \begin{table}[!h]
     \centering
@@ -90,7 +91,34 @@
     \end{tabular}}
     \end{table}
 
+<<<<<<< HEAD
 \begin{table}[!h]
+=======
+\begin{table}[!ht]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Sorted} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+    Selection sort             & $32.454305$     & $100009999$ & $327.066795$ & $900029999$ & $811.842781$   & $2500049999$  \\ \hline
+    Insertion sort             & $0.03214$       & $29998$     & $0.094828$   & $89998$     & $0.149148$     & $149998$      \\ \hline
+    Bubble sort                & $63.250497$     & $100009999$ & $452.859471$ & $900029999$ & $1207.410159$  & $2500049999$  \\ \hline
+    Shaker sort                & $0.023744$      & $20002$     & $0.065392$   & $60002$     & $0.109364$     & $100002$      \\ \hline
+    Shell sort                 & $0.233536$      & $360042$    & $0.717699$   & $1170050$   & $1.269428$     & $2100049$     \\ \hline
+    Heap sort                  & $0.731515$      & $670329$    & $2.266307$   & $2236648$   & $3.914161$     & $3925351$     \\ \hline
+    Merge sort                 & $0.605551$      & $539850$    & $1.867132$   & $1779418$   & $3.338597$     & $3105338$     \\ \hline
+    Quick sort                 & $0.156341$      & $193611$    & $0.475848$   & $627227$    & $0.769475$     & $1084459$     \\ \hline
+    Counting sort              & $0.0907$        & $50001$     & $0.272008$   & $150001$    & $0.542011$     & $250001$      \\ \hline
+    Radix sort                 & $0.496967$      & $130057$    & $1.313971$   & $480071$    & $2.314367$     & $800071$      \\ \hline
+    Flash sort                 & $0.409824$      & $157987$    & $0.813127$   & $473987$    & $1.384683$     & $789987$      \\ \hline
+    \end{tabular}}
+    \end{table}
+
+\begin{table}[!ht]
+>>>>>>> 5e85200 (fix bug)
     \centering
     \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
     \resizebox{\textwidth}{!}{
@@ -99,6 +127,7 @@
     \multicolumn{7}{|c|}{Data order: Sorted} \\ \hline
     \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
     \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
+<<<<<<< HEAD
     Selection sort             & $3349.233902$   & $10000099999$ & $31423.715711$ & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
     Insertion sort             &                 &               &                &               &               &                 \\ \hline
     Bubble sort                &                 &               &                &               &               &                 \\ \hline
@@ -115,6 +144,23 @@
     \includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/1.png}
     \includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/2.png}
     \includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/3.png}
+=======
+    Selection sort             & $3420.596541$   & $10000099999$ & $30403.08904$  & $90000299999$ & $84546.66351$ & $250000499999$  \\ \hline
+    Insertion sort             & $0.293327$      & $299998$      & $0.878459$     & $899998$      & $1.55454$     & $1499998$       \\ \hline
+    Bubble sort                & $4995.281004$   & $10000099999$ & $44724.22977$  & $90000299999$ & $123768.8695$ & $250000499999$  \\ \hline
+    Shaker sort                & $0.207387$      & $200002$      & $0.640425$     & $600002$      & $1.112155$    & $1000002$       \\ \hline
+    Shell sort                 & $2.711568$      & $4500051$     & $9.147943$     & $15300061$    & $14.070404$   & $25500058$      \\ \hline
+    Heap sort                  & $8.039268$      & $8365080$     & $25.626199$    & $27413230$    & $44.345756$   & $47404886$      \\ \hline
+    Merge sort                 & $6.695373$      & $6560682$     & $25.754188$    & $21324394$    & $36.377894$   & $36710346$      \\ \hline
+    Quick sort                 & $1.556683$      & $2268923$     & $5.091156$     & $7275707$     & $8.709876$    & $12475707$      \\ \hline
+    Counting sort              & $1.117524$      & $500001$      & $3.133094$     & $1500001$     & $5.192094$    & $2500001$       \\ \hline
+    Radix sort                 & $4.611011$      & $1600071$     & $16.120228$    & $5700085$     & $27.212628$   & $9500085$       \\ \hline
+    Flash sort                 & $2.819439$      & $1579987$     & $8.235912$     & $4739987$     & $14.235853$   & $7899987$       \\ \hline
+    \end{tabular}}
+    \end{table}
+    complie di
+\subsubsection{Reversed data}
+>>>>>>> 5e85200 (fix bug)
 
     \begin{itemize}
         \item \textbf{Hiệu năng tốt nhất:} Shaker sort.

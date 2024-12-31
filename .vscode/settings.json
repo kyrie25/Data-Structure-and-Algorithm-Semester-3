@@ -2,21 +2,9 @@
     "files.associations": {
         "array": "cpp",
         "atomic": "cpp",
-        "bit": "cpp",
         "*.tcc": "cpp",
-        "cctype": "cpp",
-        "clocale": "cpp",
-        "cmath": "cpp",
-        "cstdarg": "cpp",
-        "cstddef": "cpp",
-        "cstdint": "cpp",
-        "cstdio": "cpp",
-        "cstdlib": "cpp",
-        "cwchar": "cpp",
-        "cwctype": "cpp",
         "deque": "cpp",
         "map": "cpp",
-        "unordered_map": "cpp",
         "vector": "cpp",
         "exception": "cpp",
         "algorithm": "cpp",
@@ -74,6 +62,16 @@
             ]
         },
         {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
             "name": "bibtex",
             "command": "bibtex",
             "args": [
@@ -82,4 +80,29 @@
             "env": {}
         }
     ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (shell-escape)",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "pdflatex (shell-escape)",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xelatex (shell-escape)",
+            "tools": [
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.outDir": "./out",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.latex.clean.enabled": true
 }

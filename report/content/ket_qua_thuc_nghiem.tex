@@ -2,9 +2,10 @@
 
 \subsection{Kết quả}
 
+% Randomized data
 \subsubsection{Randomized data}
 
-\begin{table}[!ht]
+\begin{table}[!h]
     \centering
     \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
     \resizebox{\textwidth}{!}{
@@ -27,7 +28,7 @@
     \end{tabular}}
     \end{table}
 
-\begin{table}[!ht]
+\begin{table}[!h]
     \centering
     \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
     \resizebox{\textwidth}{!}{
@@ -49,10 +50,188 @@
     Flash sort                 &                 &               &                &               &               &                 \\ \hline
     \end{tabular}}
     \end{table}
+
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/1.png}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/2.png}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/randomized/3.png}
+
+    \begin{itemize}
+        \item \textbf{Hiệu năng tốt nhất:} Counting sort.
+        \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
+        \item \textit{Selection sort, Insertion sort, Bubble sort, Shaker sort :} Các thuật toán này đều có thời gian tăng nhanh theo kích thước của bộ dữ liệu, điều này phù hợp với độ phức tạp lý thuyết $\mathcal{O}(n^2)$ của chúng.
+        \item \textit{Shell sort:} Mặc dù về lý thuyết \textit{Shell sort} có độ phức tạp trung bình là $\mathcal{O}(n^{3/2})$ nhưng kết quả thực nghiệm lại thể hiện rằng nó có hiệu quả tương đương với các thuật toán có độ phức tạp $\mathcal{O}(n \cdot \log n)$. 
+        \item \textit{Heap sort, Merge sort, Quick sort:} Các thuật toán đều có thời gian chạy ổn định và tăng chậm, phù hợp với độ phức tạp $\mathcal{O}(n \cdot \log n)$.
+        \item \textit{Counting sort}: Kể cả với dữ liệu lớn \textit{Counting sort} vẫn duy trì được thời gian chạy thấp nhất
+        \item \textit{Radix sort, Flash sort}:  
+    \end{itemize}
+\newpage
+% Sorted data
 \subsubsection{Sorted data}
+\begin{table}[!h]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Sorted} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+    Selection sort             & $32.183573$     & $100009999$ & $306.653455$ & $900029999$ & $844.855146$   & $2500049999$  \\ \hline
+    Insertion sort             &                 &             &              &             &                &               \\ \hline
+    Bubble sort                &                 &             &              &             &                &               \\ \hline
+    Shaker sort                &                 &             &              &             &                &               \\ \hline
+    Shell sort                 &                 &             &              &             &                &               \\ \hline
+    Heap sort                  &                 &             &              &             &                &               \\ \hline
+    Merge sort                 &                 &             &              &             &                &               \\ \hline
+    Quick sort                 &                 &             &              &             &                &               \\ \hline
+    Counting sort              &                 &             &              &             &                &               \\ \hline
+    Radix sort                 &                 &             &              &             &                &               \\ \hline
+    Flash sort                 &                 &             &              &             &                &               \\ \hline
+    \end{tabular}}
+    \end{table}
 
-\subsubsection{Reversed data}
+\begin{table}[!h]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Sorted} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
+    Selection sort             & $3349.233902$   & $10000099999$ & $31423.715711$ & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
+    Insertion sort             &                 &               &                &               &               &                 \\ \hline
+    Bubble sort                &                 &               &                &               &               &                 \\ \hline
+    Shaker sort                &                 &               &                &               &               &                 \\ \hline
+    Shell sort                 &                 &               &                &               &               &                 \\ \hline
+    Heap sort                  &                 &               &                &               &               &                 \\ \hline
+    Merge sort                 &                 &               &                &               &               &                 \\ \hline
+    Quick sort                 &                 &               &                &               &               &                 \\ \hline
+    Counting sort              &                 &               &                &               &               &                 \\ \hline
+    Radix sort                 &                 &               &                &               &               &                 \\ \hline
+    Flash sort                 &                 &               &                &               &               &                 \\ \hline
+    \end{tabular}}
+    \end{table}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/1.png}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/2.png}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/sorted/3.png}
 
+    \begin{itemize}
+        \item \textbf{Hiệu năng tốt nhất:} Shaker sort.
+        \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
+    \end{itemize}    
+\newpage
 \subsubsection{Nearly sorted data}
+    \begin{table}[!h]
+        \centering
+        \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{7}{|c|}{Data order: Nearly sorted} \\ \hline
+        \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+        \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+        Selection sort             & $32.183573$     & $100009999$ & $306.653455$ & $900029999$ & $844.855146$   & $2500049999$  \\ \hline
+        Insertion sort             &                 &             &              &             &                &               \\ \hline
+        Bubble sort                &                 &             &              &             &                &               \\ \hline
+        Shaker sort                &                 &             &              &             &                &               \\ \hline
+        Shell sort                 &                 &             &              &             &                &               \\ \hline
+        Heap sort                  &                 &             &              &             &                &               \\ \hline
+        Merge sort                 &                 &             &              &             &                &               \\ \hline
+        Quick sort                 &                 &             &              &             &                &               \\ \hline
+        Counting sort              &                 &             &              &             &                &               \\ \hline
+        Radix sort                 &                 &             &              &             &                &               \\ \hline
+        Flash sort                 &                 &             &              &             &                &               \\ \hline
+        \end{tabular}}
+        \end{table}
+    
+    \begin{table}[!h]
+        \centering
+        \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multicolumn{7}{|c|}{Data order: Nearly sorted} \\ \hline
+        \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
+        \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
+        Selection sort             & $3349.233902$   & $10000099999$ & $31423.715711$ & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
+        Insertion sort             &                 &               &                &               &               &                 \\ \hline
+        Bubble sort                &                 &               &                &               &               &                 \\ \hline
+        Shaker sort                &                 &               &                &               &               &                 \\ \hline
+        Shell sort                 &                 &               &                &               &               &                 \\ \hline
+        Heap sort                  &                 &               &                &               &               &                 \\ \hline
+        Merge sort                 &                 &               &                &               &               &                 \\ \hline
+        Quick sort                 &                 &               &                &               &               &                 \\ \hline
+        Counting sort              &                 &               &                &               &               &                 \\ \hline
+        Radix sort                 &                 &               &                &               &               &                 \\ \hline
+        Flash sort                 &                 &               &                &               &               &                 \\ \hline
+        \end{tabular}}
+        \end{table}
+        \includegraphics[width = 1\linewidth]{img/experiment/running time/nearly sorted/1.png}
+        \includegraphics[width = 1\linewidth]{img/experiment/running time/nearly sorted/2.png}
+        \includegraphics[width = 1\linewidth]{img/experiment/running time/nearly sorted/3.png}
+    
+        \begin{itemize}
+            \item \textbf{Hiệu năng tốt nhất:} Shaker sort.
+            \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
+        \end{itemize}
+% Reversed data
+\newpage
+\subsubsection{Reversed data}
+\begin{table}[!h]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Reversed} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+    Selection sort             & $32.183573$     & $100009999$ & $306.653455$ & $900029999$ & $844.855146$   & $2500049999$  \\ \hline
+    Insertion sort             &                 &             &              &             &                &               \\ \hline
+    Bubble sort                &                 &             &              &             &                &               \\ \hline
+    Shaker sort                &                 &             &              &             &                &               \\ \hline
+    Shell sort                 &                 &             &              &             &                &               \\ \hline
+    Heap sort                  &                 &             &              &             &                &               \\ \hline
+    Merge sort                 &                 &             &              &             &                &               \\ \hline
+    Quick sort                 &                 &             &              &             &                &               \\ \hline
+    Counting sort              &                 &             &              &             &                &               \\ \hline
+    Radix sort                 &                 &             &              &             &                &               \\ \hline
+    Flash sort                 &                 &             &              &             &                &               \\ \hline
+    \end{tabular}}
+    \end{table}
 
+\begin{table}[!h]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Reversed} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
+    Selection sort             & $3349.233902$   & $10000099999$ & $31423.715711$ & $90000299999$ & $85183.64454$ & $250000499999$  \\ \hline
+    Insertion sort             &                 &               &                &               &               &                 \\ \hline
+    Bubble sort                &                 &               &                &               &               &                 \\ \hline
+    Shaker sort                &                 &               &                &               &               &                 \\ \hline
+    Shell sort                 &                 &               &                &               &               &                 \\ \hline
+    Heap sort                  &                 &               &                &               &               &                 \\ \hline
+    Merge sort                 &                 &               &                &               &               &                 \\ \hline
+    Quick sort                 &                 &               &                &               &               &                 \\ \hline
+    Counting sort              &                 &               &                &               &               &                 \\ \hline
+    Radix sort                 &                 &               &                &               &               &                 \\ \hline
+    Flash sort                 &                 &               &                &               &               &                 \\ \hline
+    \end{tabular}}
+    \end{table}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/reversed/1.png}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/reversed/2.png}
+    \includegraphics[width = 1\linewidth]{img/experiment/running time/reversed/3.png}
+
+    \begin{itemize}
+        \item \textbf{Hiệu năng tốt nhất:} Counting sort.
+        \item \textbf{Hiệu năng tệ nhất:} Selection sort. 
+    \end{itemize}
+
+
+\newpage
 \subsection{Nhận xét}

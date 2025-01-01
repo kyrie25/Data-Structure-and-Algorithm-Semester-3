@@ -264,9 +264,13 @@
 
     \begin{itemize}
         \item \textbf{Hiệu năng tốt nhất:} Counting sort.
-        \item \textbf{Hiệu năng tệ nhất:} Selection sort. 
+        \item \textbf{Hiệu năng tệ nhất:} Selection sort.
+        \item \textit{Selection sort, Bubble sort, Insertion sort, Shaker sort:} Các thuật toán này đều có thời gian chạy tăng nhanh theo kích thước của bộ dữ liệu, điều này phù hợp với độ phức tạp lý thuyết $\mathcal{O}(n^2)$, yêu cầu số lượng phép so sánh rất lớn để đưa các phần tử về đúng vị trí dẫn đến thời gian chạy chậm.
+        \item \textit{Shell sort, Heap sort, Merge sort, Quick sort:} Các thuật toán này đều có thời gian chạy ổn định và tăng chậm, phù hợp với độ phức tạp $\mathcal{O}(n \cdot \log n)$. Trong nhóm này \textit{Quick sort} vẫn có hiệu năng tốt nhất do sử dụng pivot ở giữa mảng, cách chọn này giúp tránh được các tình huống xấu nhất đặc biệt trong mảng có phân phối dữ liệu đều điều này còn giúp giảm nguy cơ phân chia không cân đối trong gọi đệ quy.
+        \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này khộng phụ thuộc vào sắp xếp dữ liệu mà thuộc vào phân phối dữ liệu đối với \textit{Flash sort}, phạm vi giá trị của mảng đối với Radix sort \textit{Counting sort} nên với bộ dữ liệu ngược thì các thuật toán này vẫn giữ được hiệu năng tốt.
     \end{itemize}
 
+    \includegraphics[width = 1\linewidth]{img/experiment/comparison/reversed.png}
 
 \newpage
 \subsection{Kết luận}

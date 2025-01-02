@@ -1,0 +1,59 @@
+\subsubsection{Ý tưởng}
+Merge Sort là một thuật toán sắp xếp chia để trị (divide-and-conquer). Thuật toán chia mảng ban đầu thành hai nửa, tiếp tục chia nhỏ từng nửa cho đến khi mỗi phần chỉ còn một phần tử. Sau đó, các phần nhỏ này được hợp nhất lại theo thứ tự sắp xếp để tạo thành mảng đã sắp xếp.
+
+\subsubsection{Mã giả}
+
+\begin{algorithm}[H]
+\caption{Merge Sort}
+\begin{algorithmic}[1]
+\Procedure{MergeSort}{$arr, left, right$}
+    \State \textbf{Input:} Mảng $arr$ với chỉ số bắt đầu $left$ và kết thúc $right$
+    \State \textbf{Output:} Mảng $arr$ được sắp xếp trong đoạn $[left, right]$
+    
+    \If{$left < right$}
+        \State Tính chỉ số giữa $mid \gets \lfloor (left + right) / 2 \rfloor$
+        
+        \State \textbf{Chia nhỏ (Divide):}
+        \State \Call{MergeSort}{$arr, left, mid$} \Comment{Đệ quy cho nửa trái}
+        \State \Call{MergeSort}{$arr, mid+1, right$} \Comment{Đệ quy cho nửa phải}
+        
+        \State \textbf{Hợp nhất (Conquer):}
+        \State \Call{Merge}{$arr, left, mid, right$} \Comment{Hợp nhất hai nửa đã sắp xếp}
+    \EndIf
+\EndProcedure
+
+\Procedure{Merge}{$arr, left, mid, right$}
+    \State \textbf{Input:} Mảng $arr$ với hai đoạn $[left, mid]$ và $[mid+1, right]$ đã được sắp xếp
+    \State \textbf{Output:} Đoạn $[left, right]$ được sắp xếp
+    
+    \State Khởi tạo mảng tạm $L[1..(mid-left+1)]$ và $R[1..(right-mid)]$
+    \For{$i \gets 1$ \textbf{to} $mid - left + 1$}
+        \State $L[i] \gets arr[left + i - 1]$
+    \EndFor
+    \For{$j \gets 1$ \textbf{to} $right - mid$}
+        \State $R[j] \gets arr[mid + j]$
+    \EndFor
+    
+    \State Khởi tạo $i, j \gets 1$, $k \gets left$
+    \While{$i \leq \text{size of } L$ \textbf{and} $j \leq \text{size of } R$}
+        \If{$L[i] \leq R[j]$}
+            \State $arr[k] \gets L[i]$
+            \State $i \gets i + 1$
+        \Else
+            \State $arr[k] \gets R[j]$
+            \State $j \gets j + 1$
+        \EndIf
+        \State $k \gets k + 1$
+    \EndWhile
+    
+    \While{$i \leq \text{size of } L$}
+        \State $arr[k] \gets L[i]$
+        \State $i \gets i + 1, k \gets k + 1$
+    \EndWhile
+    \While{$j \leq \text{size of } R$}
+        \State $arr[k] \gets R[j]$
+        \State $j \gets j + 1, k \gets k + 1$
+    \EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}

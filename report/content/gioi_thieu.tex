@@ -12,27 +12,27 @@ Nghiên cứu này đóng góp vào cộng đồng khoa học bằng việc cung
 Phương pháp này tập trung vào việc phân tích các thuộc tính của thuật toán từ góc độ lý thuyết:
 
 \begin{itemize}
-    \item[$\bullet$] \textbf{So sánh độ phức tạp thời gian (\textit{Time Complexity}):}
+    \item [\textbf{--}] \textbf{So sánh độ phức tạp thời gian (\textit{Time Complexity}):}
     \begin{itemize}
-        \item Xác định và chứng minh độ phức tạp thời gian của từng thuật toán dựa trên số lượng phép so sánh.
-        \item Phân tích các trường hợp khác nhau:
+        \item [$\bullet$]Xác định và chứng minh độ phức tạp thời gian của từng thuật toán dựa trên số lượng phép so sánh.
+        \item [$\bullet$]Phân tích các trường hợp khác nhau:
         \begin{itemize}
-            \item[$\bullet$] Tốt nhất (\textit{Best Case}): Khi đầu vào phù hợp tối ưu.
-            \item[$\bullet$] Trung bình (\textit{Average Case}): Khi đầu vào ngẫu nhiên.
-            \item[$\bullet$] Tệ nhất (\textit{Worst Case}): Khi đầu vào không phù hợp.
+            \item [$\bullet$] Tốt nhất (\textit{Best Case}): Khi đầu vào phù hợp tối ưu.
+            \item [$\bullet$] Trung bình (\textit{Average Case}): Khi đầu vào ngẫu nhiên.
+            \item [$\bullet$] Tệ nhất (\textit{Worst Case}): Khi đầu vào không phù hợp.
         \end{itemize}
     \end{itemize}
     
-    \item[$\bullet$] \textbf{So sánh độ phức tạp không gian (\textit{Space Complexity}):}
+    \item [\textbf{--}] \textbf{So sánh độ phức tạp không gian (\textit{Space Complexity}):}
     \begin{itemize}
-        \item Phân tích lượng bộ nhớ cần thiết cho từng thuật toán.
-        \item Xem xét liệu thuật toán có sử dụng bộ nhớ bổ sung (\textit{In-place sorting}) hay cần bộ nhớ phụ.
+        \item [$\bullet$] Phân tích lượng bộ nhớ cần thiết cho từng thuật toán.
+        \item [$\bullet$] Xem xét liệu thuật toán có sử dụng bộ nhớ bổ sung (\textit{In-place sorting}) hay cần bộ nhớ phụ.
     \end{itemize}
     
-    \item \textbf{Phân tích đặc điểm:}
+    \item [\textbf{--}] \textbf{Phân tích đặc điểm:}
     \begin{itemize}
-        \item Đặc điểm ổn định (\textit{Stable}) hay không ổn định (\textit{Unstable}).
-        \item Tích hợp với dữ liệu lớn, dữ liệu ngẫu nhiên, dữ liệu đã sắp xếp, dữ liệu sắp xếp ngược thứ tự, hoặc dữ liệu gần được sắp xếp.
+        \item [$\bullet$] Đặc điểm ổn định (\textit{Stable}) hay không ổn định (\textit{Unstable}).
+        \item [$\bullet$] Tích hợp với dữ liệu lớn, dữ liệu ngẫu nhiên, dữ liệu đã sắp xếp, dữ liệu sắp xếp ngược thứ tự, hoặc dữ liệu gần được sắp xếp.
     \end{itemize}
 \end{itemize}
 
@@ -40,35 +40,35 @@ Phương pháp này tập trung vào việc phân tích các thuộc tính của
 Phương pháp thực nghiệm giúp kiểm tra hiệu năng thực tế của thuật toán:
 
 \begin{itemize}
-    \item \textbf{Chuẩn bị dữ liệu đầu vào:}
+    \item [\textbf{--}] \textbf{Chuẩn bị dữ liệu đầu vào:}
     \begin{itemize}
-    \item Khảo sát các thuật toán sắp xếp trên các kích thước mảng khác nhau: 10000, 30000, 50000, 100000, 300000 và 500000.
-    \item Khảo sát các thuật toán sắp xếp trên các kiểu thứ tự khác nhau của mảng:
+    \item [$\bullet$] Khảo sát các thuật toán sắp xếp trên các kích thước mảng khác nhau: 10000, 30000, 50000, 100000, 300000 và 500000.
+    \item [$\bullet$] Khảo sát các thuật toán sắp xếp trên các kiểu thứ tự khác nhau của mảng:
         \begin{itemize}
-            \item[$\bullet$] Mảng đã sắp xếp.
-            \item[$\bullet$] Mảng gần được sắp xếp hoàn chỉnh.
-            \item[$\bullet$] Mảng đã sắp xếp, nhưng theo thứ tự ngược (sắp xếp ngược).
-            \item[$\bullet$] Mảng có thứ tự ngẫu nhiên.
+            \item [$\bullet$] Mảng đã sắp xếp.
+            \item [$\bullet$] Mảng gần được sắp xếp hoàn chỉnh.
+            \item [$\bullet$] Mảng đã sắp xếp, nhưng theo thứ tự ngược (sắp xếp ngược).
+            \item [$\bullet$] Mảng có thứ tự ngẫu nhiên.
         \end{itemize}
     \end{itemize}
-    \item \textbf{Các chỉ số hiệu năng cần ghi nhận:}
+    \item [\textbf{--}] \textbf{Các chỉ số hiệu năng cần ghi nhận:}
     \begin{itemize}
-        \item Thời gian thực thi: Đo thời gian cần thiết để sắp xếp.
-        \item Số phép so sánh: Đếm số lần các phần tử được so sánh.
+        \item [$\bullet$] Thời gian thực thi: Đo thời gian cần thiết để sắp xếp.
+        \item [$\bullet$] Số phép so sánh: Đếm số lần các phần tử được so sánh.
     \end{itemize}
-    \item \textbf{Công cụ hỗ trợ thực nghiệm:}
+    \item [\textbf{--}] \textbf{Công cụ hỗ trợ thực nghiệm:}
     \begin{itemize}
-        \item Viết các đoạn mã nguồn bằng \textit{C++}.
-        \item Mã nguồn được biên dịch thành chương trình sử dụng tham số dòng lệnh (command-line argument) với các chế độ mode sau:
+        \item [$\bullet$]Viết các đoạn mã nguồn bằng \textit{C++}.
+        \item [$\bullet$]Mã nguồn được biên dịch thành chương trình sử dụng tham số dòng lệnh (command-line argument) với các chế độ mode sau:
         \begin{itemize}
-            \item[$\bullet$] \textit{Algorithm mode} (chạy 1 thuật toán).
-            \item[$\bullet$] \textit{Comparison mode} (chạy 1 cặp thuật toán).
+            \item [$\bullet$] \textit{Algorithm mode} (chạy 1 thuật toán).
+            \item [$\bullet$] \textit{Comparison mode} (chạy 1 cặp thuật toán).
         \end{itemize}
     \end{itemize}
-    \item \textbf{So sánh kết quả:}
+    \item [\textbf{--}]\textbf{So sánh kết quả:}
     \begin{itemize}
-        \item Trình bày kết quả dưới dạng bảng và đồ thị.
-        \item Phân tích sự khác biệt giữa lý và thực nghiệm.
+        \item [$\bullet$]Trình bày kết quả dưới dạng bảng và đồ thị.
+        \item [$\bullet$]Phân tích sự khác biệt giữa lý và thực nghiệm.
     \end{itemize}
 \end{itemize}
 
@@ -76,15 +76,15 @@ Phương pháp thực nghiệm giúp kiểm tra hiệu năng thực tế của t
 Mô phỏng và trực quan hóa giúp minh họa cách hoạt động của thuật toán, dễ hiểu hơn cho độc giả:
 
 \begin{itemize}
-    \item \textbf{Mô phỏng:}
+    \item [\textbf{--}]\textbf{Mô phỏng:}
     \begin{itemize}
-        \item Tạo các đoạn mã giả hoặc hình vẽ minh hoạt từng bước sắp xếp.
-        \item Hiển thị sự thay đổi vị trí các phần tử trong mảng qua từng bước của thuật toán.
+        \item [$\bullet$]Tạo các đoạn mã giả hoặc hình vẽ minh hoạt từng bước sắp xếp.
+        \item [$\bullet$]Hiển thị sự thay đổi vị trí các phần tử trong mảng qua từng bước của thuật toán.
     \end{itemize}
-    \item \textbf{Đồ thị:}
+    \item [\textbf{--}]\textbf{Đồ thị:}
     \begin{itemize}
-        \item Vẽ biểu đồ cột minh hoạt số phép so sánh, thời gian thực thi.
-        \item So sánh các thuật toán bằng biểu đồ đường.
+        \item [$\bullet$]Vẽ biểu đồ cột minh hoạt số phép so sánh, thời gian thực thi.
+        \item [$\bullet$]So sánh các thuật toán bằng biểu đồ đường.
     \end{itemize}
 \end{itemize}
 \newpage

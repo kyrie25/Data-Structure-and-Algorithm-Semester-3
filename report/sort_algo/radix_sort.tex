@@ -1,0 +1,53 @@
+\subsubsection{Ý tưởng}
+Radix Sort là một thuật toán sắp xếp không dựa trên so sánh, hoạt động dựa trên các chữ số của phần tử trong mảng. Thuật toán xử lý các phần tử theo từng chữ số (bắt đầu từ chữ số hàng đơn vị, sau đó đến hàng chục, hàng trăm, v.v.). Ở mỗi bước, các phần tử được sắp xếp cục bộ bằng một thuật toán sắp xếp ổn định như Counting Sort.
+
+\subsubsection{Mã giả}
+
+\begin{algorithm}[H]
+\caption{Radix Sort}
+\begin{algorithmic}[1]
+\Procedure{RadixSort}{$arr, n$}
+    \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử
+    \State \textbf{Output:} Mảng $arr$ được sắp xếp
+    
+    \State Tìm giá trị lớn nhất trong $arr$: $max \gets \max(arr)$
+    
+    \State Khởi tạo $exp \gets 1$ \Comment{Biểu thị chữ số cần xét: 1, 10, 100, ...}
+    \While{$max / exp > 0$}
+        \State \Call{CountingSort}{$arr, n, exp$} \Comment{Sắp xếp theo chữ số hiện tại}
+        \State $exp \gets exp \times 10$
+    \EndWhile
+\EndProcedure
+
+\Procedure{CountingSort}{$arr, n, exp$}
+    \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử, chữ số cần xét $exp$
+    \State \textbf{Output:} Mảng $arr$ được sắp xếp theo chữ số hàng $exp$
+    
+    \State Khởi tạo mảng đếm $count[0..9] \gets 0$
+    \State Khởi tạo mảng tạm $output[1..n]$
+    
+    \State \textbf{Đếm số lần xuất hiện:}
+    \For{$i \gets 1$ \textbf{to} $n$}
+        \State $digit \gets \lfloor arr[i] / exp \rfloor \mod 10$
+        \State $count[digit] \gets count[digit] + 1$
+    \EndFor
+    
+    \State \textbf{Tính chỉ số thực tế:}
+    \For{$i \gets 1$ \textbf{to} $9$}
+        \State $count[i] \gets count[i] + count[i-1]$
+    \EndFor
+    
+    \State \textbf{Sắp xếp phần tử theo chữ số hiện tại:}
+    \For{$i \gets n$ \textbf{down to} $1$}
+        \State $digit \gets \lfloor arr[i] / exp \rfloor \mod 10$
+        \State $output[count[digit]] \gets arr[i]$
+        \State $count[digit] \gets count[digit] - 1$
+    \EndFor
+    
+    \State \textbf{Cập nhật mảng ban đầu:}
+    \For{$i \gets 1$ \textbf{to} $n$}
+        \State $arr[i] \gets output[i]$
+    \EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}

@@ -58,6 +58,82 @@ Merge Sort là một thuật toán sắp xếp chia để trị (divide-and-conq
 \end{algorithmic}
 \end{algorithm}
 
+\subsubsection{Ví dụ}
+
+Giả sử chúng ta có mảng ban đầu: $[38, 27, 43, 3, 9, 82, 10]$. Dưới đây là các bước thực hiện Merge Sort minh họa bằng hình ảnh:
+
+\begin{enumerate}
+    \item Gọi đệ quy cho nửa phải để chia nhỏ mảng ban đầu đến khi chỉ còn một phần tử:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/1.png}
+        \caption{Minh họa MergeSort-1}
+    \end{figure}
+    
+    \item Trộn các phần tử đã chọn thành mảng sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/2.png}
+        \caption{Minh họa MergeSort-2}
+    \end{figure}
+    
+    \item Gọi đệ quy cho nửa trái của nửa phải ban đầu:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/3.png}
+        \caption{Minh họa MergeSort-3}
+    \end{figure}
+    
+    \item Trọn các phần tử đã chọn thành mảng sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/4.png}
+        \caption{Minh họa MergeSort-4}
+    \end{figure}
+    
+    \item Trộn hai nửa của nửa phải mảng ban đầu thành mảng sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/5.png}
+        \caption{Minh họa MergeSort-5}
+    \end{figure}
+    
+    \item Gọi đệ quy tương tự cho nửa trái của mảng ban đầu:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/6.png}
+        \caption{Minh họa MergeSort-6}
+    \end{figure}
+    
+    \item Trộn các phần tử đã chọn thành mảng sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/7.png}
+        \caption{Minh họa MergeSort-7}
+    \end{figure}
+    
+    \item Trộn hai nửa của nửa trái mảng ban đầu thành mảng sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/8.png}
+        \caption{Minh họa MergeSort-8}
+    \end{figure}
+    
+    \item Trộn hai nửa của mảng ban đầu thành mảng sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/9.png}
+        \caption{Minh họa MergeSort-9}
+    \end{figure}
+    
+    \item Hoành thành sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/merge_sort/10.png}
+        \caption{Minh họa MergeSort-10}
+    \end{figure}
+\end{enumerate}
+
 \subsubsection{Độ phức tạp}
 \begin{itemize}
     \item[\textbf{--}] \textbf{Thời gian:}

@@ -209,6 +209,19 @@
             \item \textit{Heap sort, Merge sort, Quick sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
             \item \textit{Counting sort, Radix sort, Flash sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
     \end{itemize}
+
+    \includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_NEARLY.jpg}
+    \paragraph{Quan sát biểu đồ cột:}
+    \begin{itemize}
+        \item \textbf{Số phép so sánh ít nhất:} Insertion sort.
+        \item \textbf{Số phép so sánh nhiều nhất:} Selection sort.
+        \item \textit{Selection sort, Bubble sort, Shaker sort:} Các thuật toán này đều có số phép so sánh nhiều nhất và số phép tang nhanh khi kích thước mảng tăng lên. \textit{Selection sort} là thuật toán có nhiều phép so sánh nhất trong nhóm này vì luôn phải thực hiện n(n-1)/2 phép so sánh mà không phụ thuộc vào tính chất bộ dữ liệu. \textit{Shaker sort và Bubble sort} Số phép so sánh cao, nhưng vẫn ít hơn so với trường hợp dữ liệu ngẫu nhiên, nhờ việc phát hiện các phần tử đã ở đúng vị trí.
+        \item \textit{Insertion sort: }Khi dữ liệu gần như đã được sắp xếp, Insertion sort thể hiện rõ ưu thế vượt trội, với số phép so sánh giảm đáng kể so với các thuật toán khác. Đây là lựa chọn lý tưởng trong trường hợp dữ liệu có tính gần đúng cao.
+        \item \textit{Quick sort: }Số phép so sánh tương đối thấp trong trường hợp này, nhưng không tối ưu bằng Insertion sort khi dữ liệu gần như sắp xếp.
+        \item \textit{Shell sort, Merge sort, Heap sort: }Các thuật toán này duy trì số phép so sánh ổn định hơn và không bị ảnh hưởng lớn bởi dữ liệu gần như sắp xếp
+        \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sắp xếp đều không phụ thuộc vào việc so sánh giữa giá trị của các phần tử nên có số phép so sánh ít nhất và không tăng nhanh khi kích thước mảng tăng lên vì nó không dựa vào việc so sánh phần tử.
+    \end{itemize}
+
 % Reversed data
 \newpage
 \subsubsection{Reversed data}

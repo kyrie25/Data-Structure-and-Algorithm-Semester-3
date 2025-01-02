@@ -57,3 +57,25 @@ Merge Sort là một thuật toán sắp xếp chia để trị (divide-and-conq
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
+
+\subsubsection{Độ phức tạp}
+\begin{itemize}
+    \item[\textbf{--}] \textbf{Thời gian:}
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Best Case:} \(\mathcal{O}(n \log n)\)
+        \item[$\bullet$] \textbf{Average Case:} \(\mathcal{O}(n \log n)\)
+        \item[$\bullet$] \textbf{Worst Case:} \(\mathcal{O}(n \log n)\)
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Không gian:}
+    \begin{itemize}
+        \item[$\bullet$] Merge Sort yêu cầu bộ nhớ phụ trợ để lưu trữ các mảng con trong quá trình hợp nhất, do đó độ phức tạp không gian là:
+        \[
+        \mathcal{O}(n)
+        \]
+        \item[$\bullet$] Tổng không gian bộ nhớ: \(\mathcal{O}(n)\).
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Tính ổn định:}
+    \begin{itemize}
+        \item[$\bullet$] Merge Sort là một thuật toán \textbf{ổn định}. Điều này có nghĩa là khi hai phần tử có giá trị bằng nhau, thứ tự ban đầu của chúng trong mảng sẽ không thay đổi trong quá trình sắp xếp.
+    \end{itemize}
+\end{itemize}

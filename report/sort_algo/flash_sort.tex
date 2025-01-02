@@ -35,3 +35,28 @@ Flash Sort là một thuật toán sắp xếp dựa trên việc phân phối c
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
+
+\subsubsection{Độ phức tạp}
+\begin{itemize}
+    \item[\textbf{--}] \textbf{Thời gian:}
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Best Case:} \(\mathcal{O}(n)\), xảy ra khi mảng đã được phân bố đồng đều hoặc có cấu trúc dễ dàng phân nhóm. Trong trường hợp này, thuật toán có thể phân loại mảng trong một lần quét mà không cần phải thực hiện bất kỳ phép hoán đổi nào.
+        \item[$\bullet$] \textbf{Average Case:} \(\mathcal{O}(n + k)\), độ phức tạp này thường thấy khi dữ liệu được phân bố ngẫu nhiên. Trong trường hợp này, Flash Sort sử dụng một phương pháp phân vùng và sắp xếp các phần tử trong các nhóm.
+        \item[$\bullet$] \textbf{Worst Case:} \(\mathcal{O}(n^2)\), xảy ra khi dữ liệu có phân bố bất lợi hoặc có sự phân bố không đều giữa các giá trị. Trong trường hợp này, Flash Sort sẽ cần phải thực hiện các phép hoán đổi nhiều hơn.
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Không gian:}
+    \begin{itemize}
+        \item[$\bullet$] Flash Sort yêu cầu một mảng phụ để lưu trữ các chỉ số phân loại (buckets). Kích thước của mảng phụ này phụ thuộc vào số lượng phần tử trong mảng gốc và số lượng buckets được sử dụng. Cụ thể, nếu ta có \(n\) phần tử và \(m\) buckets, thì độ phức tạp bộ nhớ của Flash Sort là:
+        \[
+        \mathcal{O}(n + m)
+        \]
+        \item[$\bullet$] Mảng gốc: \(\mathcal{O}(n)\)
+        \item[$\bullet$] Mảng phụ (buckets): \(\mathcal{O}(m)\)
+        \item[$\bullet$] Trong trường hợp tốt nhất, số lượng buckets \(m\) có thể nhỏ hơn hoặc bằng số lượng phần tử \(n\), do đó độ phức tạp bộ nhớ có thể được coi là \(\mathcal{O}(n)\).
+        \item[$\bullet$] Trong trường hợp xấu nhất, số lượng buckets \(m\) có thể lớn hơn, dẫn đến độ phức tạp bộ nhớ là \(\mathcal{O}(n + m)\).
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Tính ổn định:}
+    \begin{itemize}
+        \item[$\bullet$] Flash Sort là một thuật toán \textbf{không ổn định}. Điều này có nghĩa là khi hai phần tử có giá trị bằng nhau, thứ tự ban đầu của chúng có thể thay đổi trong quá trình sắp xếp.
+    \end{itemize}
+\end{itemize}

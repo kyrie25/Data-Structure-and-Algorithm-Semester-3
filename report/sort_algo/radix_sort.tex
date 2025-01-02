@@ -51,3 +51,34 @@ Radix Sort là một thuật toán sắp xếp không dựa trên so sánh, ho�
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
+
+\subsubsection{Độ phức tạp}
+\begin{itemize}
+    \item[\textbf{--}] \textbf{Thời gian:}
+    \begin{itemize}
+        \item[$\bullet$] Sắp xếp mỗi chữ số cần \(\mathcal{O}(n + k)\), trong đó:
+        \begin{itemize}
+            \item \(n\) là số lượng phần tử trong mảng.
+            \item \(k\) là số lượng giá trị có thể xuất hiện (thông thường \(k = 10\), tương ứng với các chữ số từ 0 đến 9).
+        \end{itemize}
+        \item[$\bullet$] Tổng số chữ số cần xử lý là \(d = \lfloor \log_b(\text{max}) \rfloor + 1\), trong đó \(b\) là cơ số (ở đây \(b = 10\)).
+        \item[$\bullet$] Vì vậy, tổng thời gian thực hiện là:
+        \[
+        \mathcal{O}(d \cdot (n + k))
+        \]
+        \item[$\bullet$] Với \(k\) là hằng số, độ phức tạp có thể rút gọn thành \(\mathcal{O}(d \cdot n)\).
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Không gian:}
+    \begin{itemize}
+        \item[$\bullet$] Bộ nhớ tạm cần thiết bao gồm:
+        \begin{itemize}
+            \item \(\mathcal{O}(n)\) cho mảng tạm \(output\) để lưu trữ kết quả trung gian.
+            \item \(\mathcal{O}(k)\) cho mảng đếm \(count\).
+        \end{itemize}
+        \item[$\bullet$] Tổng không gian bộ nhớ: \(\mathcal{O}(n + k)\).
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Tính ổn định:}
+    \begin{itemize}
+        \item[$\bullet$] Radix Sort là một thuật toán \textbf{ổn định} nếu Counting Sort trong từng bước xử lý chữ số được triển khai theo cách ổn định. Tính ổn định đảm bảo rằng thứ tự ban đầu của các phần tử có giá trị bằng nhau trong mảng sẽ không thay đổi sau khi sắp xếp.
+    \end{itemize}
+\end{itemize}

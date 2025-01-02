@@ -5,17 +5,19 @@ Insertion sort là một thuật toán sắp xếp đơn giản hoạt động b
 \begin{algorithm}[H]
 \caption{Insertion sort}
 \begin{algorithmic}[1]
-\Procedure{BubbleSort}{$arr, n$}
+\Procedure{Insertion sort}{$arr, n$}
     \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử
     \State \textbf{Output:} Mảng $arr$ được sắp xếp
     
-    \For {$i \gets 0 $ \textbf{to} $n$}
-        \For {$j \gets 0$ \textbf{to} $n - i - 1$} 
-            \If{$arr[j] > arr[j+1]$}
-                \State \textbf{swap} $arr[j]$ \textbf{and} $arr[j+1]$
-            \EndIf
-        \EndFor
-    \EndFor
+    \For{$i \gets 1$ to $n-1$}
+    \State $key \gets arr[i]$
+    \State $j \gets i - 1$
+    \While{$j \geq 0$ \textbf{and} $arr[j] > key$}
+        \State $arr[j+1] \gets arr[j]$
+        \State $j \gets j - 1$
+    \EndWhile
+    \State $arr[j+1] \gets key$
+\EndFor
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}

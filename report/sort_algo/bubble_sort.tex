@@ -1,5 +1,5 @@
 \subsubsection{Ý tưởng}
-Bubble Sort là thuật toán sắp xếp so sánh liên tiếp các cặp phần tử liền kề trong mảng và hoán đổi nếu chúng không theo đúng thứ tự. Quá trình này được lặp lại cho đến khi mảng được sắp xếp. Với mỗi lần lặp, phần tử lớn nhất (hoặc nhỏ nhất) sẽ "nổi" lên cuối (hoặc đầu) mảng.
+Bubble Sort là thuật toán sắp xếp so sánh liên tiếp các cặp phần tử liền kề trong mảng và hoán đổi nếu chúng không theo đúng thứ tự. Quá trình này được lặp lại cho đến khi mảng được sắp xếp. Với mỗi lần lặp, các phần tử sẽ được đưa về đúng vị trí của nó, giống như các bong bóng nổi lên từ dưới đáy nước. 
 \subsubsection{Mã giả}
 
 \begin{algorithm}[H]
@@ -22,67 +22,93 @@ Bubble Sort là thuật toán sắp xếp so sánh liên tiếp các cặp phầ
 
 \subsubsection{Ví dụ}
 
+Dưới đây là các bước chạy tay của thuật toán \textit{Bubble Sort} với mảng $[42, 17, 93, 58, 21, 76, 34]$:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{img/bubble_sort/1.png}
-    
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/2.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/3.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/4.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/5.png}
-    \caption{Các bước chạy - 1}
-    \label{fig:part1}
+    \includegraphics[width=0.75\linewidth]{img/bubble_sort/1.png}
 \end{figure}
+\newpage
+\begin{enumerate}
+    \item Lần lặp thứ nhất
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/2.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/3.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/4.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/5.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/6.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/7.png}
+    \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{img/bubble_sort/6.png}
-    
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/7.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/8.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/9.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/10.png}
-    \caption{Các bước chạy - 2}
-    \label{fig:part2}
-\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/8.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/9.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/10.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/11.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/12.png}
+    \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{img/bubble_sort/11.png}
-    
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/12.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/13.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/14.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/15.png}
-    \caption{Các bước chạy - 3}
-    \label{fig:part3}
-\end{figure}
+    \item Lần lặp thứ hai
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/13.png}
+       
+    \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{img/bubble_sort/16.png}
-    
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/17.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/18.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/bubble_sort/19.png}
-    \caption{Các bước chạy - 4}
-    \label{fig:part4}
-\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/14.png} 
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/15.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/16.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/17.png}        
+    \end{figure}
 
+    \item Lần lặp thứ ba
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/18.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/19.png}
+    \end{figure}
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/20.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/21.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/22.png}
+    \end{figure}
+
+    \item Lần lặp thứ tư
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/23.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/24.png}
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/25.png}
+    \end{figure}
+    \newpage
+    \item Lần lặp thứ năm
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/26.png}
+    \end{figure}
+
+    \item Lần lặp thứ sáu
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/27.png}
+    \end{figure}
+
+    \item Lần lặp thứ bảy
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/28.png}
+    \end{figure}
+
+    \item Cuối cùng ta thu được mảng được sắp xếp
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/bubble_sort/28.png}
+    \end{figure}
+\end{enumerate}
+\newpage
 \subsubsection{Độ phức tạp}

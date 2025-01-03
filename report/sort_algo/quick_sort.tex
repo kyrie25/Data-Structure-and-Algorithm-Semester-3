@@ -45,38 +45,55 @@ Quick Sort là thuật toán hoạt động bằng cách chia mảng thành hai 
 \end{algorithm}
 
 \subsubsection{Ví dụ}
+Dưới đây là các bước chạy tay của thuật toán \textit{Quick Sort} (với $pivot$ là phần tử giữa mảng) với mảng $[42, 17, 93, 58, 21, 76, 34]$:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{img/quick_sort/1.png}
-    
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/2.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/3.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/4.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/5.png}
-    \caption{Các bước chạy - 1}
+    \includegraphics[width=0.75\linewidth]{img/quick_sort/1.png}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{img/quick_sort/6.png}
+\begin{enumerate}
+    \item Trước tiên ta chọn $pivot = 58$ (phần tử ở giữa mảng) và tiến hành phân hoạch mảng thành hai phần:
+    \begin{itemize}
+        \item Phần bên trái chứa các phần tử nhỏ hơn hoặc bằng $58$: $[42, 17, 34, 21]$
+        \item Phần bên phải chứa các phần tử lớn hơn $58$: $[93, 76]$
+    \end{itemize}
+    \item Ta sẽ di chuyển các phần tử sao cho các phần tử nhỏ hơn hoặc bằng $pivot$ sẽ nằm bên trái $pivot$ và các phần tử lớn hơn $pivot$ sẽ nằm bên phải $pivot$.
     
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/7.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/8.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/9.png}
-    \vspace{0.5cm}
-    \includegraphics[width=1\linewidth]{img/quick_sort/10.png}
-    \caption{Các bước chạy - 2}
-\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/2.png}
+        
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/3.png}
+        
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/4.png}
+    
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/5.png}
+    
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/6.png}
+        
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/7.png}
+        
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/8.png}
+    \end{figure}
 
-Ta sẽ gọi đệ quy lên mảng $[42,17,34,21]$ và $[58, 76,93]$ và thực hiện hoàn toàn tương tự các bước trên ta sẽ thu được mảng $[17, 21, 34, 42, 58, 76, 93]$ đã được sắp xếp.
+    \item Đến đây ta gọi đệ quy cho hai phần mảng mới được phân hoạch là $[42, 17, 34, 21]$, $[58, 76, 93]$ và cứ tiếp tục như vậy cho đến khi ta không thể phân hoạch nhỏ hơn được nữa.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{img/quick_sort/9.png}
+        
+    \end{figure}
+
+    \item Sau khi thực hiện tất cả bước trên ta sẽ thu được mảng đã được sắp xếp.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{img/quick_sort/10.png}
+    \end{figure}
+\end{enumerate}
 
 \subsubsection{Độ phức tạp}
 \begin{itemize}

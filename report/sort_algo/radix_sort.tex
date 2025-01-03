@@ -52,6 +52,82 @@ Radix Sort là một thuật toán sắp xếp không dựa trên so sánh, ho�
 \end{algorithmic}
 \end{algorithm}
 
+\subsubsection{Ví dụ}
+
+Giả sử chúng ta có mảng ban đầu: $[38, 27, 43, 3, 9, 82, 10]$. Dưới đây là các bước thực hiện Radix Sort minh họa bằng hình ảnh:
+
+\begin{enumerate}
+    \item Tạo mảng đếm và mảng phụ để lưu trữ kết quả trung gian:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/1.png}
+        \caption{Minh họa RadixSort-1}
+    \end{figure}
+    
+    \item Đếm số lần xuất hiên của chứ số hàng đơn vị và lưu vào mảng đếm:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/2.png}
+        \caption{Minh họa RadixSort-2}
+    \end{figure}
+    
+    \item Thực hiện cộng dồn ở mảng đến và trừ mỗi phần tử ở mảng đếm đi 1 để tính chỉ số của phần tử trong mảng kết quả:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/3.png}
+        \caption{Minh họa RadixSort-3}
+    \end{figure}
+    
+    \item Duyệt mảng ban đầu từ cuối về đầu, lưu từng phần tử vào mảng kết quả tạm thời với chỉ số là giá trị trong mảng count ứng với chữ số hàng đơn vị của phần tử đó:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/4.png}
+        \caption{Minh họa RadixSort-4}
+    \end{figure}
+    
+    \item Kết thúc bước sắp xếp chữ số hàng đơn vị:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/5.png}
+        \caption{Minh họa RadixSort-5}
+    \end{figure}
+    
+    \item Cập nhật mảng ban đầu với mảng kết quả tạm thời:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/6.png}
+        \caption{Minh họa RadixSort-6}
+    \end{figure}
+    
+    \item Đếm số lần xuất hiên của chứ số hàng chục và lưu vào mảng đếm:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/7.png}
+        \caption{Minh họa RadixSort-7}
+    \end{figure}
+    
+    \item Thực hiện cộng dồn ở mảng đến và trừ mỗi phần tử ở mảng đếm đi 1 để tính chỉ số của phần tử trong mảng kết quả:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/8.png}
+        \caption{Minh họa RadixSort-8}
+    \end{figure}
+    
+    \item Duyệt mảng ban đầu từ cuối về đầu, lưu từng phần tử vào mảng kết quả tạm thời với chỉ số là giá trị trong mảng count ứng với chữ số hàng chục của phần tử đó:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/9.png}
+        \caption{Minh họa RadixSort-9}
+    \end{figure}
+    
+    \item Hoành thành sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/radix_sort/10.png}
+        \caption{Minh họa RadixSort-10}
+    \end{figure}
+\end{enumerate}
+
 \subsubsection{Độ phức tạp}
 \begin{itemize}
     \item[\textbf{--}] \textbf{Thời gian:}

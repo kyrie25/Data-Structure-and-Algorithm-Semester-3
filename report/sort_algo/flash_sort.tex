@@ -15,7 +15,7 @@ Flash Sort là một thuật toán sắp xếp dựa trên việc phân phối c
     \State Tính số nhóm $m \gets \lfloor 0.43 \cdot n \rfloor$
     \State Khởi tạo mảng đếm $L[1..m]$ với giá trị ban đầu là 0
     \For{$i \gets 1$ \textbf{to} $n$}
-        \State Xác định nhóm $k_i \gets \lfloor m \cdot \frac{arr[i] - A_{\text{min}}}{A_{\text{max}} - A_{\text{min}}} \rfloor$
+        \State Xác định nhóm $k_i \gets \lfloor (m - 1) \cdot \frac{arr[i] - A_{\text{min}}}{A_{\text{max}} - A_{\text{min}}} \rfloor$
         \State Tăng $L[k_i]$ lên 1
     \EndFor
     

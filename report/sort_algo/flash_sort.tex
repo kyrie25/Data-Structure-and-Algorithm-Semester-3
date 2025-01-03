@@ -36,6 +36,98 @@ Flash Sort là một thuật toán sắp xếp dựa trên việc phân phối c
 \end{algorithmic}
 \end{algorithm}
 
+\subsubsection{Ví dụ}
+
+Giả sử chúng ta có mảng ban đầu: $[42, 17, 93, 58, 21, 76, 34]$. Dưới đây là các bước thực hiện Radix Sort minh họa bằng hình ảnh:
+
+\begin{enumerate}
+    \item Tìm giá trị nhỏ nhất và lớn nhất trong mảng và số lượng Bucket:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/1.png}
+        \caption{Minh họa FlashSort-1}
+    \end{figure}
+    
+    \item Tạo mảng \textbf{L} chứa số lượng phần tử trong từng nhóm, duyệt từng phần tử để xác định nhóm của phần tử đó bằng công thức $\lfloor (m - 1) \cdot \frac{arr[i] - A_{\text{min}}}{A_{\text{max}} - A_{\text{min}}} \rfloor$:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/2.png}
+        \caption{Minh họa FlashSort-2}
+    \end{figure}
+    
+    \item Thực hiện công dồn ở mảng \textbf{L} để tính ranh giới của các Bucket: 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/3.png}
+        \caption{Minh họa FlashSort-3}
+    \end{figure}
+    
+    \item Tiếp theo là phân phối phần tử vào đúng Bucket, ta duyệt phần tử đầu tiên để tính giá trị $k$ của phần tử đó:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/4.png}
+        \caption{Minh họa FlashSort-4}
+    \end{figure}
+    
+    \item Giảm giá trị $L[k]$ đi 1 sau đó dưa phần tử vừa tính giá trị $k$ vào vị trí cuối cùng của Bucket $k$, và lưu lại phần tử tại vị trí bị thay thế vào biến tạm thời:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/5.png}
+        \caption{Minh họa FlashSort-5}
+    \end{figure}
+    
+    \item Tương tự ta làm lại các bước trên đối với phần tử lưu trong biến tạm đến khi tất cả phần tử đều vào đúng Bucket của nó:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/6.png}
+        \caption{Minh họa FlashSort-6}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/7.png}
+        \caption{Minh họa FlashSort-7}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/8.png}
+        \caption{Minh họa FlashSort-8}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/9.png}
+        \caption{Minh họa FlashSort-9}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/10.png}
+        \caption{Minh họa FlashSort-10}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/11.png}
+        \caption{Minh họa FlashSort-11}
+    \end{figure}
+
+    \item Hoàn thành bước phân phối, sau đó ta thực hiện Insertion Sort trên từng Bucket:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/12.png}
+        \caption{Minh họa FlashSort-12}
+    \end{figure}
+
+    \item Hoành thành sắp xếp:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{img/flash_sort/13.png}
+        \caption{Minh họa FlashSort-13}
+    \end{figure}
+\end{enumerate}
+
 \subsubsection{Độ phức tạp}
 \begin{itemize}
     \item[\textbf{--}] \textbf{Thời gian:}

@@ -1,0 +1,37 @@
+\subsubsection{Ý tưởng}
+Selection Sort là thuật toán sắp xếp dựa trên so sánh. Thuật toán này sắp xếp một mảng bằng cách chọn đi chọn lại phần tử nhỏ nhất (hoặc lớn nhất) từ phần chưa được sắp xếp và hoán đổi nó với phần tử chưa được sắp xếp đầu tiên. Quá trình này tiếp tục cho đến khi toàn bộ mảng được sắp xếp.
+\begin{enumerate}
+    \item Đầu tiên chúng ta tìm phần tử nhỏ nhất và hoán đổi nó với phần tử đầu tiên. 
+    Bằng cách này, chúng ta sẽ có được phần tử nhỏ nhất ở đúng vị trí của nó.
+    
+    \item Sau đó, chúng ta tìm phần tử nhỏ nhất trong số các phần tử còn lại 
+    (hoặc phần tử nhỏ thứ hai) và hoán đổi nó với phần tử thứ hai.
+    
+    \item Chúng ta tiếp tục làm như vậy cho đến khi di chuyển được tất cả các thành phần đến đúng vị trí.
+\end{enumerate}
+\subsubsection{Mã giả}
+
+\begin{algorithm}[H]
+    \caption{Selection Sort}
+    \begin{algorithmic}[1]
+    \Procedure{SelectionSort}{$arr, n$}
+        \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử
+        \State \textbf{Output:} Mảng $arr$ được sắp xếp
+        
+        \For {$i \gets 0$ \textbf{to} $n-1$}
+            \State $minIdx \gets i$
+            \For {$j \gets i+1$ \textbf{to} $n-1$}
+                \If{$arr[j] < arr[minIdx]$}
+                    \State $minIdx \gets j$
+                \EndIf
+            \EndFor
+            \If{$minIdx \neq i$}
+                \State \textbf{swap} $arr[i]$ \textbf{and} $arr[minIdx]$
+            \EndIf
+        \EndFor
+    \EndProcedure
+    \end{algorithmic}
+    
+\end{algorithm}
+
+\subsubsection{Ví dụ}

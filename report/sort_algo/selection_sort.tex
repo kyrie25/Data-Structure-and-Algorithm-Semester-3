@@ -33,14 +33,94 @@ Selection Sort là thuật toán sắp xếp dựa trên so sánh. Thuật toán
     \end{algorithmic}
     
 \end{algorithm}
-
+\newpage
 \subsubsection{Ví dụ}
-Giả sử chúng ta có mảng ban đầu: $[42, 17, 93, 58, 21, 76, 34]$. Dưới đây là các bước thực hiện Insertion sort minh họa bằng hình ảnh:
-
+Giả sử chúng ta có mảng ban đầu: $[42, 17, 93, 58, 21, 76, 34]$. Dưới đây là các bước thực hiện Selection sort minh họa bằng hình ảnh:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/insertion sort_lan2/1.png}
+    \includegraphics[width=0.7\textwidth]{img/selection sort/1.png}
     
 \end{figure}
+
+\begin{itemize}
+\item Bắt đầu với phần tử đầu tiên(vị trí \textbf{curr}), chạy từ \textbf{curr} đến cuối mảng tìm phần tử nhỏ nhất (vị trí \textbf{min}) rồi hoán đổi hai phần tử ở vị trí \textbf{curr} và \textbf{min}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/2.png}
+    \caption{\textbf{curr} và \textbf{min} trùng nhau do 17 là phần tử nhỏ nhất}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/3.png}
+    \caption{kết quả lần hoán vị đầu tiên.}
+\end{figure}
+
+\item Tiếp tục tăng \textbf{curr}, phần tử tiếp theo là vị trí \textbf{curr}, duyệt đến cuối mảng tìm phần tử nhỏ nhất (vị trí \textbf{min}) rồi hoán vị hai phần tử \textbf{curr} và \textbf{min}. Thực hiện tương tự cho đến khi mảng được sắp xếp.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/4.png}
+    
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/5.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/6.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/7.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/8.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/9.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/10.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/11.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/12.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/13.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/14.png} 
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/selection sort/15.png} 
+    \caption{Mảng đã được sắp xếp.}
+\end{figure}
+
+
+\end{itemize}
 

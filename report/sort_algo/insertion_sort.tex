@@ -115,10 +115,24 @@ Giả sử chúng ta có mảng ban đầu: $[42, 17, 93, 58, 21, 76, 34]$. Dư�
 
 
 
-\subsubsection{Độ phức tạp}
-Thuật toán Insertion sort có độ phức tạp thời gian như sau:
+\subsubsection{\textbf{Độ phức tạp}}
 \begin{itemize}
-    \item Trường hợp tốt nhất: $O(n)$ (mảng đã sắp xếp).
-    \item Trường hợp trung bình: $O(n^2)$.
-    \item Trường hợp xấu nhất: $O(n^2)$ (mảng sắp xếp ngược).
+    \item[\textbf{--}] \textbf{Thời gian:}
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Best Case:} \(\mathcal{O}(n)\), xảy ra khi mảng đã được sắp xếp. Trong trường hợp này, mỗi phần tử chỉ cần được so sánh một lần và không có phép chèn nào thực hiện.
+        \item[$\bullet$] \textbf{Average Case:} \(\mathcal{O}(n^2)\), xảy ra khi các phần tử trong mảng được phân bố ngẫu nhiên. Số lần so sánh và chèn tăng dần theo kích thước của mảng.
+        \item[$\bullet$] \textbf{Worst Case:} \(\mathcal{O}(n^2)\), xảy ra khi mảng được sắp xếp theo thứ tự ngược lại. Trong trường hợp này, mỗi phần tử cần được so sánh với tất cả các phần tử trước đó và được chèn vào đầu danh sách.
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Không gian:}
+    \begin{itemize}
+        \item[$\bullet$] Insertion Sort là một thuật toán \textbf{không yêu cầu bộ nhớ bổ sung} (\textbf{in-place}), vì nó thực hiện sắp xếp trực tiếp trên mảng đầu vào.
+        \item[$\bullet$] Độ phức tạp bộ nhớ là:
+        \[
+        \mathcal{O}(1)
+        \]
+    \end{itemize}
+    \item[\textbf{--}] \textbf{Tính ổn định:}
+    \begin{itemize}
+        \item[$\bullet$] Insertion Sort là một thuật toán \textbf{ổn định}. Khi hai phần tử có giá trị bằng nhau, thứ tự ban đầu của chúng được bảo toàn sau quá trình sắp xếp.
+    \end{itemize}
 \end{itemize}

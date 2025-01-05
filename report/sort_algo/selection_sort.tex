@@ -126,15 +126,15 @@ Giả sử chúng ta có mảng ban đầu: $[42, 17, 93, 58, 21, 76, 34]$. Dư�
 
 \end{itemize}
 
-\subsubsection{\textbf{Độ phức tạp}}
+\subsubsection{{Độ phức tạp}}
 \begin{itemize}
-    \item[\textbf{--}] \textbf{Thời gian:}
+    \item[\textbf{--}] {Thời gian:}
     \begin{itemize}
         \item[$\bullet$] \textbf{Best Case:} \(\mathcal{O}(n^2)\), xảy ra ngay cả khi mảng đã được sắp xếp, vì thuật toán vẫn phải kiểm tra tất cả các phần tử để tìm giá trị nhỏ nhất trong mỗi lần lặp.
         \item[$\bullet$] \textbf{Average Case:} \(\mathcal{O}(n^2)\), trong trường hợp dữ liệu được phân bố ngẫu nhiên. Số lần so sánh và hoán đổi là cố định, không phụ thuộc vào cách dữ liệu được sắp xếp ban đầu.
         \item[$\bullet$] \textbf{Worst Case:} \(\mathcal{O}(n^2)\), xảy ra khi mảng ở trạng thái không sắp xếp. Thuật toán vẫn cần thực hiện \(n-1\) lần lặp, mỗi lần so sánh \(n-1\) phần tử còn lại.
     \end{itemize}
-    \item[\textbf{--}] \textbf{Không gian:}
+    \item[\textbf{--}] {Không gian:}
     \begin{itemize}
         \item[$\bullet$] Selection Sort là thuật toán \textbf{không yêu cầu bộ nhớ bổ sung} (\textbf{in-place}), vì nó chỉ sử dụng một biến phụ để lưu trữ giá trị tạm thời trong quá trình hoán đổi.
         \item[$\bullet$] Độ phức tạp bộ nhớ là:
@@ -142,7 +142,7 @@ Giả sử chúng ta có mảng ban đầu: $[42, 17, 93, 58, 21, 76, 34]$. Dư�
         \mathcal{O}(1)
         \]
     \end{itemize}
-    \item[\textbf{--}] \textbf{Tính ổn định:}
+    \item[\textbf{--}] {Tính ổn định:}
     \begin{itemize}
         \item[$\bullet$] Selection Sort là một thuật toán \textbf{không ổn định}. Khi hai phần tử có giá trị bằng nhau, vị trí tương đối của chúng có thể thay đổi sau quá trình hoán đổi.
     \end{itemize}

@@ -87,6 +87,7 @@
         \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sắp xếp đều không phụ thuộc vào việc so sánh giữa giá trị của các phần tử nên có số phép so sánh ít nhất và không tăng nhanh khi kích thước mảng tăng lên.
     \end{itemize}
 \newpage
+%-------------------------------------------------------------------------------------------
 % Sorted data
 \subsubsection{Sorted data}
 \begin{table}[!h]
@@ -159,10 +160,10 @@
         \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
         \item Vì bộ dữ liệu đã được sắp xếp nên sẽ có một số thuật toán ít phải thực hiện phép so sánh, hoán đổi vị trí và một số sẽ nhận diện được bộ dữ liệu đã được sắp xếp, giúp cải thiện đáng kể thời gian chạy.
         \item \textit{Selection sort, Bubble sort: } Kể cả bộ dữ liệu đã được sắp xếp nhưng vì tính chất thuật toán này vẫn phải thực hiện số lượng phép so sánh và hoán đổi vị trí, do đó thời gian chạy của chúng vẫn tăng nhanh theo kích thước của bộ dữ liệu.
-        \item \textit{Insertion sort, Shaker sort: } Hai thuật toán này có thể nhận diện được bộ dữ liệu đã được sắp xếp nên thời gian chạy của chúng giảm đáng kể, nằm trong nhóm có hiệu năng tốt nhất.
-        \item \textit{Shell sort: } Tuy là một biến thể của \textit{Insertion sort} nhưng \textit{Shell sort} lại không thể nhận diện được bộ dữ liệu đã được sắp xếp nên không giảm được thời gian chạy.
-        \item \textit{Heap sort, Merge sort, Quick sort:} Các thuật toán này đều có thời gian chạy ổn định và tăng chậm, phù hợp với độ phức tạp $\mathcal{O}(n \cdot \log n)$. \textit{Quick sort} với phương pháp chọn pivot nằm giữa mảng đã giúp tránh được các tình huống xấu nhất khi gọi đệ quy, bảo việc chia nhóm đều hơn, giúp giảm thời gian chạy so với \textit{Heap sort} và \textit{Merge sort}.
-        \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sử dụng phương pháp phân phối dữ liệu nên với bộ dữ liệu được sắp xếp thì các thuật toán này sẽ chia mảng ra đều hơn, giúp hiệu năng của chúng được duy trì tốt.
+        \item \textit{Insertion sort, Shaker sort: } Hai thuật toán này có thể nhận diện được bộ dữ liệu đã được sắp xếp nên thời gian chạy của chúng giảm đáng kể, nằm trong nhóm có hiệu năng tốt nhất. \textit{Shaker sort} có hiệu năng tốt hơn \textit{Insertion sort} vì nó chỉ cần duyệt qua mảng một lần và không cần phải hoán đổi vị trí, 
+        \item \textit{Shell sort: } Tuy là một biến thể của \textit{Insertion sort} nhưng \textit{Shell sort} lại không thể nhận diện được bộ dữ liệu đã được sắp xếp nên không giảm được thời gian chạy. Tuy vậy thời gian chạy của nó vẫn ổn định và không tăng nhanh khi kích thước mảng tăng.
+        \item \textit{Heap sort, Merge sort, Quick sort: } Các thuật toán này đều có thời gian chạy ổn định và tăng chậm, phù hợp với độ phức tạp $\mathcal{O}(n \cdot \log n)$. \textit{Quick sort} với phương pháp chọn pivot nằm giữa mảng đã giúp tránh được các tình huống xấu nhất khi gọi đệ quy, bảo đảm việc chia nhóm đều hơn, giúp giảm thời gian chạy so với \textit{Heap sort} và \textit{Merge sort}.
+        \item \textit{Counting sort, Radix sort, Flash sort: } Các thuật toán này sử dụng phương pháp phân phối dữ liệu nên với bộ dữ liệu được sắp xếp thì các thuật toán này sẽ chia mảng ra đều hơn, giúp hiệu năng của chúng được duy trì tốt.
     \end{itemize}    
 
     \newpage
@@ -173,101 +174,104 @@
         \item \textbf{Số phép so sánh nhiều nhất:} Selection sort.
         \item \textit{Selection sort, Bubble sort, Shaker sort:} Các thuật toán này đều có số phép so sánh nhiều nhất và số phép tang nhanh khi kích thước mảnh tăng lên. \textit{Selection sort} là thuật toán có nhiều phép so sánh nhất trong nhóm này vì luôn phải thực hiện n(n-1)/2 phép so sánh mà không phụ thuộc vào tính chất bộ dữ liệu. \textit{Shaker sort và Bubble sort} cũng có số phép so sánh cao khi dữ liệu đã sắp xếp nhưng ít hơn Selection sort
         \item \textit{Insertion sort: }Khi dữ liệu đã được sắp xếp, Insertion sort chỉ thực hiện một số lượng nhỏ phép so sánh vì thuật toán nhận ra dữ liệu đã có thứ tự. Số phép so sánh tăng chậm khi kích thước mảng tăng.
-        \item \textit{ Quick sort:} Với dữ liệu đã sắp xếp, số phép so sánh của Quick sort tăng so với trường hợp dữ liệu ngẫu nhiên, do trường hợp xấu nhất (worst-case) có thể xảy ra khi pivot được chọn không hiệu quả.
+        \item \textit{Quick sort:} Với dữ liệu đã sắp xếp, số phép so sánh của Quick sort tăng so với trường hợp dữ liệu ngẫu nhiên, do trường hợp xấu nhất (worst-case) có thể xảy ra khi pivot được chọn không hiệu quả.
         \item \textit{Merge sort: }Số phép so sánh ổn định bất kể dữ liệu đã được sắp xếp, nhờ cấu trúc chia để trị.
         \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sắp xếp đều không phụ thuộc vào việc so sánh giữa giá trị của các phần tử nên có số phép so sánh ít nhất và không tăng nhanh khi kích thước mảng tăng lên vì nó không dựa vào việc so sánh phần tử.
     \end{itemize}
 
 \newpage
+
+%-------------------------------------------------------------------------------------------
+% Nearly sorted data
 \subsubsection{Nearly sorted data}
-    \begin{table}[!h]
-        \centering
-        \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
-        \resizebox{\textwidth}{!}{
-        \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        \multicolumn{7}{|c|}{Data order: Nearly sorted} \\ \hline
-        \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
-        \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
-        Selection sort             & $33.777678$     & $100009999$ & $300.012069$ & $900029999$ & $1099.69264$   & $2500049999$  \\ \hline
-        Insertion sort             & $0.149949$      & $168826$    & $0.208278$   & $372634$    & $0.388123$     & $641438$      \\ \hline
-        Bubble sort                & $71.653936$     & $100009999$ & $464.134654$ & $900029999$ & $2001.063413$  & $2500049999$  \\ \hline
-        Shaker sort                & $0.103333$      & $126542$    & $0.27345$    & $495592$    & $1.438943$     & $984696$      \\ \hline
-        Shell sort                 & $0.284$         & $400830$    & $1.561852$   & $1317798$   & $2.344271$     & $2419280$     \\ \hline
-        Heap sort                  & $0.719923$      & $669816$    & $3.287426$   & $2236506$   & $3.859756$     & $3925382$     \\ \hline
-        Merge sort                 & $0.664989$      & $552976$    & $2.02201$    & $1820034$   & $3.262733$     & $3183125$     \\ \hline
-        Quick sort                 & $0.170889$      & $193651$    & $0.49362$    & $627271$    & $1.165753$     & $1084499$     \\ \hline
-        Counting sort              & $0.098644$      & $50001$     & $0.256398$   & $150001$    & $0.566396$     & $250001$      \\ \hline
-        Radix sort                 & $0.25174$       & $130057$    & $1.27655$    & $480071$    & $1.639467$     & $800071$      \\ \hline
-        Flash sort                 & $0.209551$      & $157949$    & $0.650804$   & $473955$    & $1.294377$     & $789943$      \\ \hline
-        \end{tabular}}
-        \end{table}
-    
-    \begin{table}[!h]
-        \centering
-        \caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
-        \resizebox{\textwidth}{!}{
-        \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        \multicolumn{7}{|c|}{Data order: Nearly sorted} \\ \hline
-        \textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
-        \textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
-        Selection sort             & $3371.550636$   & $10000099999$ & $30445.65322$  & $90000299999$ & $89733.04115$ & $250000499999$  \\ \hline
-        Insertion sort             & $0.739959$      & $1543470$     & $3.404998$     & $5556766$     & $5.04694$     & $7276634$       \\ \hline
-        Bubble sort                & $7233.954453$   & $10000099999$ & $44954.00437$  & $90000299999$ & $125495.1535$ & $250000499999$  \\ \hline
-        Shaker sort                & $1.631161$      & $1711197$     & $3.407664$     & $5263822$     & $5.415176$    & $8201076$       \\ \hline
-        Shell sort                 & $3.551392$      & $5020837$     & $10.427654$    & $16637181$    & $18.093586$   & $27866736$      \\ \hline
-        Heap sort                  & $9.545368$      & $8363632$     & $25.528625$    & $27416975$    & $67.038805$   & $47416196$      \\ \hline
-        Merge sort                 & $9.915788$      & $6727044$     & $24.500308$    & $21849463$    & $47.313286$   & $37366559$      \\ \hline
-        Quick sort                 & $2.503859$      & $2268963$     & $7.891514$     & $7275747$     & $13.975123$   & $12475747$      \\ \hline
-        Counting sort              & $1.137761$      & $500001$      & $3.095672$     & $1500001$     & $5.480158$    & $2500001$       \\ \hline
-        Radix sort                 & $3.494295$      & $1600071$     & $12.653055$    & $5700085$     & $21.684501$   & $9500085$       \\ \hline
-        Flash sort                 & $2.815089$      & $1579943$     & $12.262283$    & $4739952$     & $14.734613$   & $7899958$       \\ \hline
-        \end{tabular}}
-        \end{table}
+\begin{table}[!h]
+    \centering
+    \caption{Sorting Algorithms Performance (Data size: 10,000 to 50,000)}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{7}{|c|}{Data order: Nearly sorted} \\ \hline
+    \textbf{Data size}         & \multicolumn{2}{c|}{10,000} & \multicolumn{2}{c|}{30,000} & \multicolumn{2}{c|}{50,000} \\ \hline
+    \textbf{Resulting statics} & Running time    & Comparisons & Running time & Comparisons & Running time   & Comparisons   \\ \hline
+    Selection sort             & $33.777678$     & $100009999$ & $300.012069$ & $900029999$ & $1099.69264$   & $2500049999$  \\ \hline
+    Insertion sort             & $0.149949$      & $168826$    & $0.208278$   & $372634$    & $0.388123$     & $641438$      \\ \hline
+    Bubble sort                & $71.653936$     & $100009999$ & $464.134654$ & $900029999$ & $2001.063413$  & $2500049999$  \\ \hline
+    Shaker sort                & $0.103333$      & $126542$    & $0.27345$    & $495592$    & $1.438943$     & $984696$      \\ \hline
+    Shell sort                 & $0.284$         & $400830$    & $1.561852$   & $1317798$   & $2.344271$     & $2419280$     \\ \hline
+    Heap sort                  & $0.719923$      & $669816$    & $3.287426$   & $2236506$   & $3.859756$     & $3925382$     \\ \hline
+    Merge sort                 & $0.664989$      & $552976$    & $2.02201$    & $1820034$   & $3.262733$     & $3183125$     \\ \hline
+    Quick sort                 & $0.170889$      & $193651$    & $0.49362$    & $627271$    & $1.165753$     & $1084499$     \\ \hline
+    Counting sort              & $0.098644$      & $50001$     & $0.256398$   & $150001$    & $0.566396$     & $250001$      \\ \hline
+    Radix sort                 & $0.25174$       & $130057$    & $1.27655$    & $480071$    & $1.639467$     & $800071$      \\ \hline
+    Flash sort                 & $0.209551$      & $157949$    & $0.650804$   & $473955$    & $1.294377$     & $789943$      \\ \hline
+    \end{tabular}}
+    \end{table}
 
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width = 0.9\linewidth]{img/experiment/running time/nearly sorted/1.png}
-            \caption{Thời gian chạy của các thuật toán trên bộ dữ liệu gần như được sắp xếp}
-        \end{figure}
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width = 0.9\linewidth]{img/experiment/running time/nearly sorted/2.png}
-            \caption{Thời gian chạy của các thuật toán chạy nhanh trên bộ dữ liệu gần như được sắp xếp}
-        \end{figure}
-        
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width = 0.9\linewidth]{img/experiment/running time/nearly sorted/3.png}
-            \caption{Thời gian chạy của các thuật toán chạy chậm trên bộ dữ liệu gần như được sắp xếp}
-        \end{figure}
-    
-        \begin{itemize}
-            \item \textbf{Hiệu năng tốt nhất:} Shaker sort.
-            \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
-            \item Bộ dữ liệu gần như đã được sắp xếp nên các thuật toán có thể nhận diện được điều này và giảm được thời gian chạy, nhưng lúc này một số thuật toán có thời gian chạy thiếu sự ổn định
-            \item \textit{Selection sort, Bubble sort: } Tương tự với trường hợp dữ liệu được sắp xếp, cả 2 thuật toán này đều có thời gian chạy tăng nhanh theo kích thước của bộ dữ liệu.
-            \item \textit{Insertion sort, Shaker sort: } Tuy vẫn có hiệu năng tốt tương tự với bộ dữ liệu được sắp xếp nhưng lúc này thời gian chạy của cả 2 lại thiếu ổn định.
-            \item \textit{Shell sort: } Tương tự với trường hợp dữ liệu được sắp xếp, \textit{Shell sort} có thời gian chạy tốt và ổn định.
-            \item \textit{Heap sort, Merge sort, Quick sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
-            \item \textit{Counting sort, Radix sort, Flash sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
-    \end{itemize}
+\begin{table}[!h]
+\centering
+\caption{Sorting Algorithms Performance (Data size: 100,000 to 500,000)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{7}{|c|}{Data order: Nearly sorted} \\ \hline
+\textbf{Data size}         & \multicolumn{2}{c|}{100,000} & \multicolumn{2}{c|}{300,000} & \multicolumn{2}{c|}{500,000}   \\ \hline
+\textbf{Resulting statics} & Running time    & Comparisons   & Running time   & Comparisons   & Running time  & Comparisons     \\ \hline
+Selection sort             & $3371.550636$   & $10000099999$ & $30445.65322$  & $90000299999$ & $89733.04115$ & $250000499999$  \\ \hline
+Insertion sort             & $0.739959$      & $1543470$     & $3.404998$     & $5556766$     & $5.04694$     & $7276634$       \\ \hline
+Bubble sort                & $7233.954453$   & $10000099999$ & $44954.00437$  & $90000299999$ & $125495.1535$ & $250000499999$  \\ \hline
+Shaker sort                & $1.631161$      & $1711197$     & $3.407664$     & $5263822$     & $5.415176$    & $8201076$       \\ \hline
+Shell sort                 & $3.551392$      & $5020837$     & $10.427654$    & $16637181$    & $18.093586$   & $27866736$      \\ \hline
+Heap sort                  & $9.545368$      & $8363632$     & $25.528625$    & $27416975$    & $67.038805$   & $47416196$      \\ \hline
+Merge sort                 & $9.915788$      & $6727044$     & $24.500308$    & $21849463$    & $47.313286$   & $37366559$      \\ \hline
+Quick sort                 & $2.503859$      & $2268963$     & $7.891514$     & $7275747$     & $13.975123$   & $12475747$      \\ \hline
+Counting sort              & $1.137761$      & $500001$      & $3.095672$     & $1500001$     & $5.480158$    & $2500001$       \\ \hline
+Radix sort                 & $3.494295$      & $1600071$     & $12.653055$    & $5700085$     & $21.684501$   & $9500085$       \\ \hline
+Flash sort                 & $2.815089$      & $1579943$     & $12.262283$    & $4739952$     & $14.734613$   & $7899958$       \\ \hline
+\end{tabular}}
+\end{table}
 
-    \newpage
-    \includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_NEARLY.jpg}
-    \paragraph{Quan sát biểu đồ cột:}
-    \begin{itemize}
-        \item \textbf{Số phép so sánh ít nhất:} Insertion sort.
-        \item \textbf{Số phép so sánh nhiều nhất:} Selection sort.
-        \item \textit{Selection sort, Bubble sort, Shaker sort:} Các thuật toán này đều có số phép so sánh nhiều nhất và số phép tang nhanh khi kích thước mảng tăng lên. \textit{Selection sort} là thuật toán có nhiều phép so sánh nhất trong nhóm này vì luôn phải thực hiện n(n-1)/2 phép so sánh mà không phụ thuộc vào tính chất bộ dữ liệu. \textit{Shaker sort và Bubble sort} Số phép so sánh cao, nhưng vẫn ít hơn so với trường hợp dữ liệu ngẫu nhiên, nhờ việc phát hiện các phần tử đã ở đúng vị trí.
-        \item \textit{Insertion sort: }Khi dữ liệu gần như đã được sắp xếp, Insertion sort thể hiện rõ ưu thế vượt trội, với số phép so sánh giảm đáng kể so với các thuật toán khác. Đây là lựa chọn lý tưởng trong trường hợp dữ liệu có tính gần đúng cao.
-        \item \textit{Quick sort: }Số phép so sánh tương đối thấp trong trường hợp này, nhưng không tối ưu bằng Insertion sort khi dữ liệu gần như sắp xếp.
-        \item \textit{Shell sort, Merge sort, Heap sort: }Các thuật toán này duy trì số phép so sánh ổn định hơn và không bị ảnh hưởng lớn bởi dữ liệu gần như sắp xếp
-        \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sắp xếp đều không phụ thuộc vào việc so sánh giữa giá trị của các phần tử nên có số phép so sánh ít nhất và không tăng nhanh khi kích thước mảng tăng lên vì nó không dựa vào việc so sánh phần tử.
-    \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\linewidth]{img/experiment/running time/nearly sorted/1.png}
+    \caption{Thời gian chạy của các thuật toán trên bộ dữ liệu gần như được sắp xếp}
+\end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\linewidth]{img/experiment/running time/nearly sorted/2.png}
+    \caption{Thời gian chạy của các thuật toán chạy nhanh trên bộ dữ liệu gần như được sắp xếp}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\linewidth]{img/experiment/running time/nearly sorted/3.png}
+    \caption{Thời gian chạy của các thuật toán chạy chậm trên bộ dữ liệu gần như được sắp xếp}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Hiệu năng tốt nhất:} Insertion sort.
+    \item \textbf{Hiệu năng tệ nhất:} Bubble sort.
+    \item Bộ dữ liệu gần như đã được sắp xếp nên có 1 số thuật toán có thể nhận diện được điều này và giảm được thời gian chạy, nhưng lúc này lại có một số thuật toán có thời gian chạy thiếu sự ổn định.
+    \item \textit{Selection sort, Bubble sort:} Tương tự với trường hợp dữ liệu được sắp xếp, cả 2 thuật toán này đều có thời gian chạy tăng nhanh theo kích thước của bộ dữ liệu.
+    \item \textit{Insertion sort, Shaker sort:} Tuy vẫn có hiệu năng tốt tương tự với bộ dữ liệu được sắp xếp nhưng lúc này thời gian chạy của cả 2 lại thiếu ổn định. \textit{Insertion sort} lại có hiệu năng tốt hơn \textit{Shaker sort} vì \textit{Insertion sort} đưa các phần tử về đúng vị trí của nó trong mảng cần được sắp xếp với rất ít các phép so sánh và hoán đổi, còn \textit{Shaker sort} lại cần vài lần duyệt mảng. Do đó \textit{Insertion sort} trở thành lựa chọn tốt nhất trong trường hợp dữ liệu gần như được sắp xếp.
+    \item \textit{Shell sort:} Tương tự với trường hợp dữ liệu được sắp xếp, \textit{Shell sort} có thời gian chạy tốt và cũng khá ổn định.
+    \item \textit{Heap sort, Merge sort, Quick sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
+    \item \textit{Counting sort, Radix sort, Flash sort:} Tương tự với trường hợp dữ liệu được sắp xếp, các thuật toán đều có thời gian chạy ổn định và tăng chậm.
+\end{itemize}
+
+\newpage
+\includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_NEARLY.jpg}
+\paragraph{Quan sát biểu đồ cột:}
+\begin{itemize}
+    \item \textbf{Số phép so sánh ít nhất:} Insertion sort.
+    \item \textbf{Số phép so sánh nhiều nhất:} Selection sort.
+    \item \textit{Selection sort, Bubble sort, Shaker sort:} Các thuật toán này đều có số phép so sánh nhiều nhất và số phép tang nhanh khi kích thước mảng tăng lên. \textit{Selection sort} là thuật toán có nhiều phép so sánh nhất trong nhóm này vì luôn phải thực hiện $\frac{n(n-1)}{2}$ phép so sánh mà không phụ thuộc vào tính chất bộ dữ liệu. \textit{Shaker sort và Bubble sort} Số phép so sánh cao, nhưng vẫn ít hơn so với trường hợp dữ liệu ngẫu nhiên, nhờ việc phát hiện các phần tử đã ở đúng vị trí.
+    \item \textit{Insertion sort: }Khi dữ liệu gần như đã được sắp xếp, \textit{Insertion sort} thể hiện rõ ưu thế vượt trội, với số phép so sánh giảm đáng kể so với các thuật toán khác. Đây là lựa chọn lý tưởng trong trường hợp dữ liệu có tính gần đúng cao.
+    \item \textit{Quick sort: }Số phép so sánh tương đối thấp trong trường hợp này, nhưng không tối ưu bằng \textit{Insertion sort} khi dữ liệu gần như sắp xếp.
+    \item \textit{Shell sort, Merge sort, Heap sort: }Các thuật toán này duy trì số phép so sánh ổn định hơn và không bị ảnh hưởng lớn bởi dữ liệu gần như sắp xếp
+    \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sắp xếp đều không phụ thuộc vào việc so sánh giữa giá trị của các phần tử nên có số phép so sánh ít nhất và không tăng nhanh khi kích thước mảng tăng lên vì nó không dựa vào việc so sánh phần tử.
+\end{itemize}
+%---------------------------------------------------------------------------------------------------------------
 % Reversed data
 \newpage
 \subsubsection{Reversed data}
@@ -315,7 +319,7 @@
     Radix sort                 & $4.246591$      & $1900085$     & $11.667985$    & $5700085$     & $19.34052$    & $9500085$       \\ \hline
     Flash sort                 & $2.194011$      & $1332502$     & $6.825843$     & $3997502$     & $11.320678$   & $6662502$       \\ \hline
     \end{tabular}}
-    \end{table}
+\end{table}
     \begin{figure}[H] 
         \centering
         \includegraphics[width = 0.9\linewidth]{img/experiment/running time/reversed/1.png}

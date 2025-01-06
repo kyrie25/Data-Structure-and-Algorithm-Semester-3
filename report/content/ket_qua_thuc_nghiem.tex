@@ -372,7 +372,7 @@ Flash sort                 & $2.815089$      & $1579943$     & $12.262283$    & 
 \begin{itemize}
     \item \textbf{Đối với bộ dữ liệu ngẫu nhiên (Randomize):} Counting Sort, Radix Sort, và Flash Sort là những thuật toán có tốc độ nhanh nhất. Tốc độ chạy của cả ba thuật toán này không phụ thuộc vào thứ tự sắp xếp của mảng, mà chủ yếu dựa vào đặc tính của dữ liệu. Cụ thể: Counting Sort và Radix Sort phụ thuộc vào khoảng giá trị của các phần tử, trong khi Flash Sort phụ thuộc vào sự phân bố giá trị trong mảng.
     
-    \item \textbf{Đối với bộ dữ liệu đã sắp xếp (Sorted) và gần sắp xếp (Nearly Sorted):} Shaker Sort và Insertion Sort là hai thuật toán vượt trội nhất. Cả hai thuật toán chỉ thực hiện một lượt kiểm tra các phần tử, đạt độ phức tạp $O(n)$. Trong khi đó, mặc dù Flash Sort cũng có độ phức tạp trung bình là $O(n)$ trên các dữ liệu có phân phối đồng đều, thuật toán này vẫn chậm hơn do phải thực hiện thêm bước phân phối lại các giá trị, không tận dụng được đặc tính đã sắp xếp của mảng.
+    \item \textbf{Đối với bộ dữ liệu đã sắp xếp (Sorted) và gần sắp xếp (Nearly Sorted):} Shaker Sort và Insertion Sort là hai thuật toán vượt trội nhất. Cả hai thuật toán chỉ thực hiện một lượt kiểm tra các phần tử, đạt độ phức tạp $\mathcal{O}(n)$. Trong khi đó, mặc dù Flash Sort cũng có độ phức tạp trung bình là $\mathcal{O}(n)$ trên các dữ liệu có phân phối đồng đều, thuật toán này vẫn chậm hơn do phải thực hiện thêm bước phân phối lại các giá trị, không tận dụng được đặc tính đã sắp xếp của mảng.
     
     \item \textbf{Đối với bộ dữ liệu sắp xếp ngược (Reversed):} Counting Sort là thuật toán có tốc độ nhanh nhất, nhờ vào cơ chế xử lý không phụ thuộc thứ tự ban đầu của mảng.
 \end{itemize}
@@ -380,7 +380,7 @@ Flash sort                 & $2.815089$      & $1579943$     & $12.262283$    & 
 \textbf{Nhóm thuật toán có tốc độ chậm nhất:}
 
 \begin{itemize}
-    \item \textbf{Đối với tất cả các bộ dữ liệu:} Bubble Sort và Selection Sort là hai thuật toán chậm nhất. Nguyên nhân là cả hai không tận dụng được trạng thái của mảng (như đã sắp xếp hay gần sắp xếp). Bất kể dữ liệu đầu vào, chúng đều phải thực hiện toàn bộ các phép so sánh và hoán đổi (hoặc lựa chọn phần tử), dẫn đến độ phức tạp $O(n^2)$ trong mọi trường hợp, làm giảm hiệu quả trên các bộ dữ liệu lớn.
+    \item \textbf{Đối với tất cả các bộ dữ liệu:} Bubble Sort và Selection Sort là hai thuật toán chậm nhất. Nguyên nhân là cả hai không tận dụng được trạng thái của mảng (như đã sắp xếp hay gần sắp xếp). Bất kể dữ liệu đầu vào, chúng đều phải thực hiện toàn bộ các phép so sánh và hoán đổi (hoặc lựa chọn phần tử), dẫn đến độ phức tạp $\mathcal{O}(n^2)$ trong mọi trường hợp, làm giảm hiệu quả trên các bộ dữ liệu lớn.
 \end{itemize}
 
 \newpage

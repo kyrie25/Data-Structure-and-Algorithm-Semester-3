@@ -30,6 +30,17 @@ Shaker Sort là một biến thể của Bubble Sort, nơi mà mảng được d
 \end{algorithm}
 
 \subsubsection{Ví dụ}
+
+\begin{enumerate}
+    \item \textbf{Bước 1}: Khai báo 2 biến tạm $left$ và $right$ lần lượt là vị trí bắt đầu và kết thúc của mảng.
+    \item \textbf{Bước 2}: Duyệt mảng từ trái sang phải và từ phải sang trái xen kẽ:
+        \begin{itemize}
+            \item Nếu phần tử hiện tại lớn hơn phần tử kế tiếp, ta đổi chỗ 2 phần tử này.
+            \item Sau mỗi lần duyệt, ta cập nhật lại vị trí của $left$ và $right$ bằng cách tăng hoặc giảm giá trị của chúng đi $1$.
+        \end{itemize}
+    \item \textbf{Bước 3}: Lặp lại bước 2 cho đến khi $left \geq right$.
+\end{enumerate}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{img/shaker_sort/1.png}

@@ -97,17 +97,17 @@ Dưới đây là các bước chạy tay của thuật toán \textit{Quick Sort
 
 \subsubsection{Độ phức tạp} 
 \begin{itemize}
-    \item[\textbf{--}]\textbf{Thời gian:}
+    \item[\textbf{--}]Độ phức tạp về thời gian:
         \begin{itemize}
             \item[$\bullet$] \textbf{Best Case:} $\mathcal{O}(n \cdot \log{}n)$, xảy ra khi việc chọn \textit{pivot} có thể phân hoạch thành 2 phần đều nhau.
             \item[$\bullet$] \textbf{Average Case:}  $\mathcal{O}(n \cdot \log{}n)$, thời gian chạy trung bình của \textit{Quick sort} thường gần với trường hợp tốt nhất hơn là trường hợp tệ nhất. \cite{CLRS2009} 
             \item[$\bullet$] \textbf{Worst Case:}  $\mathcal{O}(n^{2})$, xảy ra khi việc chọn \textit{pivot} không thể phân hoạch mảng thành 2 phần đều nhau, chẳng hạn một bên có 1 phần tử và bên còn lại có $n - 1$ phần tử.
         \end{itemize}
-    \item[\textbf{--}]\textbf{Không gian:} phụ thuộc vào độ sâu ngăn xếp của việc gọi đệ quy. Cụ thể:
+    \item[\textbf{--}]Không gian bộ nhớ: phụ thuộc vào độ sâu ngăn xếp của việc gọi đệ quy. Cụ thể:
         \begin{itemize}
             \item[$\bullet$] \textbf{Best Case:} $\mathcal{O}(\log{}n)$, khi việc phân hoạch mảng thành 2 phần đều nhau dẫn đến độ sâu ngăn xếp của việc gọi đệ quy là $\log{}n$.
             \item[$\bullet$] \textbf{Worst case:} $\mathcal{O}(n)$, khi việc phân hoạch mảng thành 2 phần bị lệch dẫn đến độ sâu ngăn xếp của việc gọi đệ quy có thể đạt tới $n$. 
             \item[$\bullet$] \textbf{Auxiliary space:} \textit{Quick sort} là thuật toán \textit{in-place}, chỉ thay đổi vị trí các phần tử trong mảng.
         \end{itemize}
-    \item[\textbf{--}]\textbf{Tính ổn định:} Không ổn định vì nó không đảm bảo vị trí ban đầu của các phần tử bằng nhau trong quá trình sắp xếp.
+    \item[\textbf{--}]Tính ổn định: Không ổn định vì nó không đảm bảo vị trí ban đầu của các phần tử bằng nhau trong quá trình sắp xếp.
 \end{itemize}

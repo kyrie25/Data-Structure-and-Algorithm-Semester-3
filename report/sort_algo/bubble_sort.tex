@@ -1,5 +1,5 @@
 \subsubsection{Ý tưởng}
-Bubble Sort là thuật toán sắp xếp so sánh liên tiếp các cặp phần tử liền kề trong mảng và hoán đổi nếu chúng không theo đúng thứ tự. Quá trình này được lặp lại cho đến khi mảng được sắp xếp. Với mỗi lần lặp, các phần tử sẽ được đưa về đúng vị trí của nó, giống như các bong bóng nổi lên từ dưới đáy nước. 
+Bubble Sort là thuật toán sắp xếp so sánh liên tiếp các cặp phần tử liền kề trong mảng và hoán đổi nếu chúng không theo đúng thứ tự. Quá trình này được lặp lại cho đến khi mảng được sắp xếp. Với mỗi lần lặp, các phần tử sẽ được đưa về đúng vị trí của nó, giống như các bong bóng nổi lên từ dưới đáy nước. \cite{black2009}
 \subsubsection{Mã giả}
 
 \begin{algorithm}[H]
@@ -27,6 +27,8 @@ Dưới đây là các bước chạy tay của thuật toán \textit{Bubble Sor
     \centering
     \includegraphics[width=0.75\linewidth]{img/bubble_sort/1.png}
 \end{figure}
+
+Trong mỗi lần lặp ta sẽ tiến hành so sánh các phần tử liền kề và hoán đổi chúng nếu chúng không theo thứ tự và cứ tiếp tục như cho đến hết mảng.
 \newpage
 \begin{enumerate}
     \item Lần lặp thứ nhất
@@ -114,12 +116,12 @@ Dưới đây là các bước chạy tay của thuật toán \textit{Bubble Sor
 \subsubsection{Độ phức tạp}
 
 \begin{itemize}
-    \item[\textbf{--}]Độ phức tạp về thời gian:
+    \item[\textbf{--}]\textbf{Thời gian:} Vì mỗi lần lặp ta đều phải duyệt qua toàn bộ mảng nên cả 3 trường hợp đều có độ phức tạp là:
         \begin{itemize}
             \item[\textbullet]\textbf{Best case}: $\mathcal{O}(n^2)$
             \item[\textbullet]\textbf{Average case}:  $\mathcal{O}(n^2)$
             \item[\textbullet]\textbf{Worst case}:  $\mathcal{O}(n^2)$
         \end{itemize}
-    \item[\textbf{--}]Độ phức tạp về không gian:  $\mathcal{O}(1)$, vì không cần thêm bộ nhớ phụ nào trong quá trình sắp xếp.
-    \item[\textbf{--}]Tính ổn định: \textit{Bubble sort} là thuật toán ổn định nghĩa là nó không thay đổi vị trí của các phần tử bằng nhau trong quá trình sắp xếp.
+    \item[\textbf{--}]\textbf{Không gian:}  $\mathcal{O}(1)$, vì không cần thêm bộ nhớ phụ trong quá trình sắp xếp.
+    \item[\textbf{--}]\textbf{Tính ổn định:} \textit{Bubble sort} là thuật toán ổn định nghĩa là nó không thay đổi vị trí của các phần tử bằng nhau trong quá trình sắp xếp.
 \end{itemize}

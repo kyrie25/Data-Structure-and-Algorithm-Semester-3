@@ -1,5 +1,5 @@
 \subsubsection{Ý tưởng}
-\textbf{Heap Sort} là thuật toán sắp xếp dựa trên cấu trúc dữ liệu \textbf{Binary Heap}, trong đó phần tử lớn nhất (hoặc nhỏ nhất) được đưa về gốc của \textit{heap} (\textit{max heap} hoặc \textit{min heap}). Sau đó, phần tử này được hoán đổi với phần tử cuối mảng và loại bỏ khỏi \textit{heap}. Quá trình xây dựng lại \textit{heap} và hoán đổi được lặp lại cho đến khi mảng được sắp xếp.
+\textbf{Heap Sort} là thuật toán sắp xếp dựa trên cấu trúc dữ liệu \textbf{Binary Heap}, trong đó phần tử lớn nhất (hoặc nhỏ nhất) được đưa về gốc của \textit{heap} (\textit{max heap} hoặc \textit{min heap}). Sau đó, phần tử này được hoán đổi với phần tử cuối mảng và loại bỏ khỏi \textit{heap}. Quá trình xây dựng lại \textit{heap} và hoán đổi được lặp lại cho đến khi mảng được sắp xếp.\cite{sharma2008analysis}
 
 \subsubsection{Mã giả}
 \begin{algorithm}[H]
@@ -223,7 +223,7 @@ Dưới đây là các bước chạy tay của thuật toán \textbf{Heap Sort}
         \begin{itemize}
             \item [$\bullet$] Với mỗi nút ở cấp độ $i$, chi phí tái cấu trúc \textbf{Heap} (\textit{Heapify}) tỷ lệ với chiều cao của nút đó, $h_i$.
             \item [$\bullet$] Số lượng nút ở mỗi cấp đó $k$ của cây nhị phân là $2^k$, và chiều cao của cây là $\log n$.
-            \item [$\bullet$] Tổng chi phí được tính bằng:
+            \item [$\bullet$] Tổng chi phí được tính bằng:\cite{basir2020analisis}
             \begin{center}
                 $T_{\text{build}} = \sum_{k=0}^{\log n - 1} \frac{n}{2^{k+1}} \cdot k$
             \end{center}
@@ -257,21 +257,21 @@ Dưới đây là các bước chạy tay của thuật toán \textbf{Heap Sort}
     \begin{itemize}
         \item [$\bullet$] \textbf{Trường hợp tốt nhất}
         \begin{itemize}
-            \item [$\bullet$] Trường hợp tốt nhất, \textbf{Heapify} vẫn phải thực hiện đầy đủ các bước, vì vậy không giảm độ phức tạp:
+            \item [$\bullet$] Trường hợp tốt nhất, \textbf{Heapify} vẫn phải thực hiện đầy đủ các bước, vì vậy không giảm độ phức tạp:\cite{mishra2008selection}
             \begin{center}
                 $T_{\text{best}} = \mathcal{O}(n \cdot \log n)$
             \end{center}
         \end{itemize}
         \item [$\bullet$] \textbf{Trường hợp trung bình}
         \begin{itemize}
-            \item [$\bullet$] Với các mảng ngẫu nhiên, sắp xếp, gần được sắp xếp, mảng giảm dần, trung bình mỗi lần \textbf{Heapify} vẫn có độ phức tạp $\mathcal{O}(\log n)$, lặp lại $n-1$ lần mà không phụ thuộc vào trạng thái ban đầu của mảng.
+            \item [$\bullet$] Với các mảng ngẫu nhiên, sắp xếp, gần được sắp xếp, mảng giảm dần, trung bình mỗi lần \textbf{Heapify} vẫn có độ phức tạp $\mathcal{O}(\log n)$, lặp lại $n-1$ lần mà không phụ thuộc vào trạng thái ban đầu của mảng.\cite{mishra2008selection}
             \begin{center}
                 $T_{\text{average}} = \mathcal{O}(n \cdot \log n)$
             \end{center}
         \end{itemize}
         \item [$\bullet$] \textbf{Trường hợp xấu nhất}
         \begin{itemize}
-            \item [$\bullet$] Trường hợp xấu nhất cũng không khác biệt vì \textbf{Heapify} vẫn phải xử lý toàn bộ chiều của \textbf{Heap}.
+            \item [$\bullet$] Trường hợp xấu nhất cũng không khác biệt vì \textbf{Heapify} vẫn phải xử lý toàn bộ chiều của \textbf{Heap}.\cite{mishra2008selection}
             \begin{center}
                 $T_{\text{worst}} = \mathcal{O}(n \cdot \log n)$
             \end{center}

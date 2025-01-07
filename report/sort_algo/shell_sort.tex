@@ -1,5 +1,5 @@
 \subsubsection{Ý tưởng}
-\textbf{Shell Sort} là một cải tiến của thuật toán \textbf{Insertion Sort}. Ý tưởng chính là sắp xếp các phần tử nằm xa nhau trước, sau đó giảm dần khoảng cách giữa các phần tử so sánh, và cuối cùng thực hiện một lần \textbf{Insertion Sort} với các khoảng cách bằng 1. Điều này giúp giảm số lần hoán đổi và so sánh khi so sánh các phần tử gần nhau ở bước cuối.
+\textbf{Shell Sort} là một cải tiến của thuật toán \textbf{Insertion Sort}. Ý tưởng chính là sắp xếp các phần tử nằm xa nhau trước, sau đó giảm dần khoảng cách giữa các phần tử so sánh, và cuối cùng thực hiện một lần \textbf{Insertion Sort} với các khoảng cách bằng 1. Điều này giúp giảm số lần hoán đổi và so sánh khi so sánh các phần tử gần nhau ở bước cuối.\cite{sedgewick1996analysis}
 
 \subsubsection{Mã giả}
 \begin{algorithm}[H]
@@ -120,9 +120,9 @@ Dưới đây là các bước chạy tay của thuật toán \textbf{Shell Sort
 \begin{itemize}
     \item[\textbf{--}] \textbf{Độ phức tạp về thời gian:}
     \begin{itemize}
-        \item[$\bullet$] \textbf{Best Case:} $\mathcal{O}(n \cdot \log n)$, phụ thuộc vào cách chọn chuỗi khoảng cách (gap sequence). Khi mảng gần như đã được sắp xếp, số phép hoán đổi và so sánh giảm đáng kể.
-        \item[$\bullet$] \textbf{Average Case:} $\mathcal{O}(n^{3/2})$, đối với chuỗi khoảng cách phổ biến như Knuth hoặc Hibbard. Đây là độ phức tạp trung bình được quan sát trong thực tế và lý thuyết.
-        \item[$\bullet$] \textbf{Worst Case:} $\mathcal{O}(n^2)$, xảy ra khi mảng có cấu trúc dữ liệu bất lợi hoặc chuỗi khoảng cách không được tối ưu hóa.
+        \item[$\bullet$] \textbf{Best Case:} $\mathcal{O}(n \cdot \log n)$, phụ thuộc vào cách chọn chuỗi khoảng cách (gap sequence). Khi mảng gần như đã được sắp xếp, số phép hoán đổi và so sánh giảm đáng kể.\cite{vishweshwarayya975find}
+        \item[$\bullet$] \textbf{Average Case:} $\mathcal{O}(n^{3/2})$, đối với chuỗi khoảng cách phổ biến như Knuth hoặc Hibbard. Đây là độ phức tạp trung bình được quan sát trong thực tế và lý thuyết.\cite{jiang1999average}
+        \item[$\bullet$] \textbf{Worst Case:} $\mathcal{O}(n^2)$, xảy ra khi mảng có cấu trúc dữ liệu bất lợi hoặc chuỗi khoảng cách không được tối ưu hóa.\cite{vishweshwarayya975find}
     \end{itemize}
     \item[\textbf{--}] \textbf{Độ phức tạp về không gian:} $\mathcal{O}(1)$, do thuật toán thực hiện in-place, không yêu cầu bộ nhớ phụ trợ.
     \item[\textbf{--}] \textbf{Tính ổn định:} Thuật toán không ổn định, vì trong quá trình di chuyển các phần tử qua khoảng cách lớn, thứ tự ban đầu của các phần tử có giá trị bằng nhau có thể bị thay đổi.

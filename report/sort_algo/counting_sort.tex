@@ -1,6 +1,6 @@
 \subsubsection{Ý tưởng}
 
-Counting Sort là một thuật toán sắp xếp dựa trên phép đếm số lần xuất hiện của các phần tử trong mảng. Thuật toán này chỉ hoạt động với các mảng có giá trị không âm và có giới hạn về giá trị của các phần tử trong mảng.
+Counting Sort là một thuật toán sắp xếp dựa trên phép đếm số lần xuất hiện của các phần tử trong mảng. Thuật toán này chỉ hoạt động với các mảng có giá trị không âm và có giới hạn về giá trị của các phần tử trong mảng. \cite{cormen2001}
 
 \subsubsection{Mã giả}
 
@@ -27,6 +27,13 @@ Counting Sort là một thuật toán sắp xếp dựa trên phép đếm số 
 \end{algorithm}
 
 \subsubsection{Ví dụ}
+
+Giả sử ta có mảng $arr = [42, 17, 93, 58, 21, 76, 34]$ và ta muốn sắp xếp mảng này bằng thuật toán Counting Sort.
+\begin{enumerate}
+    \item \textbf{Bước 1}: Tính số lần xuất hiện của các phần tử trong mảng $arr$ và lưu vào mảng $count$.\\Mảng $count$ trong hình được lược bỏ các phần tử có giá trị bằng $0$.
+    \item \textbf{Bước 2}: Tính số lần xuất hiện của các phần tử nhỏ hơn hoặc bằng phần tử hiện tại trong mảng $count$.
+    \item \textbf{Bước 3}: Sắp xếp mảng $arr$ vào mảng $output$ dựa trên số lần xuất hiện của các phần tử trong mảng $count$.
+\end{enumerate}
 
 \begin{figure}[H]
     \centering

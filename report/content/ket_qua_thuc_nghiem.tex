@@ -77,7 +77,11 @@
     \end{itemize}
 
     \newpage
-    \includegraphics[width = 1\linewidth]{img/experiment/comparison/comparision_randomesize.jpg}
+    \begin{figure}[H]
+        \centering        
+        \includegraphics[width = 1\linewidth]{img/experiment/comparison/comparision_randomesize.jpg}
+        \caption{Biểu đồ số lượng phép so sánh của các thuật toán trên bộ dữ liệu ngẫu nhiên}
+    \end{figure}
     \paragraph{Quan sát biểu đồ cột:}
     \begin{itemize}
         \item \textbf{Số phép so sánh ít nhất:} Counting sort.
@@ -167,7 +171,11 @@
     \end{itemize}    
 
     \newpage
-    \includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_SORTED.jpg}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_SORTED.jpg}
+        \caption{Biểu đồ số lượng phép so sánh của các thuật toán trên bộ dữ liệu đã sắp xếp}
+    \end{figure}
     \paragraph{Quan sát biểu đồ cột:}
     \begin{itemize}
         \item \textbf{Số phép so sánh ít nhất:} Insertion sort.
@@ -260,7 +268,11 @@ Flash sort                 & $2.815089$      & $1579943$     & $12.262283$    & 
 \end{itemize}
 
 \newpage
-\includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_NEARLY.jpg}
+\begin{figure}[H]
+    \centering    
+    \includegraphics[width = 1\linewidth]{img/experiment/comparison/COMPARISON_NEARLY.jpg}
+    \caption{Biểu đồ số lượng phép so sánh của các thuật toán trên bộ dữ liệu gần như được sắp xếp}
+\end{figure}
 \paragraph{Quan sát biểu đồ cột:}
 \begin{itemize}
     \item \textbf{Số phép so sánh ít nhất:} Insertion sort.
@@ -359,7 +371,7 @@ Flash sort                 & $2.815089$      & $1579943$     & $12.262283$    & 
     \begin{itemize}
         \item \textbf{Số phép so sánh ít nhất:} Counting sort.
         \item \textbf{Số phép so sánh nhiều nhất:} Selection sort.
-        \item \textit{Selection sort, Bubble sort, Insert sort, Shaker sort:} Các thuật toán này đều có số phép so sánh nhiều nhất và số phép tang nhanh khi kích thước mảnh tăng lên. \textit{Selection sort} là thuật toán có nhiều phép so sánh nhất trong nhóm này vì luôn phải thực hiện n(n-1)/2 phép so sánh dù bộ dữ liệu đã được sắp xếp ra sao.
+        \item \textit{Selection sort, Bubble sort, Insert sort, Shaker sort:} Các thuật toán này đều có số phép so sánh nhiều nhất và số phép tang nhanh khi kích thước mảnh tăng lên. \textit{Selection sort} là thuật toán có nhiều phép so sánh nhất trong nhóm này vì luôn phải thực hiện $\frac{n(n-1)}{2}$ phép so sánh dù bộ dữ liệu đã được sắp xếp ra sao.
         \item \textit{Shell sort, Heap sort, Merge sort, Quick sort:} Các thuật toán này đều có số phép so sánh ít nhất và tăng chậm khi kích thước mảng tăng lên. \textit{Quick sort} vẫn là thuật toán có hiệu năng tốt nhất trong nhóm này.
         \item \textit{Counting sort, Radix sort, Flash sort:} Các thuật toán này sắp xếp đều không phụ thuộc vào việc so sánh giữa giá trị của các phần tử nên có số phép so sánh ít nhất và không tăng nhanh khi kích thước mảng tăng lên.
     \end{itemize}

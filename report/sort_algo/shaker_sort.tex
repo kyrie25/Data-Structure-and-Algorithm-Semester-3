@@ -50,19 +50,19 @@ Shaker Sort là một biến thể của Bubble Sort, nơi mà mảng được d
 \subsubsection{Độ phức tạp}
 
 \begin{itemize}
-    \item Độ phức tạp thời gian: $\mathcal{O}(n^2)$
-    \item Độ phức tạp không gian: $\mathcal{O}(1)$
-    \item Ưu điểm:
-        \begin{itemize}
-            \item Giảm số lần so sánh giữa các phần tử trong mảng
-        \end{itemize}
-    \item Nhược điểm:
-        \begin{itemize}
-            \item Độ phức tạp thời gian cao
-        \end{itemize}
-    \item Tính ổn định: \textit{Shaker Sort} là một thuật toán ổn định. Điều này có nghĩa là nếu có hai phần tử bằng nhau, thì chúng sẽ không bị đảo lộn thứ tự sau khi sắp xếp.
-    \item Ứng dụng:
-        \begin{itemize}
-            \item Sắp xếp các mảng có kích thước nhỏ
-        \end{itemize}
+    \item[\textbf{--}] Độ phức tạp thời gian: 
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Best case}: $\mathcal{O}(n^2)$
+        \item[$\bullet$] \textbf{Average case}: $\mathcal{O}(n^2)$
+        \item[$\bullet$] \textbf{Worst case}: $\mathcal{O}(n^2)$
+    \end{itemize}
+    \item[\textbf{--}] Độ phức tạp không gian:
+    \begin{itemize}
+        \item[$\bullet$] \textit{Shaker sort} không sử dụng thêm bộ nhớ phụ ngoài 2 biến tạm $left$ và $right$.
+        \item[$\bullet$] Độ phức tạp bộ nhớ là:
+        \[
+        \mathcal{O}(1)
+        \]
+    \end{itemize}
+    \item[\textbf{--}] Tính ổn định: \textit{Shaker Sort} là một thuật toán ổn định. Điều này có nghĩa là nếu có hai phần tử bằng nhau, thì chúng sẽ không bị đảo lộn thứ tự sau khi sắp xếp.
 \end{itemize}

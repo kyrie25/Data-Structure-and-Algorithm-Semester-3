@@ -44,21 +44,19 @@ Giả sử ta có mảng $arr = [42, 17, 93, 58, 21, 76, 34]$ và ta muốn sắ
 \subsubsection{Độ phức tạp}
 
 \begin{itemize}
-    \item Độ phức tạp thời gian: $\mathcal{O}(n + k)$
-    \item Độ phức tạp không gian: $\mathcal{O}(n + k)$
-    \item Ưu điểm:
-        \begin{itemize}
-            \item Độ phức tạp thời gian tốt nhất trong các thuật toán sắp xếp: $\mathcal{O}(n)$
-            \item Không sử dụng so sánh giữa các phần tử
-        \end{itemize}
-    \item Nhược điểm:
-        \begin{itemize}
-            \item Chỉ hoạt động với các mảng có giá trị không âm và có giới hạn về giá trị của các phần tử
-            \item Không thể sắp xếp các mảng có số thập phân
-        \end{itemize}
-    \item Tính ổn định: \textit{Counting Sort} là một thuật toán ổn định. Điều này có nghĩa là nếu có hai phần tử bằng nhau, thì chúng sẽ không bị đảo lộn thứ tự sau khi sắp xếp.
-    \item Ứng dụng:
-        \begin{itemize}
-            \item Sắp xếp các mảng có giá trị không âm và có giới hạn về giá trị của các phần tử
-        \end{itemize}
+    \item[\textbf{--}] Độ phức tạp thời gian:
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Best case}: $\mathcal{O}(n + k)$
+        \item[$\bullet$] \textbf{Average case}: $\mathcal{O}(n + k)$
+        \item[$\bullet$] \textbf{Worst case}: $\mathcal{O}(n + k)$
+    \end{itemize}
+    \item[\textbf{--}] Độ phức tạp không gian:
+    \begin{itemize}
+        \item[$\bullet$] \textit{Counting Sort} sử dụng thêm bộ nhớ phụ để lưu trữ mảng $count$ và mảng $output$.
+        \item[] Độ phức tạp không gian:
+        \[
+        \mathcal{O}(n + k)
+        \]
+    \end{itemize}
+    \item[\textbf{--}] Tính ổn định: \textit{Counting Sort} là một thuật toán ổn định. Điều này có nghĩa là nếu có hai phần tử bằng nhau, thì chúng sẽ không bị đảo lộn thứ tự sau khi sắp xếp.
 \end{itemize}

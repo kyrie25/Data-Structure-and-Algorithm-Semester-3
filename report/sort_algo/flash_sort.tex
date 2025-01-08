@@ -12,7 +12,7 @@ Flash Sort là một thuật toán sắp xếp dựa trên việc phân phối c
     
     \State \textbf{Bước 1: Phân loại (Classification)}
     \State Tìm giá trị nhỏ nhất $A_{\text{min}}$ và lớn nhất $A_{\text{max}}$ trong mảng $arr$
-    \State Tính số nhóm $m \gets \lfloor 0.43 \cdot n \rfloor$
+    \State Tính số nhóm $m \gets \lfloor 0.45 \cdot n \rfloor$
     \State Khởi tạo mảng đếm $L[1..m]$ với giá trị ban đầu là 0
     \For{$i \gets 1$ \textbf{to} $n$}
         \State Xác định nhóm $k_i \gets \lfloor (m - 1) \cdot \frac{arr[i] - A_{\text{min}}}{A_{\text{max}} - A_{\text{min}}} \rfloor$

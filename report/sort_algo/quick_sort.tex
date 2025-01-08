@@ -15,12 +15,12 @@ Quick Sort là một thuật toán chia để trị \textbf{(divide and conquer)
     \If{$left \geq right$}
         \State \textbf{return}
     \EndIf
-    \State $pivot \gets$ \Call{Partition}{$arr, left, right$}
+    \State $pivot \gets$ \Call{Partition}{$arr, left, right$} \Comment{Vị trí của pivot sau khi phân hoạch}
     \State \Call{QuickSortRecursive}{$arr, left, pivot - 1$}
     \State \Call{QuickSortRecursive}{$arr, pivot, right$}
 \EndProcedure
 
-\Procedure{Partition}{$arr, left, right$}
+\Procedure{Partition}{$arr, left, right$} \Comment{Phân hoạch mảng thành 2 phần}
     \State $pivot \gets arr[\frac{left + right}{2}]$
     \State $i \gets left, j \gets right$
 

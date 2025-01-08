@@ -4,7 +4,7 @@ Radix Sort là một thuật toán sắp xếp không dựa trên so sánh, ho�
 \subsubsection{Mã giả}
 
 \begin{algorithm}[H]
-\caption{Radix Sort}
+\caption{Radix Sort (Mảng bắt đầu từ 0)}
 \begin{algorithmic}[1]
 \Procedure{RadixSort}{$arr, n$}
     \State \textbf{Input:} Mảng $arr$ gồm $n$ phần tử
@@ -24,10 +24,10 @@ Radix Sort là một thuật toán sắp xếp không dựa trên so sánh, ho�
     \State \textbf{Output:} Mảng $arr$ được sắp xếp theo chữ số hàng $exp$
     
     \State Khởi tạo mảng đếm $count[0..9] \gets 0$
-    \State Khởi tạo mảng tạm $output[1..n]$
+    \State Khởi tạo mảng tạm $output[0..(n-1)]$
     
     \State \textbf{Đếm số lần xuất hiện:}
-    \For{$i \gets 1$ \textbf{to} $n$}
+    \For{$i \gets 0$ \textbf{to} $n-1$}
         \State $digit \gets \lfloor arr[i] / exp \rfloor \mod 10$
         \State $count[digit] \gets count[digit] + 1$
     \EndFor
@@ -38,14 +38,14 @@ Radix Sort là một thuật toán sắp xếp không dựa trên so sánh, ho�
     \EndFor
     
     \State \textbf{Sắp xếp phần tử theo chữ số hiện tại:}
-    \For{$i \gets n$ \textbf{down to} $1$}
+    \For{$i \gets n-1$ \textbf{down to} $0$}
         \State $digit \gets \lfloor arr[i] / exp \rfloor \mod 10$
-        \State $output[count[digit]] \gets arr[i]$
+        \State $output[count[digit] - 1] \gets arr[i]$
         \State $count[digit] \gets count[digit] - 1$
     \EndFor
     
     \State \textbf{Cập nhật mảng ban đầu:}
-    \For{$i \gets 1$ \textbf{to} $n$}
+    \For{$i \gets 0$ \textbf{to} $n-1$}
         \State $arr[i] \gets output[i]$
     \EndFor
 \EndProcedure

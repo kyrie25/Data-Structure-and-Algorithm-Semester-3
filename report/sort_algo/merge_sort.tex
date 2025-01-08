@@ -4,7 +4,7 @@ Merge Sort là một thuật toán sắp xếp chia để trị (divide-and-conq
 \subsubsection{Mã giả}
 
 \begin{algorithm}[H]
-\caption{Merge Sort}
+\caption{Merge Sort (Mảng bắt đầu từ 0)}
 \begin{algorithmic}[1]
 \Procedure{MergeSort}{$arr, left, right$}
     \State \textbf{Input:} Mảng $arr$ với chỉ số bắt đầu $left$ và kết thúc $right$
@@ -26,16 +26,16 @@ Merge Sort là một thuật toán sắp xếp chia để trị (divide-and-conq
     \State \textbf{Input:} Mảng $arr$ với hai đoạn $[left, mid]$ và $[mid+1, right]$ đã được sắp xếp
     \State \textbf{Output:} Đoạn $[left, right]$ được sắp xếp
     
-    \State Khởi tạo mảng tạm $L[1..(mid-left+1)]$ và $R[1..(right-mid)]$
-    \For{$i \gets 1$ \textbf{to} $mid - left + 1$}
-        \State $L[i] \gets arr[left + i - 1]$
+    \State Khởi tạo mảng tạm $L[0..(mid-left)]$ và $R[0..(right-mid-1)]$
+    \For{$i \gets 0$ \textbf{to} $mid - left$}
+        \State $L[i] \gets arr[left + i]$
     \EndFor
-    \For{$j \gets 1$ \textbf{to} $right - mid$}
-        \State $R[j] \gets arr[mid + j]$
+    \For{$j \gets 0$ \textbf{to} $right - mid - 1$}
+        \State $R[j] \gets arr[mid + 1 + j]$
     \EndFor
     
-    \State Khởi tạo $i, j \gets 1$, $k \gets left$
-    \While{$i \leq \text{size of } L$ \textbf{and} $j \leq \text{size of } R$}
+    \State Khởi tạo $i, j \gets 0$, $k \gets left$
+    \While{$i < \text{size of } L$ \textbf{and} $j < \text{size of } R$}
         \If{$L[i] \leq R[j]$}
             \State $arr[k] \gets L[i]$
             \State $i \gets i + 1$
@@ -46,11 +46,11 @@ Merge Sort là một thuật toán sắp xếp chia để trị (divide-and-conq
         \State $k \gets k + 1$
     \EndWhile
     
-    \While{$i \leq \text{size of } L$}
+    \While{$i < \text{size of } L$}
         \State $arr[k] \gets L[i]$
         \State $i \gets i + 1, k \gets k + 1$
     \EndWhile
-    \While{$j \leq \text{size of } R$}
+    \While{$j < \text{size of } R$}
         \State $arr[k] \gets R[j]$
         \State $j \gets j + 1, k \gets k + 1$
     \EndWhile

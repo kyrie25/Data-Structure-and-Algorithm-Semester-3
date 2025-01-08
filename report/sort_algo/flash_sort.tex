@@ -14,13 +14,13 @@ Flash Sort là một thuật toán sắp xếp dựa trên việc phân phối c
     \State Tìm giá trị nhỏ nhất $A_{\text{min}}$ và lớn nhất $A_{\text{max}}$ trong mảng $arr$
     \State Tính số nhóm $m \gets \lfloor 0.45 \cdot n \rfloor$
     \State Khởi tạo mảng đếm $L[1..m]$ với giá trị ban đầu là 0
-    \For{$i \gets 1$ \textbf{to} $n$}
+    \For{$i \gets 0$ \textbf{to} $n - 1$}
         \State Xác định nhóm $k_i \gets \lfloor (m - 1) \cdot \frac{arr[i] - A_{\text{min}}}{A_{\text{max}} - A_{\text{min}}} \rfloor$
         \State Tăng $L[k_i]$ lên 1
     \EndFor
     
     \State Tính ranh giới của từng nhóm
-    \For{$j \gets 2$ \textbf{to} $m$}
+    \For{$j \gets 1$ \textbf{to} $m - 1$}
         \State $L[j] \gets L[j] + L[j-1]$
     \EndFor
     
@@ -29,7 +29,7 @@ Flash Sort là một thuật toán sắp xếp dựa trên việc phân phối c
     \State Duyệt từng phần tử, đưa phần tử vào vị trí thích hợp dựa trên nhóm $k_i$
     
     \State \textbf{Bước 3: Sắp xếp từng nhóm (Sorting)}
-    \For{$j \gets 1$ \textbf{to} $m$}
+    \For{$j \gets 0$ \textbf{to} $m - 1$}
         \State Sử dụng thuật toán sắp xếp cục bộ (e.g., \textit{Insertion Sort}) để sắp xếp các phần tử trong nhóm $j$
     \EndFor
 \EndProcedure
